@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:masterstudy_app/data/models/course/course_detail_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/data/models/course/course_detail_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class ReviewsStatCard extends StatefulWidget {
   const ReviewsStatCard({Key? key, required this.rating}) : super(key: key);

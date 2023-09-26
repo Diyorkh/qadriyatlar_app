@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/question_add/question_add_response.dart';
-import 'package:masterstudy_app/data/models/questions/questions_response.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/question_add/question_add_response.dart';
+import 'package:qadriyatlar_app/data/models/questions/questions_response.dart';
 
 abstract class QuestionsDataSource {
   Future<QuestionsResponse> getQuestions(int lessonId, int page, String search, String authorIn);

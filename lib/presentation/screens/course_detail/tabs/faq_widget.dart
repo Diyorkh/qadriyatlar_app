@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masterstudy_app/data/models/course/course_detail_response.dart';
+import 'package:qadriyatlar_app/data/models/course/course_detail_response.dart';
 
 class FaqWidget extends StatelessWidget {
   const FaqWidget(this.response) : super();

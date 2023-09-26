@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
 import 'package:http/http.dart';
-import 'package:masterstudy_app/core/cache/cache_manager.dart';
-import 'package:masterstudy_app/data/datasources/lesson_datasource.dart';
-import 'package:masterstudy_app/data/models/lesson/lesson_response.dart';
-import 'package:masterstudy_app/data/models/quiz/quiz_response.dart';
+import 'package:qadriyatlar_app/core/cache/cache_manager.dart';
+import 'package:qadriyatlar_app/data/datasources/lesson_datasource.dart';
+import 'package:qadriyatlar_app/data/models/lesson/lesson_response.dart';
+import 'package:qadriyatlar_app/data/models/quiz/quiz_response.dart';
 
 abstract class LessonRepository {
   Future<LessonResponse> getLesson(int courseId, int lessonId);

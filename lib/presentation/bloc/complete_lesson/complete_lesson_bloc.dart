@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
-import 'package:masterstudy_app/data/repository/lesson_repository.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/data/repository/lesson_repository.dart';
 
 part 'complete_lesson_event.dart';
 

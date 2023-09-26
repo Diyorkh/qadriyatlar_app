@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:masterstudy_app/core/extensions/color_extensions.dart';
-import 'package:masterstudy_app/data/models/app_settings/app_settings.dart';
+import 'package:qadriyatlar_app/core/extensions/color_extensions.dart';
+import 'package:qadriyatlar_app/data/models/app_settings/app_settings.dart';
 
 class ColorApp {
   static Color mainColor = Color(0xFF195ec8);

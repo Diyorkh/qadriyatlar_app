@@ -1,11 +1,11 @@
 import 'package:bloc/bloc.dart';
-import 'package:masterstudy_app/core/cache/cache_manager.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
-import 'package:masterstudy_app/data/models/cached_course/cached_course.dart';
-import 'package:masterstudy_app/data/models/curriculum/curriculum.dart';
-import 'package:masterstudy_app/data/repository/lesson_repository.dart';
-import 'package:masterstudy_app/data/repository/user_course_repository.dart';
-import 'package:masterstudy_app/presentation/screens/user_course/user_course.dart';
+import 'package:qadriyatlar_app/core/cache/cache_manager.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/data/models/cached_course/cached_course.dart';
+import 'package:qadriyatlar_app/data/models/curriculum/curriculum.dart';
+import 'package:qadriyatlar_app/data/repository/lesson_repository.dart';
+import 'package:qadriyatlar_app/data/repository/user_course_repository.dart';
+import 'package:qadriyatlar_app/presentation/screens/user_course/user_course.dart';
 import 'package:meta/meta.dart';
 
 part 'user_course_event.dart';

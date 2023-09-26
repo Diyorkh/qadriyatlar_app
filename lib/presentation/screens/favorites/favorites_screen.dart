@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/data/models/course/courses_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/favorites/favorites_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/main_screens.dart';
-import 'package:masterstudy_app/presentation/widgets/course_grid_item.dart';
-import 'package:masterstudy_app/presentation/widgets/empty_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/error_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/unauthorized_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/data/models/course/courses_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/favorites/favorites_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
+import 'package:qadriyatlar_app/presentation/widgets/course_grid_item.dart';
+import 'package:qadriyatlar_app/presentation/widgets/empty_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/unauthorized_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class FavoritesScreen extends StatelessWidget {
   FavoritesScreen();

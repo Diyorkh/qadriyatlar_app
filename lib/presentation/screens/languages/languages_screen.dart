@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/languages/languages_bloc.dart';
-import 'package:masterstudy_app/presentation/widgets/error_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
-import 'package:masterstudy_app/theme/const_styles.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/languages/languages_bloc.dart';
+import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/theme/const_styles.dart';
 
 class LanguagesScreen extends StatefulWidget {
   const LanguagesScreen({super.key});

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:masterstudy_app/core/utils/utils.dart';
-import 'package:masterstudy_app/data/models/instructors/instructors_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/screens/detail_profile/detail_profile_screen.dart';
-import 'package:masterstudy_app/presentation/widgets/flutter_toast.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/utils/utils.dart';
+import 'package:qadriyatlar_app/data/models/instructors/instructors_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/screens/detail_profile/detail_profile_screen.dart';
+import 'package:qadriyatlar_app/presentation/widgets/flutter_toast.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class TopInstructorsWidget extends StatelessWidget {
   TopInstructorsWidget(this.title, this.list, {Key? key}) : super(key: key);

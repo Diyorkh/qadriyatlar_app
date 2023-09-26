@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masterstudy_app/presentation/screens/languages/languages_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/languages/languages_screen.dart';
 
 class ChangeLanguageWidget extends StatelessWidget {
   const ChangeLanguageWidget({super.key});

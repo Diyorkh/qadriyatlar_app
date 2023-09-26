@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/data/models/course/courses_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/screens/category_detail/category_detail_screen.dart';
-import 'package:masterstudy_app/presentation/screens/course_detail/course_detail_screen.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/data/models/course/courses_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/screens/category_detail/category_detail_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/course_detail/course_detail_screen.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class CourseGridItem extends StatelessWidget {
   CourseGridItem(this.coursesBean);

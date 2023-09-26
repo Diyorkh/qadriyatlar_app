@@ -1,10 +1,10 @@
-import 'package:masterstudy_app/core/cache/app_settings_local.dart';
-import 'package:masterstudy_app/core/cache/localization_local.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
-import 'package:masterstudy_app/data/datasources/home_datasource.dart';
-import 'package:masterstudy_app/data/models/app_settings/app_settings.dart';
-import 'package:masterstudy_app/data/models/category/category.dart';
-import 'package:masterstudy_app/data/repository/languages_repository.dart';
+import 'package:qadriyatlar_app/core/cache/app_settings_local.dart';
+import 'package:qadriyatlar_app/core/cache/localization_local.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/data/datasources/home_datasource.dart';
+import 'package:qadriyatlar_app/data/models/app_settings/app_settings.dart';
+import 'package:qadriyatlar_app/data/models/category/category.dart';
+import 'package:qadriyatlar_app/data/repository/languages_repository.dart';
 
 abstract class HomeRepository {
   Future<AppSettings> getAppSettings();

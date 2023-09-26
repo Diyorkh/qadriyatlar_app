@@ -1,6 +1,6 @@
-import 'package:masterstudy_app/data/datasources/questions_datasource.dart';
-import 'package:masterstudy_app/data/models/question_add/question_add_response.dart';
-import 'package:masterstudy_app/data/models/questions/questions_response.dart';
+import 'package:qadriyatlar_app/data/datasources/questions_datasource.dart';
+import 'package:qadriyatlar_app/data/models/question_add/question_add_response.dart';
+import 'package:qadriyatlar_app/data/models/questions/questions_response.dart';
 
 abstract class QuestionsRepository {
   Future<QuestionsResponse> getQuestions(int lessonId, int page, String search, String authorIn);

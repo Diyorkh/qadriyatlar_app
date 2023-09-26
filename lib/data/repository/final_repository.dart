@@ -1,5 +1,5 @@
-import 'package:masterstudy_app/data/datasources/final_datasource.dart';
-import 'package:masterstudy_app/data/models/final_response/final_response.dart';
+import 'package:qadriyatlar_app/data/datasources/final_datasource.dart';
+import 'package:qadriyatlar_app/data/models/final_response/final_response.dart';
 
 abstract class FinalRepository {
   Future<FinalResponse> getCourseResults(int courseId);

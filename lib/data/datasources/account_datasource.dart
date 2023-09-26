@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/account/account.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/account/account.dart';
 
 abstract class AccountDataSource {
   Future<Account> getAccount({int? accountId});

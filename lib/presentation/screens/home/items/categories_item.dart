@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/core/extensions/color_extensions.dart';
-import 'package:masterstudy_app/data/models/category/category.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/screens/category_detail/category_detail_screen.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/core/extensions/color_extensions.dart';
+import 'package:qadriyatlar_app/data/models/category/category.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/screens/category_detail/category_detail_screen.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class CategoriesWidget extends StatelessWidget {
   CategoriesWidget(

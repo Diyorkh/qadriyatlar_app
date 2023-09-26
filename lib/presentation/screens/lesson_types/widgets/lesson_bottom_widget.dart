@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/data/models/lesson/lesson_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/complete_lesson/complete_lesson_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/final/final_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/assignment/assignment_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/lesson_stream/lesson_stream_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/quiz_lesson/quiz_lesson_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/text_lesson/text_lesson_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/video_lesson/lesson_video_screen.dart';
-import 'package:masterstudy_app/presentation/screens/user_course_locked/user_course_locked_screen.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
-import 'package:masterstudy_app/theme/const_dimensions.dart';
+import 'package:qadriyatlar_app/data/models/lesson/lesson_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/complete_lesson/complete_lesson_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/final/final_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/assignment/assignment_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/lesson_stream/lesson_stream_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/quiz_lesson/quiz_lesson_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/text_lesson/text_lesson_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/video_lesson/lesson_video_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/user_course_locked/user_course_locked_screen.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/theme/const_dimensions.dart';
 
 class LessonBottomWidget<T> extends StatefulWidget {
   LessonBottomWidget({

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/search/search_screen_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/search_detail/search_detail_screen.dart';
-import 'package:masterstudy_app/presentation/widgets/course_grid_item.dart';
-import 'package:masterstudy_app/presentation/widgets/empty_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/error_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/search/search_screen_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/search_detail/search_detail_screen.dart';
+import 'package:qadriyatlar_app/presentation/widgets/course_grid_item.dart';
+import 'package:qadriyatlar_app/presentation/widgets/empty_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});

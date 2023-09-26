@@ -1,15 +1,15 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/core/extensions/color_extensions.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/course/course_bloc.dart';
-import 'package:masterstudy_app/presentation/bloc/user_course_locked/user_course_locked_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/detail_profile/detail_profile_screen.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/core/extensions/color_extensions.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/course/course_bloc.dart';
+import 'package:qadriyatlar_app/presentation/bloc/user_course_locked/user_course_locked_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/detail_profile/detail_profile_screen.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DialogAuthorWidget extends StatelessWidget {

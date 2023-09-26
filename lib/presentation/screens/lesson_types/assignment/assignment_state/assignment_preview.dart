@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:masterstudy_app/data/models/assignment/assignment_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/assignment/assignment_parts/assignment_info.dart';
+import 'package:qadriyatlar_app/data/models/assignment/assignment_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/assignment/assignment_parts/assignment_info.dart';
 
 class AssignmentPreviewWidget extends StatelessWidget {
   const AssignmentPreviewWidget(this.assignmentResponse, this.courseId, this.assignmentId) : super();

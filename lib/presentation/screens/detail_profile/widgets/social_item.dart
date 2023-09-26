@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/widgets/flutter_toast.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/widgets/flutter_toast.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialItem extends StatelessWidget {

@@ -1,12 +1,12 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
-import 'package:masterstudy_app/data/models/languages/languages_response.dart';
-import 'package:masterstudy_app/data/repository/home_repository.dart';
-import 'package:masterstudy_app/data/repository/languages_repository.dart';
-import 'package:masterstudy_app/main.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/data/models/languages/languages_response.dart';
+import 'package:qadriyatlar_app/data/repository/home_repository.dart';
+import 'package:qadriyatlar_app/data/repository/languages_repository.dart';
+import 'package:qadriyatlar_app/main.dart';
 
 part 'languages_event.dart';
 

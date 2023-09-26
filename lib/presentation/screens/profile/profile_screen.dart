@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/profile/profile_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/auth/components/google_signin.dart';
-import 'package:masterstudy_app/presentation/screens/detail_profile/detail_profile_screen.dart';
-import 'package:masterstudy_app/presentation/screens/main_screens.dart';
-import 'package:masterstudy_app/presentation/screens/orders/orders_screen.dart';
-import 'package:masterstudy_app/presentation/screens/profile/widgets/profile_widget.dart';
-import 'package:masterstudy_app/presentation/screens/profile/widgets/tile_item.dart';
-import 'package:masterstudy_app/presentation/screens/profile_edit/profile_edit_screen.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/unauthorized_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/profile/profile_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/auth/components/google_signin.dart';
+import 'package:qadriyatlar_app/presentation/screens/detail_profile/detail_profile_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
+import 'package:qadriyatlar_app/presentation/screens/orders/orders_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/profile/widgets/profile_widget.dart';
+import 'package:qadriyatlar_app/presentation/screens/profile/widgets/tile_item.dart';
+import 'package:qadriyatlar_app/presentation/screens/profile_edit/profile_edit_screen.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/unauthorized_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen() : super();

@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
-import 'package:masterstudy_app/data/models/category/category.dart';
-import 'package:masterstudy_app/data/models/course/courses_response.dart';
-import 'package:masterstudy_app/data/repository/courses_repository.dart';
-import 'package:masterstudy_app/data/repository/home_repository.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/data/models/category/category.dart';
+import 'package:qadriyatlar_app/data/models/course/courses_response.dart';
+import 'package:qadriyatlar_app/data/repository/courses_repository.dart';
+import 'package:qadriyatlar_app/data/repository/home_repository.dart';
 import 'package:meta/meta.dart';
 
 part 'category_detail_event.dart';

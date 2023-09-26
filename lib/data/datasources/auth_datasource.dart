@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/errors/auth_error.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/auth_error/auth_error.dart';
-import 'package:masterstudy_app/data/models/change_password/change_password.dart';
-import 'package:masterstudy_app/data/models/restore_password/restore_password.dart';
+import 'package:qadriyatlar_app/core/errors/auth_error.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/auth_error/auth_error.dart';
+import 'package:qadriyatlar_app/data/models/change_password/change_password.dart';
+import 'package:qadriyatlar_app/data/models/restore_password/restore_password.dart';
 
 abstract class AuthDataSource {
   Future<AuthPhoneResponse> authPhone({required String phone});

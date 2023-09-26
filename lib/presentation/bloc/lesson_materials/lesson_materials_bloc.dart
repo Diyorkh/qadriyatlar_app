@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
 import 'package:path_provider/path_provider.dart';
 
 part 'lesson_materials_event.dart';

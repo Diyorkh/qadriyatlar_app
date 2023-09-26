@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/quiz_lesson/quiz_lesson_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/final/final_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/assignment/assignment_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/lesson_stream/lesson_stream_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/quiz_lesson/widgets/quiz_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/text_lesson/text_lesson_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/video_lesson/lesson_video_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/widgets/lesson_bottom_widget.dart';
-import 'package:masterstudy_app/presentation/screens/questions_screens/questions_tab/questions_tab_screen.dart';
-import 'package:masterstudy_app/presentation/widgets/error_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/warning_lesson_dialog.dart';
-import 'package:masterstudy_app/presentation/widgets/webview_widgets/web_view_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/quiz_lesson/quiz_lesson_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/final/final_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/assignment/assignment_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/lesson_stream/lesson_stream_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/quiz_lesson/widgets/quiz_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/text_lesson/text_lesson_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/video_lesson/lesson_video_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/widgets/lesson_bottom_widget.dart';
+import 'package:qadriyatlar_app/presentation/screens/questions_screens/questions_tab/questions_tab_screen.dart';
+import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/warning_lesson_dialog.dart';
+import 'package:qadriyatlar_app/presentation/widgets/webview_widgets/web_view_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class QuizLessonScreenArgs {
   QuizLessonScreenArgs(

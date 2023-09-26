@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/search_detail/search_detail_bloc.dart';
-import 'package:masterstudy_app/presentation/widgets/course_grid_item.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/search_detail/search_detail_bloc.dart';
+import 'package:qadriyatlar_app/presentation/widgets/course_grid_item.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class SearchDetailScreenArgs {
   SearchDetailScreenArgs({

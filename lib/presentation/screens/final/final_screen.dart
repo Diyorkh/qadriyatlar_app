@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/data/models/final_response/final_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/final/final_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/final/widgets/result_item_widget.dart';
-import 'package:masterstudy_app/presentation/screens/review_write/review_write_screen.dart';
-import 'package:masterstudy_app/presentation/widgets/error_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/warning_lesson_dialog.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/data/models/final_response/final_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/final/final_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/final/widgets/result_item_widget.dart';
+import 'package:qadriyatlar_app/presentation/screens/review_write/review_write_screen.dart';
+import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/warning_lesson_dialog.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class FinalScreenArgs {

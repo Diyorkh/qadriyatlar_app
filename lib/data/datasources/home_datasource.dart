@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/app_settings/app_settings.dart';
-import 'package:masterstudy_app/data/models/category/category.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/app_settings/app_settings.dart';
+import 'package:qadriyatlar_app/data/models/category/category.dart';
 
 abstract class HomeDataSource {
   Future<AppSettings> getAppSettings();

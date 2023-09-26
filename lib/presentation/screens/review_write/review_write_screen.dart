@@ -2,16 +2,16 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/core/utils/utils.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/review_write/review_write_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/main_screens.dart';
-import 'package:masterstudy_app/presentation/widgets/alert_dialogs.dart';
-import 'package:masterstudy_app/presentation/widgets/flutter_toast.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
-import 'package:masterstudy_app/theme/const_dimensions.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/core/utils/utils.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/review_write/review_write_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
+import 'package:qadriyatlar_app/presentation/widgets/alert_dialogs.dart';
+import 'package:qadriyatlar_app/presentation/widgets/flutter_toast.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/theme/const_dimensions.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ReviewWriteScreenArgs {

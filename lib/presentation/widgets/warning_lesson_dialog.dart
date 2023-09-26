@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:masterstudy_app/main.dart';
+import 'package:qadriyatlar_app/main.dart';
 
 class WarningLessonDialog extends StatelessWidget {
   @override

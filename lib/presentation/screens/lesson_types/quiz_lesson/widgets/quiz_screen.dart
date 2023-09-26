@@ -3,10 +3,10 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/quiz/quiz_response.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/quiz/quiz_response.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class QuizScreenArgs {

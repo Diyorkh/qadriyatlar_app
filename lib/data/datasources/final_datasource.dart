@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/final_response/final_response.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/final_response/final_response.dart';
 
 abstract class FinalDataSource {
   Future<FinalResponse> getCourseResults(int courseId);

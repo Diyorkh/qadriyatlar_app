@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/auth/auth_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/main_screens.dart';
-import 'package:masterstudy_app/presentation/widgets/flutter_toast.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
-import 'package:masterstudy_app/theme/const_dimensions.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/auth/auth_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
+import 'package:qadriyatlar_app/presentation/widgets/flutter_toast.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/theme/const_dimensions.dart';
 
 class AuthPhoneWidget extends StatefulWidget {
   const AuthPhoneWidget({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
-import 'package:masterstudy_app/data/models/orders/orders_response.dart';
-import 'package:masterstudy_app/data/repository/purchase_repository.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/data/models/orders/orders_response.dart';
+import 'package:qadriyatlar_app/data/repository/purchase_repository.dart';
 import 'package:meta/meta.dart';
 
 part 'orders_event.dart';

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/lesson_video/lesson_video_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/video_lesson/widgets/video_screen.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/widgets/lesson_bottom_widget.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/widgets/lesson_materials_widget.dart';
-import 'package:masterstudy_app/presentation/screens/questions_screens/questions_tab/questions_tab_screen.dart';
-import 'package:masterstudy_app/presentation/widgets/error_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/webview_widgets/web_view_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
-import 'package:masterstudy_app/theme/const_dimensions.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/lesson_video/lesson_video_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/video_lesson/widgets/video_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/widgets/lesson_bottom_widget.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/widgets/lesson_materials_widget.dart';
+import 'package:qadriyatlar_app/presentation/screens/questions_screens/questions_tab/questions_tab_screen.dart';
+import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/webview_widgets/web_view_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/theme/const_dimensions.dart';
 
 class LessonVideoScreenArgs {
   LessonVideoScreenArgs(this.courseId, this.lessonId, this.authorAva, this.authorName, this.hasPreview, this.trial);

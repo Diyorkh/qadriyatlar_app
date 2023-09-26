@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/data/models/app_settings/app_settings.dart';
-import 'package:masterstudy_app/presentation/bloc/home/home_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/home/items/categories_item.dart';
-import 'package:masterstudy_app/presentation/screens/home/items/new_courses_item.dart';
-import 'package:masterstudy_app/presentation/screens/home/items/top_instructors.dart';
-import 'package:masterstudy_app/presentation/screens/home/items/trending_item.dart';
-import 'package:masterstudy_app/presentation/widgets/error_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/data/models/app_settings/app_settings.dart';
+import 'package:qadriyatlar_app/presentation/bloc/home/home_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/home/items/categories_item.dart';
+import 'package:qadriyatlar_app/presentation/screens/home/items/new_courses_item.dart';
+import 'package:qadriyatlar_app/presentation/screens/home/items/top_instructors.dart';
+import 'package:qadriyatlar_app/presentation/screens/home/items/trending_item.dart';
+import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen() : super();

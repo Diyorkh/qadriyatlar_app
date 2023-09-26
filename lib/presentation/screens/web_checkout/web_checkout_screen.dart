@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/screens/orders/orders_screen.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/screens/orders/orders_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebCheckoutScreenArgs {

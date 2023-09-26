@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:masterstudy_app/data/models/category/category.dart';
+import 'package:qadriyatlar_app/data/models/category/category.dart';
 
 part 'user_course.g.dart';
 

@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:masterstudy_app/core/cache/cache_manager.dart';
-import 'package:masterstudy_app/core/utils/utils.dart';
-import 'package:masterstudy_app/data/models/user_course/user_course.dart';
-import 'package:masterstudy_app/data/repository/user_course_repository.dart';
+import 'package:qadriyatlar_app/core/cache/cache_manager.dart';
+import 'package:qadriyatlar_app/core/utils/utils.dart';
+import 'package:qadriyatlar_app/data/models/user_course/user_course.dart';
+import 'package:qadriyatlar_app/data/repository/user_course_repository.dart';
 
 part 'user_courses_event.dart';
 

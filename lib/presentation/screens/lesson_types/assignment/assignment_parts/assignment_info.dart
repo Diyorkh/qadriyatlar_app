@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:masterstudy_app/data/models/assignment/assignment_response.dart';
+import 'package:qadriyatlar_app/data/models/assignment/assignment_response.dart';
 
 class AssignmentInfoWidget extends StatelessWidget {
   const AssignmentInfoWidget(this.assignmentResponse) : super();

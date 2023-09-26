@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/course/course_detail_response.dart';
-import 'package:masterstudy_app/data/models/curriculum/curriculum.dart';
-import 'package:masterstudy_app/data/models/user_course/user_course.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/course/course_detail_response.dart';
+import 'package:qadriyatlar_app/data/models/curriculum/curriculum.dart';
+import 'package:qadriyatlar_app/data/models/user_course/user_course.dart';
 
 abstract class UserCourseDataSource {
   Future<CourseDetailResponse> getCourse(int id);

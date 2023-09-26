@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
-import 'package:masterstudy_app/data/models/question_add/question_add_response.dart';
-import 'package:masterstudy_app/data/repository/questions_repository.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/data/models/question_add/question_add_response.dart';
+import 'package:qadriyatlar_app/data/repository/questions_repository.dart';
 import 'package:meta/meta.dart';
 
 part 'question_details_event.dart';

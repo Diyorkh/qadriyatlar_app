@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:masterstudy_app/data/models/curriculum/curriculum.dart';
-import 'package:masterstudy_app/data/models/lesson/lesson_response.dart';
-import 'package:masterstudy_app/data/models/user_course/user_course.dart';
+import 'package:qadriyatlar_app/data/models/curriculum/curriculum.dart';
+import 'package:qadriyatlar_app/data/models/lesson/lesson_response.dart';
+import 'package:qadriyatlar_app/data/models/user_course/user_course.dart';
 
 part 'cached_course.g.dart';
 

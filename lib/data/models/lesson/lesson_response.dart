@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:masterstudy_app/data/models/quiz/quiz_response.dart';
+import 'package:qadriyatlar_app/data/models/quiz/quiz_response.dart';
 
 part 'lesson_response.g.dart';
 

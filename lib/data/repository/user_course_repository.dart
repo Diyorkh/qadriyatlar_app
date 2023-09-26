@@ -1,9 +1,9 @@
-import 'package:masterstudy_app/core/cache/course_curriculum_local.dart';
-import 'package:masterstudy_app/core/cache/progress_course_local.dart';
-import 'package:masterstudy_app/data/datasources/user_course_datasource.dart';
-import 'package:masterstudy_app/data/models/course/course_detail_response.dart';
-import 'package:masterstudy_app/data/models/curriculum/curriculum.dart';
-import 'package:masterstudy_app/data/models/user_course/user_course.dart';
+import 'package:qadriyatlar_app/core/cache/course_curriculum_local.dart';
+import 'package:qadriyatlar_app/core/cache/progress_course_local.dart';
+import 'package:qadriyatlar_app/data/datasources/user_course_datasource.dart';
+import 'package:qadriyatlar_app/data/models/course/course_detail_response.dart';
+import 'package:qadriyatlar_app/data/models/curriculum/curriculum.dart';
+import 'package:qadriyatlar_app/data/models/user_course/user_course.dart';
 
 abstract class UserCourseRepository {
   Future<UserCourseResponse> getUserCourses();

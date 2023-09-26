@@ -1,6 +1,6 @@
-import 'package:masterstudy_app/core/extensions/basic_extensions.dart';
-import 'package:masterstudy_app/data/datasources/instructor_datasource.dart';
-import 'package:masterstudy_app/data/models/instructors/instructors_response.dart';
+import 'package:qadriyatlar_app/core/extensions/basic_extensions.dart';
+import 'package:qadriyatlar_app/data/datasources/instructor_datasource.dart';
+import 'package:qadriyatlar_app/data/models/instructors/instructors_response.dart';
 
 enum InstructorsSort { rating }
 

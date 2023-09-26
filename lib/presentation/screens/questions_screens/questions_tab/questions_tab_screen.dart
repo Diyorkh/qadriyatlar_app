@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/data/models/questions/questions_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/questions_bloc/question_add/question_add_bloc.dart';
-import 'package:masterstudy_app/presentation/bloc/questions_bloc/questions/questions_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/questions_screens/question_ask/question_ask_screen.dart';
-import 'package:masterstudy_app/presentation/screens/questions_screens/questions_tab/tabs/questions_all_widget.dart';
-import 'package:masterstudy_app/presentation/screens/questions_screens/questions_tab/tabs/questions_my_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/colored_tabbar_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/dialog_author.dart';
-import 'package:masterstudy_app/presentation/widgets/error_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/flutter_toast.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
-import 'package:masterstudy_app/theme/const_dimensions.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/data/models/questions/questions_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/questions_bloc/question_add/question_add_bloc.dart';
+import 'package:qadriyatlar_app/presentation/bloc/questions_bloc/questions/questions_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/questions_screens/question_ask/question_ask_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/questions_screens/questions_tab/tabs/questions_all_widget.dart';
+import 'package:qadriyatlar_app/presentation/screens/questions_screens/questions_tab/tabs/questions_my_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/colored_tabbar_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/dialog_author.dart';
+import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/flutter_toast.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/theme/const_dimensions.dart';
 
 class QuestionsScreenArgs {
   QuestionsScreenArgs(this.lessonId, this.page);

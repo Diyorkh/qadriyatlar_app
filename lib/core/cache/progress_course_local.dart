@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/data/models/user_course/user_course.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/data/models/user_course/user_course.dart';
 
 class ProgressCoursesLocalStorage {
   List<UserCourseResponse> getUserCoursesLocal() {

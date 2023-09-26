@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/change_password/change_password_bloc.dart';
-import 'package:masterstudy_app/presentation/widgets/flutter_toast.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
-import 'package:masterstudy_app/theme/const_dimensions.dart';
-import 'package:masterstudy_app/theme/const_styles.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/change_password/change_password_bloc.dart';
+import 'package:qadriyatlar_app/presentation/widgets/flutter_toast.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/theme/const_dimensions.dart';
+import 'package:qadriyatlar_app/theme/const_styles.dart';
 
 class ChangePasswordScreen extends StatelessWidget {
   const ChangePasswordScreen() : super();

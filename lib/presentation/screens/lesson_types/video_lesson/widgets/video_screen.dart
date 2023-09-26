@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:masterstudy_app/data/models/lesson/lesson_response.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/video_lesson/widgets/default_video_player.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/video_lesson/widgets/vimeo_player.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/video_lesson/widgets/youtube_player.dart';
-import 'package:masterstudy_app/presentation/widgets/webview_widgets/in_app_webview_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/webview_widgets/web_view_widget.dart';
+import 'package:qadriyatlar_app/data/models/lesson/lesson_response.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/video_lesson/widgets/default_video_player.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/video_lesson/widgets/vimeo_player.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/video_lesson/widgets/youtube_player.dart';
+import 'package:qadriyatlar_app/presentation/widgets/webview_widgets/in_app_webview_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/webview_widgets/web_view_widget.dart';
 
 class VideoScreenArgs {
   VideoScreenArgs(

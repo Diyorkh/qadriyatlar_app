@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class UnauthorizedWidget extends StatelessWidget {
   const UnauthorizedWidget({Key? key, required this.onTap}) : super(key: key);

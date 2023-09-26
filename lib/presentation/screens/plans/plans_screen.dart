@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:masterstudy_app/data/models/purchase/all_plans_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/plans/plans_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/web_checkout/web_checkout_screen.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/data/models/purchase/all_plans_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/plans/plans_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/web_checkout/web_checkout_screen.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class PlansScreen extends StatelessWidget {
   static const String routeName = '/plansScreen';

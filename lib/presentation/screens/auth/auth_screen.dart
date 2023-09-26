@@ -2,16 +2,16 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/auth/auth_bloc.dart';
-import 'package:masterstudy_app/presentation/bloc/edit_profile_bloc/edit_profile_bloc.dart';
-import 'package:masterstudy_app/presentation/bloc/languages/languages_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/auth/widget/auth_phone_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/loader_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/auth/auth_bloc.dart';
+import 'package:qadriyatlar_app/presentation/bloc/edit_profile_bloc/edit_profile_bloc.dart';
+import 'package:qadriyatlar_app/presentation/bloc/languages/languages_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/auth/widget/auth_phone_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});

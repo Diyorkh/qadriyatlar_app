@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:masterstudy_app/data/models/instructors/instructors_response.dart';
+import 'package:qadriyatlar_app/data/models/instructors/instructors_response.dart';
 
 part 'account.g.dart';
 

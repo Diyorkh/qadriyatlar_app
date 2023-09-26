@@ -1,6 +1,6 @@
-import 'package:masterstudy_app/data/datasources/reviews_datasource.dart';
-import 'package:masterstudy_app/data/models/review/review_response.dart';
-import 'package:masterstudy_app/data/models/review_add/review_add_response.dart';
+import 'package:qadriyatlar_app/data/datasources/reviews_datasource.dart';
+import 'package:qadriyatlar_app/data/models/review/review_response.dart';
+import 'package:qadriyatlar_app/data/models/review_add/review_add_response.dart';
 
 abstract class ReviewRepository {
   Future<ReviewResponse> getReviews(int id);

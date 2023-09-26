@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/widgets/webview_widgets/web_view_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/widgets/webview_widgets/web_view_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class DescriptionCard extends StatefulWidget {
   const DescriptionCard({

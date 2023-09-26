@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:masterstudy_app/core/utils/utils.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/course/course_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/course_detail/course_detail_screen.dart';
-import 'package:masterstudy_app/presentation/screens/course_detail/widgets/purchase_dialog.dart';
-import 'package:masterstudy_app/presentation/screens/main_screens.dart';
-import 'package:masterstudy_app/presentation/screens/user_course/user_course.dart';
-import 'package:masterstudy_app/presentation/widgets/alert_dialogs.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/utils/utils.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/course/course_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/course_detail/course_detail_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/course_detail/widgets/purchase_dialog.dart';
+import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
+import 'package:qadriyatlar_app/presentation/screens/user_course/user_course.dart';
+import 'package:qadriyatlar_app/presentation/widgets/alert_dialogs.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class BottomWidget extends StatefulWidget {
   const BottomWidget({

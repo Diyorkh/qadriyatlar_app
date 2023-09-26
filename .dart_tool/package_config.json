@@ -1244,13 +1244,13 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "masterstudy_app",
+      "name": "qadriyatlar_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-09-26T11:26:45.927542Z",
+  "generated": "2023-09-26T22:23:50.743968Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }

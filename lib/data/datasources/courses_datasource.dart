@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/course/course_detail_response.dart';
-import 'package:masterstudy_app/data/models/course/courses_response.dart';
-import 'package:masterstudy_app/data/models/popular_searches/popular_searches_response.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/course/course_detail_response.dart';
+import 'package:qadriyatlar_app/data/models/course/courses_response.dart';
+import 'package:qadriyatlar_app/data/models/popular_searches/popular_searches_response.dart';
 
 abstract class CoursesDataSource {
   Future<CoursesResponse> getCourses(Map<String, dynamic> params);

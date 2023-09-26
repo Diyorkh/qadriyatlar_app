@@ -1,13 +1,13 @@
 import 'package:bloc/bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
-import 'package:masterstudy_app/data/models/app_settings/app_settings.dart';
-import 'package:masterstudy_app/data/repository/home_repository.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/data/models/app_settings/app_settings.dart';
+import 'package:qadriyatlar_app/data/repository/home_repository.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 import 'package:meta/meta.dart';
 
 part 'splash_event.dart';

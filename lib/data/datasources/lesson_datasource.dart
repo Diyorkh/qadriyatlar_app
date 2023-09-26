@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/lesson/lesson_response.dart';
-import 'package:masterstudy_app/data/models/quiz/quiz_response.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/lesson/lesson_response.dart';
+import 'package:qadriyatlar_app/data/models/quiz/quiz_response.dart';
 
 abstract class LessonDataSource {
   Future<LessonResponse> getLesson(int courseId, int lessonId);

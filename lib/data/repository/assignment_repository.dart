@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:masterstudy_app/data/datasources/assignment_datasource.dart';
-import 'package:masterstudy_app/data/models/assignment/assignment_response.dart';
+import 'package:qadriyatlar_app/data/datasources/assignment_datasource.dart';
+import 'package:qadriyatlar_app/data/models/assignment/assignment_response.dart';
 
 abstract class AssignmentRepository {
   Future<AssignmentResponse> getAssignmentInfo(int course_id, int assignment_id);

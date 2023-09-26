@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:masterstudy_app/core/services/http_service.dart';
-import 'package:masterstudy_app/data/models/add_to_cart/add_to_cart_response.dart';
-import 'package:masterstudy_app/data/models/orders/orders_response.dart';
-import 'package:masterstudy_app/data/models/purchase/all_plans_response.dart';
-import 'package:masterstudy_app/data/models/purchase/user_plans_response.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
+import 'package:qadriyatlar_app/data/models/add_to_cart/add_to_cart_response.dart';
+import 'package:qadriyatlar_app/data/models/orders/orders_response.dart';
+import 'package:qadriyatlar_app/data/models/purchase/all_plans_response.dart';
+import 'package:qadriyatlar_app/data/models/purchase/user_plans_response.dart';
 
 abstract class PurchaseDataSource {
   Future<UserPlansResponse?> getUserPlans(int courseId);

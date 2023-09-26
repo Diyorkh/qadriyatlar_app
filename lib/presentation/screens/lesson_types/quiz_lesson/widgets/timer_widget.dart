@@ -1,7 +1,5 @@
-import 'dart:js_interop';
-
 import 'package:flutter/cupertino.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
 
 class CountDownTimer extends StatefulWidget {
   const CountDownTimer({

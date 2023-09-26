@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/data/models/assignment/assignment_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/assignment/assignment_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/assignment/widgets/choose_item_widget.dart';
-import 'package:masterstudy_app/presentation/screens/lesson_types/assignment/widgets/file_item_widget.dart';
-import 'package:masterstudy_app/presentation/widgets/custom_bottom_sheet.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
-import 'package:masterstudy_app/theme/const_dimensions.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/data/models/assignment/assignment_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/assignment/assignment_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/assignment/widgets/choose_item_widget.dart';
+import 'package:qadriyatlar_app/presentation/screens/lesson_types/assignment/widgets/file_item_widget.dart';
+import 'package:qadriyatlar_app/presentation/widgets/custom_bottom_sheet.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/theme/const_dimensions.dart';
 
 class AssignmentDraftWidget extends StatefulWidget {
   const AssignmentDraftWidget(

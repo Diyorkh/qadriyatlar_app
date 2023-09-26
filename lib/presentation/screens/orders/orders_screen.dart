@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/data/models/orders/orders_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/bloc/orders/orders_bloc.dart';
-import 'package:masterstudy_app/presentation/screens/course_detail/course_detail_screen.dart';
-import 'package:masterstudy_app/presentation/widgets/colored_tabbar_widget.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/data/models/orders/orders_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/bloc/orders/orders_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/course_detail/course_detail_screen.dart';
+import 'package:qadriyatlar_app/presentation/widgets/colored_tabbar_widget.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class OrdersScreen extends StatelessWidget {

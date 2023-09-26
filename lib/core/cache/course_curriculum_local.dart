@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/data/models/curriculum/curriculum.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/data/models/curriculum/curriculum.dart';
 
 class CurriculumLocalStorage {
   List<CurriculumResponse> getCurriculumLocal(int id) {

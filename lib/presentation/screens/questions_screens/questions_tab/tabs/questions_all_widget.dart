@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/data/models/questions/questions_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/screens/questions_screens/question_details/question_details_screen.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/data/models/questions/questions_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/screens/questions_screens/question_details/question_details_screen.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class QuestionAllWidget extends StatelessWidget {
   const QuestionAllWidget({

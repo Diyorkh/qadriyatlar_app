@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:masterstudy_app/core/constants/assets_path.dart';
-import 'package:masterstudy_app/core/utils/utils.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/screens/auth/auth_screen.dart';
-import 'package:masterstudy_app/presentation/screens/courses/courses_screen.dart';
-import 'package:masterstudy_app/presentation/screens/favorites/favorites_screen.dart';
-import 'package:masterstudy_app/presentation/screens/home/home_screen.dart';
-import 'package:masterstudy_app/presentation/screens/home_simple/home_simple_screen.dart';
-import 'package:masterstudy_app/presentation/screens/profile/profile_screen.dart';
-import 'package:masterstudy_app/presentation/screens/search/search_screen.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:qadriyatlar_app/core/utils/utils.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/screens/auth/auth_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/courses/courses_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/favorites/favorites_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/home/home_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/home_simple/home_simple_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/profile/profile_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/search/search_screen.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class MainScreenArgs {
   MainScreenArgs({this.selectedIndex});

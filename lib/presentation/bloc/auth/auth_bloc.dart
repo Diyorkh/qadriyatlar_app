@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:bloc/bloc.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/core/errors/auth_error.dart';
-import 'package:masterstudy_app/core/utils/logger.dart';
-import 'package:masterstudy_app/data/models/auth_error/auth_error.dart';
-import 'package:masterstudy_app/data/repository/auth_repository.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/core/errors/auth_error.dart';
+import 'package:qadriyatlar_app/core/utils/logger.dart';
+import 'package:qadriyatlar_app/data/models/auth_error/auth_error.dart';
+import 'package:qadriyatlar_app/data/repository/auth_repository.dart';
 import 'package:meta/meta.dart';
 
 part 'auth_event.dart';

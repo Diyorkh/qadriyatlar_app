@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:masterstudy_app/core/constants/preferences_name.dart';
-import 'package:masterstudy_app/core/env.dart';
-import 'package:masterstudy_app/core/utils/utils.dart';
-import 'package:masterstudy_app/data/models/course/course_detail_response.dart';
-import 'package:masterstudy_app/data/models/review/review_response.dart';
-import 'package:masterstudy_app/main.dart';
-import 'package:masterstudy_app/presentation/screens/course_detail/meta_icon.dart';
-import 'package:masterstudy_app/presentation/screens/course_detail/tabs/widgets/annoncement_card.dart';
-import 'package:masterstudy_app/presentation/screens/course_detail/tabs/widgets/description_card.dart';
-import 'package:masterstudy_app/presentation/screens/course_detail/tabs/widgets/reviews_stat_card.dart';
-import 'package:masterstudy_app/presentation/screens/review_write/review_write_screen.dart';
-import 'package:masterstudy_app/presentation/widgets/dialog_author.dart';
-import 'package:masterstudy_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/core/utils/utils.dart';
+import 'package:qadriyatlar_app/data/models/course/course_detail_response.dart';
+import 'package:qadriyatlar_app/data/models/review/review_response.dart';
+import 'package:qadriyatlar_app/main.dart';
+import 'package:qadriyatlar_app/presentation/screens/course_detail/meta_icon.dart';
+import 'package:qadriyatlar_app/presentation/screens/course_detail/tabs/widgets/annoncement_card.dart';
+import 'package:qadriyatlar_app/presentation/screens/course_detail/tabs/widgets/description_card.dart';
+import 'package:qadriyatlar_app/presentation/screens/course_detail/tabs/widgets/reviews_stat_card.dart';
+import 'package:qadriyatlar_app/presentation/screens/review_write/review_write_screen.dart';
+import 'package:qadriyatlar_app/presentation/widgets/dialog_author.dart';
+import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class OverviewWidget extends StatefulWidget {
   const OverviewWidget(
