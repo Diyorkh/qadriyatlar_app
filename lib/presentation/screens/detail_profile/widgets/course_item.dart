@@ -75,7 +75,7 @@ class DetailCourseItem extends StatelessWidget {
                       ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       );

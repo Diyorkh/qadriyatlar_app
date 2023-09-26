@@ -296,7 +296,7 @@ class _PriceItem extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
               Visibility(
@@ -319,12 +319,12 @@ class _PriceItem extends StatelessWidget {
                           localizations.getLocalization('plan_count_left'),
                           textScaleFactor: 1.0,
                           style: TextStyle(fontSize: 9, color: ColorApp.secondaryColor),
-                        )
+                        ),
                       ],
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ],

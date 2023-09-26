@@ -182,7 +182,7 @@ class AssignmentDraftWidgetState extends State<AssignmentDraftWidget> {
                               fontWeight: FontWeight.w400,
                               fontSize: 14.0,
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),

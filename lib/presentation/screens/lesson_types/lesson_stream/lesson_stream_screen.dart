@@ -106,7 +106,7 @@ class _LessonStreamScreenState extends State<_LessonStreamScreenWidget> {
                     lessonLabel ?? '',
                     textScaleFactor: 1.0,
                     style: TextStyle(color: Colors.white, fontSize: 14.0),
-                  )
+                  ),
                 ],
               ),
               actions: <Widget>[
@@ -135,7 +135,7 @@ class _LessonStreamScreenState extends State<_LessonStreamScreenWidget> {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
             body: SingleChildScrollView(
@@ -215,7 +215,7 @@ class _LessonStreamScreenState extends State<_LessonStreamScreenWidget> {
                 ),
               ),
             ),
-          )
+          ),
         ],
       );
     }

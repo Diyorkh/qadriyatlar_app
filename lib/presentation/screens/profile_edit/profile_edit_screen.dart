@@ -581,7 +581,7 @@ class _ProfileEditWidgetState extends State<_ProfileEditWidget> {
                       ),
                       onPressed: () => BlocProvider.of<EditProfileBloc>(context).add(CloseScreenEvent()),
                     ),
-                  )
+                  ),
                 ],
               ),
             );

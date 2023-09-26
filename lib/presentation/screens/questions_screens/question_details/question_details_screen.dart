@@ -114,7 +114,7 @@ class QuestionDetailsWidgetState extends State<QuestionDetailsWidget> {
                                 fontSize: FontSize(17.0),
                                 fontWeight: FontWeight.w700,
                                 color: Color(0xFF273044),
-                              )
+                              ),
                             },
                           ),
                         ),
@@ -213,7 +213,7 @@ class QuestionDetailsWidgetState extends State<QuestionDetailsWidget> {
                                     ),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                     _buildAddedReply(),

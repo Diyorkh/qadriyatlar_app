@@ -57,9 +57,7 @@ class _LessonMaterialsWidgetState extends State<LessonMaterialsWidget> {
                       ),
                     )
                   : const SizedBox(),
-
               const SizedBox(height: 10.0),
-
               ListView.builder(
                 shrinkWrap: true,
                 itemCount: lessonResponse.materials?.length ?? 0,
@@ -86,7 +84,7 @@ class _LessonMaterialsWidgetState extends State<LessonMaterialsWidget> {
                     },
                   );
                 },
-              )
+              ),
             ],
           ),
         ),

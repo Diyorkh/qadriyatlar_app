@@ -172,7 +172,7 @@ class CourseGridCard extends StatelessWidget {
                   '$rating ($reviews)',
                   textScaleFactor: 1.0,
                   style: Theme.of(context).primaryTextTheme.bodySmall?.copyWith(color: Colors.black),
-                )
+                ),
               ],
             ),
           ),

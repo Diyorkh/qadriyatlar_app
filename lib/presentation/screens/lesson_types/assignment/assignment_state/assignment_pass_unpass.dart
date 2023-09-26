@@ -73,7 +73,7 @@ class AssignmentPassUnpassWidget extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -86,7 +86,7 @@ class AssignmentPassUnpassWidget extends StatelessWidget {
             style: {
               'body': Style(
                 fontSize: FontSize(13.0),
-              )
+              ),
             },
           ),
         ),
@@ -135,9 +135,9 @@ class AssignmentPassUnpassWidget extends StatelessWidget {
                       color: ColorApp.mainColor,
                       fontWeight: FontWeight.w500,
                     ),
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         ),
@@ -172,7 +172,7 @@ class AssignmentPassUnpassWidget extends StatelessWidget {
                 },
               )
             : const SizedBox(),
-        AssignmentInfoWidget(assignmentResponse)
+        AssignmentInfoWidget(assignmentResponse),
       ],
     );
   }

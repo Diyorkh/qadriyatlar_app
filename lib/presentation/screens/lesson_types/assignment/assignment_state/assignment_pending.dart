@@ -53,7 +53,7 @@ class AssignmentPendingWidget extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

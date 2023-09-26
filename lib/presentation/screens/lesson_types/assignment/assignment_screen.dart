@@ -210,7 +210,7 @@ class _AssignmentScreenWidgetState extends State<_AssignmentScreenWidget> {
             offset: Offset(0, 0),
             blurRadius: 6,
             spreadRadius: 2,
-          )
+          ),
         ],
       ),
       child: Padding(
@@ -394,7 +394,7 @@ class _AssignmentScreenWidgetState extends State<_AssignmentScreenWidget> {
             offset: Offset(0, 0),
             blurRadius: 6,
             spreadRadius: 2,
-          )
+          ),
         ],
       ),
       child: Padding(

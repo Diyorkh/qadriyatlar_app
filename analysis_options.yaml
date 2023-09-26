@@ -19,8 +19,6 @@ linter:
     collection_methods_unrelated_type: true
     deprecated_consistency: true
     hash_and_equals: true
-    iterable_contains_unrelated_type: true
-    list_remove_unrelated_type: true
     literal_only_boolean_expressions: true
     null_check_on_nullable_type_parameter: true
     no_duplicate_case_values: true

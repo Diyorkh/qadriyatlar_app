@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/data/models/course/course_detail_response.dart';
 import 'package:qadriyatlar_app/data/repository/user_course_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'user_course_locked_event.dart';
 

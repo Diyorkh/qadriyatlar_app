@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/data/models/assignment/assignment_response.dart';
 import 'package:qadriyatlar_app/data/repository/assignment_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'assignment_event.dart';
 

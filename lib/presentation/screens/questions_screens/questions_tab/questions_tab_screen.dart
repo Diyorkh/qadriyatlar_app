@@ -147,7 +147,7 @@ class QuestionsWidgetState extends State<QuestionsWidget> {
                     offset: Offset(0, 0),
                     blurRadius: 6,
                     spreadRadius: 2,
-                  )
+                  ),
                 ],
               ),
               child: Padding(

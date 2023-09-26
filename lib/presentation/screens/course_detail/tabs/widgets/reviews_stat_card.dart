@@ -91,11 +91,11 @@ class _ReviewsStatCardState extends State<ReviewsStatCard> {
                       ),
                     ],
                   ),
-                )
+                ),
               ],
-            )
+            ),
           ],
-        )
+        ),
       ],
     );
   }
@@ -151,7 +151,7 @@ class StatRowCard extends StatelessWidget {
               fontWeight: FontWeight.bold,
               fontSize: 14,
             ),
-          )
+          ),
         ],
       ),
     );

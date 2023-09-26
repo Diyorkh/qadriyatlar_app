@@ -67,7 +67,7 @@ class _OverviewWidgetState extends State<OverviewWidget> with AutomaticKeepAlive
                                   value.label,
                                   textScaleFactor: 1.0,
                                 ),
-                              )
+                              ),
                             ],
                           ),
                           Expanded(
@@ -77,7 +77,7 @@ class _OverviewWidgetState extends State<OverviewWidget> with AutomaticKeepAlive
                               textAlign: TextAlign.end,
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -235,7 +235,7 @@ class _OverviewWidgetState extends State<OverviewWidget> with AutomaticKeepAlive
                             );
                           },
                           onRatingUpdate: (double value) {},
-                        )
+                        ),
                       ],
                     ),
                   ),

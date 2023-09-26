@@ -31,7 +31,7 @@ class UnauthorizedWidget extends StatelessWidget {
               onPressed: onTap,
               child: Text(localizations.getLocalization('login_label_text')),
             ),
-          )
+          ),
         ],
       ),
     );

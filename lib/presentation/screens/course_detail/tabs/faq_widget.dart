@@ -37,7 +37,7 @@ class FaqWidget extends StatelessWidget {
                   color: Colors.grey.shade600,
                 ),
               ),
-            )
+            ),
           ],
         );
       },

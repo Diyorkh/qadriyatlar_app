@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/errors/auth_error.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/data/models/restore_password/restore_password.dart';
 import 'package:qadriyatlar_app/data/repository/auth_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'restore_password_event.dart';
 

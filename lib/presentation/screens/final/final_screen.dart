@@ -142,7 +142,7 @@ class _FinalScreenState extends State<_FinalScreenWidget> {
                                         color: Color(0xFFEEF1F7),
                                         borderRadius: BorderRadius.circular(10.0),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
@@ -150,7 +150,7 @@ class _FinalScreenState extends State<_FinalScreenWidget> {
                             _buildProgressTitle(
                               state,
                               state.finalResponse.course!.progressPercent,
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -215,7 +215,7 @@ class _FinalScreenState extends State<_FinalScreenWidget> {
                       Padding(
                         padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
                         child: _buildButtons(state.finalResponse),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -260,7 +260,7 @@ class _FinalScreenState extends State<_FinalScreenWidget> {
                     color: Color(0xFF2A3045),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/data/models/purchase/all_plans_response.dart';
 import 'package:qadriyatlar_app/data/repository/purchase_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'plans_event.dart';
 

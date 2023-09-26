@@ -221,7 +221,7 @@ class _LessonVideoScreenState extends State<_LessonVideoScreenWidget> {
                                               blurRadius: 10,
                                               spreadRadius: -2,
                                               offset: Offset(0, 12.0),
-                                            )
+                                            ),
                                           ],
                                         ),
                                         // Button "Play Video"
@@ -262,7 +262,7 @@ class _LessonVideoScreenState extends State<_LessonVideoScreenWidget> {
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 14.0,
                                                 ),
-                                              )
+                                              ),
                                             ],
                                           ),
                                         ),

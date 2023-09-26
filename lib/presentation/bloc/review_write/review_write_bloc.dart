@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/data/models/account/account.dart';
 import 'package:qadriyatlar_app/data/models/review_add/review_add_response.dart';
 import 'package:qadriyatlar_app/data/repository/account_repository.dart';
 import 'package:qadriyatlar_app/data/repository/review_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'review_write_event.dart';
 

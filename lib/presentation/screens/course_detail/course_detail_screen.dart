@@ -329,7 +329,7 @@ class _CourseScreenWidgetState extends State<_CourseScreenWidget> with TickerPro
                                                 Icon(
                                                   Icons.keyboard_arrow_right,
                                                   color: Colors.white.withOpacity(0.5),
-                                                )
+                                                ),
                                               ],
                                             ),
                                           ),
@@ -403,11 +403,11 @@ class _CourseScreenWidgetState extends State<_CourseScreenWidget> with TickerPro
                                   ],
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
-                    )
+                    ),
                   ];
                 },
                 body: AnimatedSwitcher(

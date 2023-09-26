@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/cache/cache_manager.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/data/models/lesson/lesson_response.dart';
 import 'package:qadriyatlar_app/data/repository/lesson_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'lesson_stream_event.dart';
 

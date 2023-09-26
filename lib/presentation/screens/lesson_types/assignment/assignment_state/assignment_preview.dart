@@ -26,7 +26,7 @@ class AssignmentPreviewWidget extends StatelessWidget {
             style: TextStyle(color: Color(0xFF273044)),
           ),
         ),
-        AssignmentInfoWidget(assignmentResponse)
+        AssignmentInfoWidget(assignmentResponse),
       ],
     );
   }

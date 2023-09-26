@@ -46,7 +46,7 @@ class ErrorCustomWidget extends StatelessWidget {
                   localizations.getLocalization('error_button'),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

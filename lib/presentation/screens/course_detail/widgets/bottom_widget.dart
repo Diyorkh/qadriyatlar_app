@@ -186,7 +186,7 @@ class _BottomWidgetState extends State<BottomWidget> {
                                             ),
                                           ],
                                         ),
-                                      )
+                                      ),
                                     ],
                                   );
                                 },
@@ -196,7 +196,7 @@ class _BottomWidgetState extends State<BottomWidget> {
                             }
                           }
                         },
-                      )
+                      ),
                     ],
                   ),
                 ),

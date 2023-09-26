@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/core/utils/utils.dart';
 import 'package:qadriyatlar_app/data/models/course/courses_response.dart';
 import 'package:qadriyatlar_app/data/repository/courses_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'favorites_event.dart';
 

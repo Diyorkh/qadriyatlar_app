@@ -157,7 +157,7 @@ class CourseCard extends StatelessWidget {
                         ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

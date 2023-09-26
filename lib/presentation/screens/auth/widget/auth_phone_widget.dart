@@ -92,7 +92,7 @@ class _AuthPhoneWidgetState extends State<AuthPhoneWidget> {
                         // TODO: Добавить перевод
                         child: Text('Sign in'),
                       ),
-                    )
+                    ),
                   ],
                 ),
               );
@@ -265,7 +265,7 @@ class _AuthPhoneWidgetState extends State<AuthPhoneWidget> {
                             }
 
                             // TODO: Добавить перевод
-                            if(_regConfirmPasswordController.text != _regPasswordController.text) {
+                            if (_regConfirmPasswordController.text != _regPasswordController.text) {
                               return 'Please check password';
                             }
                             return null;
@@ -294,7 +294,7 @@ class _AuthPhoneWidgetState extends State<AuthPhoneWidget> {
                           // TODO: Добавить перевод
                           child: Text('Login'),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -357,7 +357,7 @@ class _AuthPhoneWidgetState extends State<AuthPhoneWidget> {
                     // TODO: Добавить перевод
                     child: state is LoadingAuthPhoneState ? LoaderWidget() : Text('GET CODE'),
                   ),
-                )
+                ),
               ],
             ),
           );

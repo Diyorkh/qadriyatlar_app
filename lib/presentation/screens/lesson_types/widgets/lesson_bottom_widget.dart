@@ -69,7 +69,7 @@ class _LessonBottomWidgetState extends State<LessonBottomWidget> {
                 offset: Offset(0, 0),
                 blurRadius: 6,
                 spreadRadius: 2,
-              )
+              ),
             ],
           ),
           child: Padding(
@@ -220,7 +220,7 @@ class _LessonBottomWidgetState extends State<LessonBottomWidget> {
                                   localizations.getLocalization('complete_lesson_button'),
                                   textScaleFactor: 1.0,
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),

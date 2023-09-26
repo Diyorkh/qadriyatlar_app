@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/cache/cache_manager.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/data/models/final_response/final_response.dart';
 import 'package:qadriyatlar_app/data/repository/final_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'final_event.dart';
 

@@ -96,7 +96,7 @@ class OrdersWidgetState extends State<OrdersWidget> {
             itemBuilder: (BuildContext ctx, int index) {
               return MembershipWidget(state.orders.memberships[index], index == 0);
             },
-          )
+          ),
         ],
       );
     }
@@ -190,7 +190,7 @@ class OrderWidgetState extends State<OrderWidget> {
               expanded ? Icons.arrow_drop_up : Icons.arrow_drop_down,
               color: ColorApp.mainColor,
             ),
-          )
+          ),
         ],
       ),
     );
@@ -224,7 +224,7 @@ class OrderWidgetState extends State<OrderWidget> {
                 style: TextStyle(color: Color(0xFF999999), fontSize: 20),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
@@ -288,7 +288,7 @@ class OrderWidgetState extends State<OrderWidget> {
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -357,7 +357,7 @@ class _MembershipWidgetState extends State<MembershipWidget> {
                 expanded ? Icons.arrow_drop_up : Icons.arrow_drop_down,
                 color: ColorApp.mainColor,
               ),
-            )
+            ),
           ],
         ),
         Text(
@@ -415,7 +415,7 @@ class _MembershipWidgetState extends State<MembershipWidget> {
                           style: {
                             'body': Style(
                               fontSize: FontSize(14),
-                            )
+                            ),
                           },
                         )
                       : Text(
@@ -475,7 +475,7 @@ class _MembershipWidgetState extends State<MembershipWidget> {
                 style: TextStyle(color: Color(0xFF999999), fontSize: 20),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

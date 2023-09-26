@@ -103,7 +103,7 @@ class QuestionsItem extends StatelessWidget {
                     fontSize: 15.0,
                     color: repliesColor,
                   ),
-                )
+                ),
               ],
             ),
           ],

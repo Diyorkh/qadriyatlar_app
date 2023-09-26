@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:qadriyatlar_app/presentation/screens/auth/auth_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/category_detail/category_detail_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/change_password/change_password_screen.dart';
@@ -28,7 +29,6 @@ import 'package:qadriyatlar_app/presentation/screens/splash/splash_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/user_course/user_course.dart';
 import 'package:qadriyatlar_app/presentation/screens/user_course_locked/user_course_locked_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/web_checkout/web_checkout_screen.dart';
-import 'package:page_transition/page_transition.dart';
 
 class AppRoutes {
   PageRoute generateRoute(RouteSettings routeSettings, BuildContext context) {

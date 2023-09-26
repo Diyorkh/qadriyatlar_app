@@ -148,14 +148,14 @@ class PlanWidget extends StatelessWidget {
                             textColor: Colors.white,
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
                 Flexible(
                   child: _buildWebView(allPlansBean.features!),
                   flex: 1,
-                )
+                ),
               ],
             ),
           ),

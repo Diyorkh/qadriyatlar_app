@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/core/utils/utils.dart';
 import 'package:qadriyatlar_app/data/models/course/course_detail_response.dart';
@@ -10,7 +11,6 @@ import 'package:qadriyatlar_app/data/models/review/review_response.dart';
 import 'package:qadriyatlar_app/data/repository/courses_repository.dart';
 import 'package:qadriyatlar_app/data/repository/purchase_repository.dart';
 import 'package:qadriyatlar_app/data/repository/review_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'course_event.dart';
 

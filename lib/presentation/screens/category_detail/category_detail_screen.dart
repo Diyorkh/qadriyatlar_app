@@ -109,14 +109,14 @@ class _CategoryDetailScreenWidgetState extends State<_CategoryDetailScreenWidget
                                       color: Colors.grey,
                                     ),
                                   ],
-                                )
+                                ),
                               ],
                             ),
                           ),
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

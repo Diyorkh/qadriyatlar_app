@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/data/models/app_settings/app_settings.dart';
 import 'package:qadriyatlar_app/data/models/category/category.dart';
@@ -7,7 +8,6 @@ import 'package:qadriyatlar_app/data/models/instructors/instructors_response.dar
 import 'package:qadriyatlar_app/data/repository/courses_repository.dart';
 import 'package:qadriyatlar_app/data/repository/home_repository.dart';
 import 'package:qadriyatlar_app/data/repository/instructors_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'home_event.dart';
 

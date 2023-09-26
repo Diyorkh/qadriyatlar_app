@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
-import 'package:qadriyatlar_app/core/services/http_service.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:qadriyatlar_app/core/services/http_service.dart';
 
 part 'lesson_materials_event.dart';
 

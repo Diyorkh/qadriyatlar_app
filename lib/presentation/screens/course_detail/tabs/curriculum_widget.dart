@@ -276,7 +276,7 @@ class _CurriculumWidgetState extends State<CurriculumWidget> with AutomaticKeepA
                     softWrap: false,
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

@@ -33,7 +33,7 @@ class DialogAuthorWidget extends StatelessWidget {
                 padding: EdgeInsets.only(top: 20.0, bottom: 15.0, left: 20.0, right: 20.0),
                 child: buildBody(context, courseState),
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -148,10 +148,10 @@ class DialogAuthorWidget extends StatelessWidget {
                         radius: 24,
                         backgroundImage: NetworkImage(state.courseDetailResponse.author.avatarUrl),
                       ),
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
           if (preferences.getString(PreferencesName.apiToken) == null ||
@@ -253,7 +253,7 @@ class DialogAuthorWidget extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
         ],
       );
     }

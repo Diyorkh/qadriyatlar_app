@@ -90,7 +90,7 @@ class UserCourseLockedWidgetState extends State<UserCourseLockedWidget> {
                   pinned: true,
                   snap: false,
                   flexibleSpace: _buildFlexSpaceBar(state),
-                )
+                ),
               ];
             },
             body: Builder(
@@ -132,7 +132,7 @@ class UserCourseLockedWidgetState extends State<UserCourseLockedWidget> {
                               color: Color(0xFFAAAAAA),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   );
@@ -201,7 +201,7 @@ class UserCourseLockedWidgetState extends State<UserCourseLockedWidget> {
                                     state.courseDetailResponse.author!.avatarUrl!,
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -250,7 +250,7 @@ class UserCourseLockedWidgetState extends State<UserCourseLockedWidget> {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       );
@@ -337,7 +337,7 @@ class UserCourseLockedWidgetState extends State<UserCourseLockedWidget> {
                 }
               },
               child: setUpButtonChild(state),
-            )
+            ),
           ],
         ),
       ),
@@ -355,7 +355,7 @@ class UserCourseLockedWidgetState extends State<UserCourseLockedWidget> {
                 localizations.getLocalization('course_free_price'),
                 textScaleFactor: 1.0,
               ),
-              Icon(Icons.arrow_drop_down)
+              Icon(Icons.arrow_drop_down),
             ],
           );
         } else {
@@ -391,7 +391,7 @@ class UserCourseLockedWidgetState extends State<UserCourseLockedWidget> {
                   selectedPlan!,
                   textScaleFactor: 1.0,
                 ),
-                Icon(Icons.arrow_drop_down)
+                Icon(Icons.arrow_drop_down),
               ],
             ),
           );

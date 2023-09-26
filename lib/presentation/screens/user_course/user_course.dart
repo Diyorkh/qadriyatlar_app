@@ -232,7 +232,7 @@ class UserCourseWidgetState extends State<UserCourseWidget> {
                                                     : 'http://ms.stylemix.biz/wp-content/uploads/elementor/thumbs/placeholder-1919x1279-plpkge6q8d1n11vbq6ckurd53ap3zw1gbw0n5fqs0o.gif',
                                               ),
                                             ),
-                                          )
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -314,7 +314,7 @@ class UserCourseWidgetState extends State<UserCourseWidget> {
                                           Padding(
                                             padding: const EdgeInsets.only(left: 20.0),
                                             child: _buildCacheButton(state),
-                                          )
+                                          ),
                                         ],
                                       ),
                                     ),
@@ -323,11 +323,11 @@ class UserCourseWidgetState extends State<UserCourseWidget> {
                               ),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
-                )
+                ),
               ];
             },
             body: Builder(
@@ -588,7 +588,7 @@ class UserCourseWidgetState extends State<UserCourseWidget> {
                             style: TextStyle(color: locked ? Colors.black.withOpacity(0.3) : Colors.black),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -632,9 +632,9 @@ class UserCourseWidgetState extends State<UserCourseWidget> {
                           ),
                         ],
                       ),
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),

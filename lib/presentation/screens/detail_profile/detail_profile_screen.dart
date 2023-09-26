@@ -267,7 +267,7 @@ class _DetailProfileWidgetState extends State<DetailProfileWidget> {
                                         const SizedBox(),
                                     ],
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
@@ -372,7 +372,7 @@ class _DetailProfileWidgetState extends State<DetailProfileWidget> {
                                 localizations.getLocalization('empty_profile_button'),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     );

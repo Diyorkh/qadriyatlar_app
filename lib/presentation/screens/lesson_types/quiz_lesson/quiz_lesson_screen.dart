@@ -181,7 +181,7 @@ class QuizLessonWidgetState extends State<QuizLessonWidget> {
                           offset: Offset(0, 0),
                           blurRadius: 6,
                           spreadRadius: 2,
-                        )
+                        ),
                       ],
                     ),
                     child: Padding(

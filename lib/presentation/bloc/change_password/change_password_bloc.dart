@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/data/models/change_password/change_password.dart';
 import 'package:qadriyatlar_app/data/repository/auth_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'change_password_event.dart';
 

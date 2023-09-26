@@ -175,7 +175,7 @@ class TrendingCourseItem extends StatelessWidget {
                       ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       );
