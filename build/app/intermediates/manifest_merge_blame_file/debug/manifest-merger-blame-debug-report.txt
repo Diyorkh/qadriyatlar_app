@@ -1,0 +1,775 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.qadriyatlar.akademiyasiapp"
+4    android:versionCode="66"
+5    android:versionName="2.2.5" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:6:5-67
+14-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:4:5-80
+15-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:4:22-77
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:5:5-81
+16-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:5:22-78
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:7:5-79
+17-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:7:22-76
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:8:5-68
+18-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:8:22-65
+19
+20    <queries>
+20-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:68:5-97:15
+21
+22        <!-- If your app opens https URLs -->
+23        <intent>
+23-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:70:9-73:18
+24            <action android:name="android.intent.action.VIEW" />
+24-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:43:17-69
+24-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:43:25-66
+25
+26            <data android:scheme="https" />
+26-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:17-75
+26-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:23-72
+27        </intent>
+28        <intent>
+28-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:74:9-77:18
+29            <action android:name="android.intent.action.SEND" />
+29-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:75:13-65
+29-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:75:21-62
+30
+31            <data android:mimeType="*/*" />
+31-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:17-75
+32        </intent>
+33        <intent>
+33-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:70:9-73:18
+34            <action android:name="android.intent.action.VIEW" />
+34-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:43:17-69
+34-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:43:25-66
+35
+36            <data android:scheme="https" />
+36-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:17-75
+36-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:23-72
+37        </intent>
+38        <!-- If your app makes calls -->
+39        <intent>
+39-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:83:9-86:18
+40            <action android:name="android.intent.action.DIAL" />
+40-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:84:13-65
+40-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:84:21-62
+41
+42            <data android:scheme="tel" />
+42-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:17-75
+42-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:23-72
+43        </intent>
+44        <!-- If your sends SMS messages -->
+45        <intent>
+45-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:88:9-91:18
+46            <action android:name="android.intent.action.SENDTO" />
+46-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:89:13-67
+46-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:89:21-64
+47
+48            <data android:scheme="smsto" />
+48-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:17-75
+48-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:23-72
+49        </intent>
+50        <!-- If your app sends emails -->
+51        <intent>
+51-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:74:9-77:18
+52            <action android:name="android.intent.action.SEND" />
+52-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:75:13-65
+52-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:75:21-62
+53
+54            <data android:mimeType="*/*" />
+54-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:17-75
+55        </intent>
+56        <intent>
+56-->[:file_picker] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:18
+57            <action android:name="android.intent.action.GET_CONTENT" />
+57-->[:file_picker] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-72
+57-->[:file_picker] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:21-69
+58
+59            <data android:mimeType="*/*" />
+59-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:17-75
+60        </intent>
+61        <intent>
+61-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:18
+62            <action android:name="android.support.customtabs.action.CustomTabsService" />
+62-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-90
+62-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:11:21-87
+63        </intent>
+64
+65        <package android:name="com.facebook.katana" />
+65-->[com.facebook.android:facebook-common:15.0.2] /Users/diyor/.gradle/caches/transforms-3/fed16052c77974f20c3c16fac259c086/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:30:9-55
+65-->[com.facebook.android:facebook-common:15.0.2] /Users/diyor/.gradle/caches/transforms-3/fed16052c77974f20c3c16fac259c086/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:30:18-52
+66
+67        <intent>
+67-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:17:9-19:18
+68            <action android:name="com.android.vending.billing.InAppBillingService.BIND" />
+68-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:18:13-91
+68-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:18:21-88
+69        </intent>
+70    </queries>
+71    <queries>
+71-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:68:5-97:15
+72        <provider android:authorities="com.facebook.katana.provider.PlatformProvider" /> <!-- allows app to access Facebook app features -->
+73    </queries> <!-- Permissions options for the `notification` group -->
+74    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+74-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-77
+74-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:13:22-74
+75    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+75-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:28:5-82
+75-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:28:22-79
+76    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+76-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/diyor/.gradle/caches/transforms-3/bb27ac9b432d7b6abf4387bff6f4da2f/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:25:5-79
+76-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/diyor/.gradle/caches/transforms-3/bb27ac9b432d7b6abf4387bff6f4da2f/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:25:22-76
+77    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+77-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:26:5-110
+77-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:26:22-107
+78    <uses-permission android:name="com.android.vending.BILLING" />
+78-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:10:5-67
+78-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:10:22-64
+79
+80    <permission
+80-->[androidx.core:core:1.9.0] /Users/diyor/.gradle/caches/transforms-3/026305bd210a656c6584ffcfe57f1314/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+81        android:name="com.qadriyatlar.akademiyasiapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+81-->[androidx.core:core:1.9.0] /Users/diyor/.gradle/caches/transforms-3/026305bd210a656c6584ffcfe57f1314/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+82        android:protectionLevel="signature" />
+82-->[androidx.core:core:1.9.0] /Users/diyor/.gradle/caches/transforms-3/026305bd210a656c6584ffcfe57f1314/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+83
+84    <uses-permission android:name="com.qadriyatlar.akademiyasiapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+84-->[androidx.core:core:1.9.0] /Users/diyor/.gradle/caches/transforms-3/026305bd210a656c6584ffcfe57f1314/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+84-->[androidx.core:core:1.9.0] /Users/diyor/.gradle/caches/transforms-3/026305bd210a656c6584ffcfe57f1314/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+85
+86    <application
+86-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:10:5-66:19
+87        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+87-->[androidx.core:core:1.9.0] /Users/diyor/.gradle/caches/transforms-3/026305bd210a656c6584ffcfe57f1314/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+88        android:debuggable="true"
+89        android:icon="@mipmap/ic_launcher"
+89-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:11:9-43
+90        android:label="Qadriyatlar akademiyasi"
+90-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:12:9-48
+91        android:requestLegacyExternalStorage="true"
+91-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:13:9-52
+92        android:supportsRtl="true" >
+92-->[com.facebook.android:facebook-android-sdk:14.1.1] /Users/diyor/.gradle/caches/transforms-3/d0ee03bbe2af23616dfba96d48db9941/transformed/jetified-facebook-android-sdk-14.1.1/AndroidManifest.xml:28:18-44
+93        <activity
+93-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:15:9-32:20
+94            android:name="com.qadriyatlar.akademiyasiapp.MainActivity"
+94-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:16:13-41
+95            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+95-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:17:13-163
+96            android:exported="true"
+96-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:18:13-36
+97            android:hardwareAccelerated="true"
+97-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:19:13-47
+98            android:launchMode="singleTop"
+98-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:20:13-43
+99            android:theme="@style/LaunchTheme"
+99-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:21:13-47
+100            android:windowSoftInputMode="adjustResize" >
+100-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:22:13-55
+101            <intent-filter>
+101-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:23:13-26:29
+102                <action android:name="android.intent.action.MAIN" />
+102-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:24:17-69
+102-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:24:25-66
+103
+104                <category android:name="android.intent.category.LAUNCHER" />
+104-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:25:17-77
+104-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:25:27-74
+105            </intent-filter>
+106            <intent-filter>
+106-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:28:13-31:29
+107                <action android:name="FLUTTER_NOTIFICATION_CLICK" />
+107-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:29:17-69
+107-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:29:25-66
+108
+109                <category android:name="android.intent.category.DEFAULT" />
+109-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:30:17-76
+109-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:30:27-73
+110            </intent-filter>
+111        </activity>
+112        <activity
+112-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:34:9-37:48
+113            android:name="com.facebook.FacebookActivity"
+113-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:34:19-63
+114            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+114-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:35:13-113
+115            android:label="@string/app_name"
+115-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:37:13-45
+116            android:theme="@style/com_facebook_activity_theme" />
+116-->[com.facebook.android:facebook-common:15.0.2] /Users/diyor/.gradle/caches/transforms-3/fed16052c77974f20c3c16fac259c086/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:37:13-63
+117        <activity
+117-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:39:9-48:20
+118            android:name="com.facebook.CustomTabActivity"
+118-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:40:13-58
+119            android:exported="true" >
+119-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:41:13-36
+120            <intent-filter>
+120-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:42:13-47:29
+121                <action android:name="android.intent.action.VIEW" />
+121-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:43:17-69
+121-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:43:25-66
+122
+123                <category android:name="android.intent.category.DEFAULT" />
+123-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:30:17-76
+123-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:30:27-73
+124                <category android:name="android.intent.category.BROWSABLE" />
+124-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:45:17-78
+124-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:45:27-75
+125
+126                <data android:scheme="@string/fb_login_protocol_scheme" />
+126-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:17-75
+126-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:23-72
+127            </intent-filter>
+128            <intent-filter>
+128-->[com.facebook.android:facebook-common:15.0.2] /Users/diyor/.gradle/caches/transforms-3/fed16052c77974f20c3c16fac259c086/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:43:13-52:29
+129                <action android:name="android.intent.action.VIEW" />
+129-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:43:17-69
+129-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:43:25-66
+130
+131                <category android:name="android.intent.category.DEFAULT" />
+131-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:30:17-76
+131-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:30:27-73
+132                <category android:name="android.intent.category.BROWSABLE" />
+132-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:45:17-78
+132-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:45:27-75
+133
+134                <data
+134-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:17-75
+135                    android:host="cct.com.qadriyatlar.akademiyasiapp"
+136                    android:scheme="fbconnect" />
+136-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:46:23-72
+137            </intent-filter>
+138        </activity>
+139
+140        <!--
+141             Don't delete the meta-data below.
+142             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+143        -->
+144        <meta-data
+144-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:52:9-54:33
+145            android:name="flutterEmbedding"
+145-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:53:13-44
+146            android:value="2" />
+146-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:54:13-30
+147        <meta-data
+147-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:55:9-57:52
+148            android:name="com.google.firebase.messaging.default_notification_icon"
+148-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:56:13-83
+149            android:resource="@drawable/ic_push" />
+149-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:57:13-49
+150        <meta-data
+150-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:58:9-60:55
+151            android:name="com.facebook.sdk.ApplicationId"
+151-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:59:13-58
+152            android:value="@string/facebook_app_id" />
+152-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:60:13-52
+153        <meta-data
+153-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:61:9-63:61
+154            android:name="com.facebook.sdk.ClientToken"
+154-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:62:13-56
+155            android:value="@string/facebook_client_token" />
+155-->/Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/android/app/src/main/AndroidManifest.xml:63:13-58
+156
+157        <service
+157-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-19:72
+158            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+158-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-107
+159            android:exported="false"
+159-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+160            android:permission="android.permission.BIND_JOB_SERVICE" />
+160-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-69
+161        <service
+161-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-26:19
+162            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+162-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-97
+163            android:exported="false" >
+163-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-37
+164            <intent-filter>
+164-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:29
+165                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+165-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-78
+165-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-75
+166            </intent-filter>
+167        </service>
+168
+169        <receiver
+169-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-35:20
+170            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+170-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-98
+171            android:exported="true"
+171-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-36
+172            android:permission="com.google.android.c2dm.permission.SEND" >
+172-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-73
+173            <intent-filter>
+173-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-34:29
+174                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+174-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:17-81
+174-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:25-78
+175            </intent-filter>
+176        </receiver>
+177
+178        <service
+178-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:9-41:19
+179            android:name="com.google.firebase.components.ComponentDiscoveryService"
+179-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:18-89
+180            android:directBootAware="true"
+180-->[com.google.firebase:firebase-common:20.3.2] /Users/diyor/.gradle/caches/transforms-3/087b502631dd054277db079c057af9d1/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:34:13-43
+181            android:exported="false" >
+181-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:54:13-37
+182            <meta-data
+182-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-40:85
+183                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+183-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:39:17-128
+184                android:value="com.google.firebase.components.ComponentRegistrar" />
+184-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:40:17-82
+185            <meta-data
+185-->[:firebase_crashlytics] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_crashlytics/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+186                android:name="com.google.firebase.components:io.flutter.plugins.firebase.crashlytics.FlutterFirebaseAppRegistrar"
+186-->[:firebase_crashlytics] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_crashlytics/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-130
+187                android:value="com.google.firebase.components.ComponentRegistrar" />
+187-->[:firebase_crashlytics] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_crashlytics/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+188            <meta-data
+188-->[:firebase_core] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+189                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+189-->[:firebase_core] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+190                android:value="com.google.firebase.components.ComponentRegistrar" />
+190-->[:firebase_core] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+191            <meta-data
+191-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:55:13-57:85
+192                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+192-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:56:17-119
+193                android:value="com.google.firebase.components.ComponentRegistrar" />
+193-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:57:17-82
+194            <meta-data
+194-->[com.google.firebase:firebase-crashlytics:18.3.7] /Users/diyor/.gradle/caches/transforms-3/db705e06ceff04dddb37561b6416462e/transformed/jetified-firebase-crashlytics-18.3.7/AndroidManifest.xml:17:13-19:85
+195                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+195-->[com.google.firebase:firebase-crashlytics:18.3.7] /Users/diyor/.gradle/caches/transforms-3/db705e06ceff04dddb37561b6416462e/transformed/jetified-firebase-crashlytics-18.3.7/AndroidManifest.xml:18:17-115
+196                android:value="com.google.firebase.components.ComponentRegistrar" />
+196-->[com.google.firebase:firebase-crashlytics:18.3.7] /Users/diyor/.gradle/caches/transforms-3/db705e06ceff04dddb37561b6416462e/transformed/jetified-firebase-crashlytics-18.3.7/AndroidManifest.xml:19:17-82
+197            <meta-data
+197-->[com.google.firebase:firebase-iid:21.1.0] /Users/diyor/.gradle/caches/transforms-3/1c687015f2aeef68a15eb262f4e05a81/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:32:13-34:85
+198                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+198-->[com.google.firebase:firebase-iid:21.1.0] /Users/diyor/.gradle/caches/transforms-3/1c687015f2aeef68a15eb262f4e05a81/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:33:17-96
+199                android:value="com.google.firebase.components.ComponentRegistrar" />
+199-->[com.google.firebase:firebase-iid:21.1.0] /Users/diyor/.gradle/caches/transforms-3/1c687015f2aeef68a15eb262f4e05a81/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:34:17-82
+200            <meta-data
+200-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/diyor/.gradle/caches/transforms-3/bb27ac9b432d7b6abf4387bff6f4da2f/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:31:13-33:85
+201                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+201-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/diyor/.gradle/caches/transforms-3/bb27ac9b432d7b6abf4387bff6f4da2f/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:32:17-139
+202                android:value="com.google.firebase.components.ComponentRegistrar" />
+202-->[com.google.android.gms:play-services-measurement-api:21.2.2] /Users/diyor/.gradle/caches/transforms-3/bb27ac9b432d7b6abf4387bff6f4da2f/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:33:17-82
+203            <meta-data
+203-->[com.google.firebase:firebase-datatransport:18.1.7] /Users/diyor/.gradle/caches/transforms-3/21d3d571811105cbf1294b20c76e1a2b/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:27:13-29:85
+204                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+204-->[com.google.firebase:firebase-datatransport:18.1.7] /Users/diyor/.gradle/caches/transforms-3/21d3d571811105cbf1294b20c76e1a2b/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:28:17-115
+205                android:value="com.google.firebase.components.ComponentRegistrar" />
+205-->[com.google.firebase:firebase-datatransport:18.1.7] /Users/diyor/.gradle/caches/transforms-3/21d3d571811105cbf1294b20c76e1a2b/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:29:17-82
+206            <meta-data
+206-->[com.google.firebase:firebase-installations:17.1.3] /Users/diyor/.gradle/caches/transforms-3/1127f40e408f8b3347495948161c91cf/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:17:13-19:85
+207                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+207-->[com.google.firebase:firebase-installations:17.1.3] /Users/diyor/.gradle/caches/transforms-3/1127f40e408f8b3347495948161c91cf/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:18:17-127
+208                android:value="com.google.firebase.components.ComponentRegistrar" />
+208-->[com.google.firebase:firebase-installations:17.1.3] /Users/diyor/.gradle/caches/transforms-3/1127f40e408f8b3347495948161c91cf/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:19:17-82
+209        </service>
+210
+211        <provider
+211-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:43:9-47:38
+212            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+212-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:44:13-102
+213            android:authorities="com.qadriyatlar.akademiyasiapp.flutterfirebasemessaginginitprovider"
+213-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:45:13-88
+214            android:exported="false"
+214-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:46:13-37
+215            android:initOrder="99" />
+215-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:47:13-35
+216
+217        <activity
+217-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-20:47
+218            android:name="com.pichillilorenzo.flutter_inappwebview.in_app_browser.InAppBrowserActivity"
+218-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-104
+219            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+219-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-137
+220            android:exported="false"
+220-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-37
+221            android:theme="@style/AppTheme" />
+221-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-44
+222        <activity
+222-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:21:9-24:55
+223            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ChromeCustomTabsActivity"
+223-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-112
+224            android:exported="false"
+224-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
+225            android:theme="@style/ThemeTransparent" />
+225-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-52
+226        <activity
+226-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-28:55
+227            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.TrustedWebActivity"
+227-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-106
+228            android:exported="false"
+228-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-37
+229            android:theme="@style/ThemeTransparent" />
+229-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-52
+230        <activity
+230-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:29:9-33:55
+231            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ChromeCustomTabsActivitySingleInstance"
+231-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-126
+232            android:exported="false"
+232-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-37
+233            android:launchMode="singleInstance"
+233-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-48
+234            android:theme="@style/ThemeTransparent" />
+234-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-52
+235        <activity
+235-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-38:55
+236            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.TrustedWebActivitySingleInstance"
+236-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-120
+237            android:exported="false"
+237-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-37
+238            android:launchMode="singleInstance"
+238-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-48
+239            android:theme="@style/ThemeTransparent" />
+239-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-52
+240
+241        <receiver
+241-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:40:9-43:40
+242            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ActionBroadcastReceiver"
+242-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:41:13-111
+243            android:enabled="true"
+243-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-35
+244            android:exported="false" />
+244-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:43:13-37
+245
+246        <meta-data
+246-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:45:9-47:36
+247            android:name="io.flutter.embedded_views_preview"
+247-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:46:13-61
+248            android:value="true" />
+248-->[:flutter_inappwebview] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/flutter_inappwebview/intermediates/merged_manifest/debug/AndroidManifest.xml:47:13-33
+249        <!--
+250           Declares a provider which allows us to store files to share in
+251           '.../caches/share_plus' and grant the receiving action access
+252        -->
+253        <provider
+253-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-23:20
+254            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+254-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-77
+255            android:authorities="com.qadriyatlar.akademiyasiapp.flutter.share_provider"
+255-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-74
+256            android:exported="false"
+256-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+257            android:grantUriPermissions="true" >
+257-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-47
+258            <meta-data
+258-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-22:68
+259                android:name="android.support.FILE_PROVIDER_PATHS"
+259-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-67
+260                android:resource="@xml/flutter_share_file_paths" />
+260-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-65
+261        </provider>
+262        <!--
+263           This manifest declared broadcast receiver allows us to use an explicit
+264           Intent when creating a PendingItent to be informed of the user's choice
+265        -->
+266        <receiver
+266-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-34:20
+267            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
+267-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-82
+268            android:exported="false" >
+268-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-37
+269            <intent-filter>
+269-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-33:29
+270                <action android:name="EXTRA_CHOSEN_COMPONENT" />
+270-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:32:17-65
+270-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:32:25-62
+271            </intent-filter>
+272        </receiver>
+273
+274        <provider
+274-->[:image_picker_android] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+275            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+275-->[:image_picker_android] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+276            android:authorities="com.qadriyatlar.akademiyasiapp.flutter.image_provider"
+276-->[:image_picker_android] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+277            android:exported="false"
+277-->[:image_picker_android] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+278            android:grantUriPermissions="true" >
+278-->[:image_picker_android] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+279            <meta-data
+279-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-22:68
+280                android:name="android.support.FILE_PROVIDER_PATHS"
+280-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-67
+281                android:resource="@xml/flutter_image_picker_file_paths" />
+281-->[:share_plus] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-65
+282        </provider>
+283
+284        <activity
+284-->[:url_launcher_android] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+285            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+285-->[:url_launcher_android] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+286            android:exported="false"
+286-->[:url_launcher_android] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+287            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+287-->[:url_launcher_android] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+288        <activity android:name="com.facebook.CustomTabMainActivity" />
+288-->[com.facebook.android:facebook-common:15.0.2] /Users/diyor/.gradle/caches/transforms-3/fed16052c77974f20c3c16fac259c086/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:38:9-71
+288-->[com.facebook.android:facebook-common:15.0.2] /Users/diyor/.gradle/caches/transforms-3/fed16052c77974f20c3c16fac259c086/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:38:19-68
+289        <activity
+289-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:23:9-27:75
+290            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+290-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:24:13-93
+291            android:excludeFromRecents="true"
+291-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:25:13-46
+292            android:exported="false"
+292-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:26:13-37
+293            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+293-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:27:13-72
+294        <!--
+295            Service handling Google Sign-In user revocation. For apps that do not integrate with
+296            Google Sign-In, this service will never be started.
+297        -->
+298        <service
+298-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:33:9-37:51
+299            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+299-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:34:13-89
+300            android:exported="true"
+300-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:35:13-36
+301            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+301-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:36:13-107
+302            android:visibleToInstantApps="true" />
+302-->[com.google.android.gms:play-services-auth:20.5.0] /Users/diyor/.gradle/caches/transforms-3/04193055b86800dc9ce60b2ccd27c81a/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:37:13-48
+303
+304        <receiver
+304-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:31:9-38:20
+305            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+305-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:32:13-78
+306            android:exported="true"
+306-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:33:13-36
+307            android:permission="com.google.android.c2dm.permission.SEND" >
+307-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:34:13-73
+308            <intent-filter>
+308-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-34:29
+309                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+309-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:17-81
+309-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:25-78
+310            </intent-filter>
+311        </receiver>
+312        <!--
+313             FirebaseMessagingService performs security checks at runtime,
+314             but set to not exported to explicitly avoid allowing another app to call it.
+315        -->
+316        <service
+316-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:44:9-51:19
+317            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+317-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:45:13-82
+318            android:directBootAware="true"
+318-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:46:13-43
+319            android:exported="false" >
+319-->[com.google.firebase:firebase-messaging:23.1.2] /Users/diyor/.gradle/caches/transforms-3/3414219ca5f4e05c571fd69a3ea80b32/transformed/jetified-firebase-messaging-23.1.2/AndroidManifest.xml:47:13-37
+320            <intent-filter android:priority="-500" >
+320-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:29
+321                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+321-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-78
+321-->[:firebase_messaging] /Users/diyor/Works/Qadriyatlar Academiyasi/qadriyatlar_app/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-75
+322            </intent-filter>
+323        </service>
+324
+325        <activity
+325-->[com.google.android.gms:play-services-base:18.0.1] /Users/diyor/.gradle/caches/transforms-3/ba9cd8209d7cac076ce90aa40ce8e54d/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+326            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+326-->[com.google.android.gms:play-services-base:18.0.1] /Users/diyor/.gradle/caches/transforms-3/ba9cd8209d7cac076ce90aa40ce8e54d/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+327            android:exported="false"
+327-->[com.google.android.gms:play-services-base:18.0.1] /Users/diyor/.gradle/caches/transforms-3/ba9cd8209d7cac076ce90aa40ce8e54d/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+328            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+328-->[com.google.android.gms:play-services-base:18.0.1] /Users/diyor/.gradle/caches/transforms-3/ba9cd8209d7cac076ce90aa40ce8e54d/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+329
+330        <provider
+330-->[com.google.firebase:firebase-common:20.3.2] /Users/diyor/.gradle/caches/transforms-3/087b502631dd054277db079c057af9d1/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
+331            android:name="com.google.firebase.provider.FirebaseInitProvider"
+331-->[com.google.firebase:firebase-common:20.3.2] /Users/diyor/.gradle/caches/transforms-3/087b502631dd054277db079c057af9d1/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:26:13-77
+332            android:authorities="com.qadriyatlar.akademiyasiapp.firebaseinitprovider"
+332-->[com.google.firebase:firebase-common:20.3.2] /Users/diyor/.gradle/caches/transforms-3/087b502631dd054277db079c057af9d1/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:27:13-72
+333            android:directBootAware="true"
+333-->[com.google.firebase:firebase-common:20.3.2] /Users/diyor/.gradle/caches/transforms-3/087b502631dd054277db079c057af9d1/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:28:13-43
+334            android:exported="false"
+334-->[com.google.firebase:firebase-common:20.3.2] /Users/diyor/.gradle/caches/transforms-3/087b502631dd054277db079c057af9d1/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:29:13-37
+335            android:initOrder="100" />
+335-->[com.google.firebase:firebase-common:20.3.2] /Users/diyor/.gradle/caches/transforms-3/087b502631dd054277db079c057af9d1/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:30:13-36
+336
+337        <receiver
+337-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:29:9-33:20
+338            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+338-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:30:13-85
+339            android:enabled="true"
+339-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:31:13-35
+340            android:exported="false" >
+340-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:32:13-37
+341        </receiver>
+342
+343        <service
+343-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:35:9-38:40
+344            android:name="com.google.android.gms.measurement.AppMeasurementService"
+344-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:36:13-84
+345            android:enabled="true"
+345-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:37:13-35
+346            android:exported="false" />
+346-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:38:13-37
+347        <service
+347-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:39:9-43:72
+348            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+348-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:40:13-87
+349            android:enabled="true"
+349-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:41:13-35
+350            android:exported="false"
+350-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:42:13-37
+351            android:permission="android.permission.BIND_JOB_SERVICE" />
+351-->[com.google.android.gms:play-services-measurement:21.2.2] /Users/diyor/.gradle/caches/transforms-3/f29c569c1f08a583555e9f497fda8330/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:43:13-69
+352
+353        <meta-data
+353-->[com.google.android.gms:play-services-basement:18.2.0] /Users/diyor/.gradle/caches/transforms-3/6933906a0332130d0bbeb9f1b7b13052/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
+354            android:name="com.google.android.gms.version"
+354-->[com.google.android.gms:play-services-basement:18.2.0] /Users/diyor/.gradle/caches/transforms-3/6933906a0332130d0bbeb9f1b7b13052/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
+355            android:value="@integer/google_play_services_version" />
+355-->[com.google.android.gms:play-services-basement:18.2.0] /Users/diyor/.gradle/caches/transforms-3/6933906a0332130d0bbeb9f1b7b13052/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
+356        <!--
+357         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+358         with the application context. This config is merged in with the host app's manifest,
+359         but there can only be one provider with the same authority activated at any given
+360         point; so if the end user has two or more different apps that use Facebook SDK, only the
+361         first one will be able to use the provider. To work around this problem, we use the
+362         following placeholder in the authority to identify each host application as if it was
+363         a completely different provider.
+364        -->
+365        <provider
+365-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:41:9-44:40
+366            android:name="com.facebook.internal.FacebookInitProvider"
+366-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:42:13-70
+367            android:authorities="com.qadriyatlar.akademiyasiapp.FacebookInitProvider"
+367-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:43:13-72
+368            android:exported="false" />
+368-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:44:13-37
+369
+370        <receiver
+370-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:46:9-52:20
+371            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+371-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:47:13-86
+372            android:exported="false" >
+372-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:48:13-37
+373            <intent-filter>
+373-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:49:13-51:29
+374                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+374-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:50:17-95
+374-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:50:25-92
+375            </intent-filter>
+376        </receiver>
+377        <receiver
+377-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:53:9-59:20
+378            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+378-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:54:13-118
+379            android:exported="false" >
+379-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:55:13-37
+380            <intent-filter>
+380-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:56:13-58:29
+381                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+381-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:57:17-103
+381-->[com.facebook.android:facebook-core:15.0.2] /Users/diyor/.gradle/caches/transforms-3/371959e9f45a8032a6363d83c46358ff/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:57:25-100
+382            </intent-filter>
+383        </receiver>
+384
+385        <uses-library
+385-->[androidx.window:window:1.0.0-beta04] /Users/diyor/.gradle/caches/transforms-3/a959b525cdd1861bde0e2d91cfbcd968/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+386            android:name="androidx.window.extensions"
+386-->[androidx.window:window:1.0.0-beta04] /Users/diyor/.gradle/caches/transforms-3/a959b525cdd1861bde0e2d91cfbcd968/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+387            android:required="false" />
+387-->[androidx.window:window:1.0.0-beta04] /Users/diyor/.gradle/caches/transforms-3/a959b525cdd1861bde0e2d91cfbcd968/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+388        <uses-library
+388-->[androidx.window:window:1.0.0-beta04] /Users/diyor/.gradle/caches/transforms-3/a959b525cdd1861bde0e2d91cfbcd968/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+389            android:name="androidx.window.sidecar"
+389-->[androidx.window:window:1.0.0-beta04] /Users/diyor/.gradle/caches/transforms-3/a959b525cdd1861bde0e2d91cfbcd968/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+390            android:required="false" />
+390-->[androidx.window:window:1.0.0-beta04] /Users/diyor/.gradle/caches/transforms-3/a959b525cdd1861bde0e2d91cfbcd968/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+391
+392        <meta-data
+392-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:23:9-25:37
+393            android:name="com.google.android.play.billingclient.version"
+393-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:24:13-73
+394            android:value="5.1.0" />
+394-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:25:13-34
+395
+396        <activity
+396-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:27:9-31:75
+397            android:name="com.android.billingclient.api.ProxyBillingActivity"
+397-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:28:13-78
+398            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+398-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:29:13-96
+399            android:exported="false"
+399-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:30:13-37
+400            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+400-->[com.android.billingclient:billing:5.1.0] /Users/diyor/.gradle/caches/transforms-3/edfff07083ac8c994a9d172b9e058d97/transformed/jetified-billing-5.1.0/AndroidManifest.xml:31:13-72
+401
+402        <service
+402-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/diyor/.gradle/caches/transforms-3/b67963a92e246ef4dfb314c4ad7e2824/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+403            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+403-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/diyor/.gradle/caches/transforms-3/b67963a92e246ef4dfb314c4ad7e2824/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+404            android:exported="false" >
+404-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/diyor/.gradle/caches/transforms-3/b67963a92e246ef4dfb314c4ad7e2824/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+405            <meta-data
+405-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/diyor/.gradle/caches/transforms-3/b67963a92e246ef4dfb314c4ad7e2824/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+406                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+406-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/diyor/.gradle/caches/transforms-3/b67963a92e246ef4dfb314c4ad7e2824/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
+407                android:value="cct" />
+407-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/diyor/.gradle/caches/transforms-3/b67963a92e246ef4dfb314c4ad7e2824/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+408        </service>
+409        <service
+409-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/diyor/.gradle/caches/transforms-3/f4c0caa0109dfe89771b9a77c4d12a3d/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
+410            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+410-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/diyor/.gradle/caches/transforms-3/f4c0caa0109dfe89771b9a77c4d12a3d/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
+411            android:exported="false"
+411-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/diyor/.gradle/caches/transforms-3/f4c0caa0109dfe89771b9a77c4d12a3d/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
+412            android:permission="android.permission.BIND_JOB_SERVICE" >
+412-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/diyor/.gradle/caches/transforms-3/f4c0caa0109dfe89771b9a77c4d12a3d/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
+413        </service>
+414
+415        <receiver
+415-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/diyor/.gradle/caches/transforms-3/f4c0caa0109dfe89771b9a77c4d12a3d/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
+416            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+416-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/diyor/.gradle/caches/transforms-3/f4c0caa0109dfe89771b9a77c4d12a3d/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
+417            android:exported="false" />
+417-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/diyor/.gradle/caches/transforms-3/f4c0caa0109dfe89771b9a77c4d12a3d/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
+418
+419        <provider
+419-->[androidx.emoji2:emoji2:1.2.0] /Users/diyor/.gradle/caches/transforms-3/496842677f72a9b74d7cb30780909346/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+420            android:name="androidx.startup.InitializationProvider"
+420-->[androidx.emoji2:emoji2:1.2.0] /Users/diyor/.gradle/caches/transforms-3/496842677f72a9b74d7cb30780909346/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+421            android:authorities="com.qadriyatlar.akademiyasiapp.androidx-startup"
+421-->[androidx.emoji2:emoji2:1.2.0] /Users/diyor/.gradle/caches/transforms-3/496842677f72a9b74d7cb30780909346/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+422            android:exported="false" >
+422-->[androidx.emoji2:emoji2:1.2.0] /Users/diyor/.gradle/caches/transforms-3/496842677f72a9b74d7cb30780909346/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+423            <meta-data
+423-->[androidx.emoji2:emoji2:1.2.0] /Users/diyor/.gradle/caches/transforms-3/496842677f72a9b74d7cb30780909346/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+424                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+424-->[androidx.emoji2:emoji2:1.2.0] /Users/diyor/.gradle/caches/transforms-3/496842677f72a9b74d7cb30780909346/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+425                android:value="androidx.startup" />
+425-->[androidx.emoji2:emoji2:1.2.0] /Users/diyor/.gradle/caches/transforms-3/496842677f72a9b74d7cb30780909346/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+426            <meta-data
+426-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/diyor/.gradle/caches/transforms-3/d986642f4419e59ff7319691d3d5b612/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+427                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+427-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/diyor/.gradle/caches/transforms-3/d986642f4419e59ff7319691d3d5b612/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+428                android:value="androidx.startup" />
+428-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/diyor/.gradle/caches/transforms-3/d986642f4419e59ff7319691d3d5b612/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+429        </provider>
+430    </application>
+431
+432</manifest>

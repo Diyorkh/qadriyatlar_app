@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1072548249996",
+    "project_id": "qadriyatlar-akademiyasi",
+    "storage_bucket": "qadriyatlar-akademiyasi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072548249996:android:8be5729ebde0e2851c56a9",
+        "android_client_info": {
+          "package_name": "com.qadriyatlar.akademiyasiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072548249996-gggi5vj7rlke7lepmbf3m0p9ldpvg4gj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKbQIxiPqSkJ3u7yuz26PJO7Ar8_Ug1-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072548249996-gggi5vj7rlke7lepmbf3m0p9ldpvg4gj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1072548249996-3pc98j3a0vl4ggdshg8nie4q06h765c9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.stylemixthemes.masterstudyapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
