@@ -48,7 +48,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(height: 10.0),
                 Center(
                   child: const Text(
-                    'Iltimos, davom etish uchun shaklni to\'ldiring',
+                    "Iltimos, davom etish uchun shaklni to'ldiring",
                     style: headline3,
                   ),
                 ),
@@ -89,23 +89,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 TextButton(
                   onPressed: () => Navigator.pop(context),
                   child: RichText(
-                    text: TextSpan(children: [
-                      TextSpan(
-                        text: 'Akkauntingiz bormi? ',
-                        style: headline.copyWith(
-                          color: Colors.grey,
-                          fontSize: 14.0,
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Akkauntingiz bormi? ',
+                          style: headline.copyWith(
+                            color: Colors.grey,
+                            fontSize: 14.0,
+                          ),
                         ),
-                      ),
-                      TextSpan(
-                        text: ' Kirish',
-                        style: headlineDot.copyWith(
-                          fontSize: 14.0,
+                        TextSpan(
+                          text: ' Kirish',
+                          style: headlineDot.copyWith(
+                            fontSize: 14.0,
+                          ),
                         ),
-                      ),
-                    ]),
+                      ],
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),

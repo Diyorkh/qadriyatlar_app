@@ -24,7 +24,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       subtitle: "Karantin o'rganish uchun \neng yaxshi vaqtdir, \nhech qayerdan ham!",
     ),
     SlideContent(
-      title: "Siz uchun kurs \ntoping",
+      title: 'Siz uchun kurs \ntoping',
       subtitle: "Karantin o'rganish uchun \neng yaxshi vaqtdir, \nhech qayerdan ham!",
     ),
     SlideContent(
@@ -180,7 +180,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       ),
                       child: Text(
                         // TODO: 27.09.2023 Add translations
-                        _currentPage < _slideContents.length - 1 ? "Keyingi" : "Boshlash",
+                        _currentPage < _slideContents.length - 1 ? 'Keyingi' : 'Boshlash',
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16.0,

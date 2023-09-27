@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/auth/auth_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/auth/screens/restore_password_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/auth/screens/sign_up_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
-import 'package:qadriyatlar_app/presentation/screens/auth/screens/restore_password_screen.dart';
 import 'package:qadriyatlar_app/presentation/widgets/custom_app_button.dart';
 import 'package:qadriyatlar_app/presentation/widgets/custom_text_field.dart';
 import 'package:qadriyatlar_app/presentation/widgets/flutter_toast.dart';
@@ -367,7 +367,7 @@ class _AuthPhoneWidgetState extends State<AuthPhoneWidget> {
                       children: [
                         TextSpan(
                           // TODO: Add translations
-                          text: 'Akkauntingiz yo\'qmi? ',
+                          text: "Akkauntingiz yo'qmi? ",
                           style: headline.copyWith(
                             color: Colors.grey,
                             fontSize: 14.0,
@@ -375,7 +375,7 @@ class _AuthPhoneWidgetState extends State<AuthPhoneWidget> {
                         ),
                         TextSpan(
                           // TODO: Add translations
-                          text: ' Ro\'yxatdan o\'ting',
+                          text: " Ro'yxatdan o'ting",
                           style: headlineDot.copyWith(
                             fontSize: 14.0,
                           ),
