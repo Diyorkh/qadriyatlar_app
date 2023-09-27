@@ -14,6 +14,11 @@ class ColorApp {
   static const Color kDarkGray = Color(0xFFAAAAAA);
   static const Color kDividerColor = Color(0xFFE5E5E5);
 
+  static const Color blueText = Color(0xFF4D60E7);
+
+  static const Color grayText = Color(0xFF5D5F65);
+  static const Color whiteText = Color(0xFFEDEEEF);
+  static const Color black = Colors.black;
 
   // BottomNavigationBar Color
   static Color unselectedColor = Colors.grey;

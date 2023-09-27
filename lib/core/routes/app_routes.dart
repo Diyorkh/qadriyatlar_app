@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:qadriyatlar_app/presentation/screens/auth/auth_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/auth/screens/restore_password_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/auth/screens/sign_in_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/auth/screens/sign_up_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/category_detail/category_detail_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/change_password/change_password_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/course_detail/course_detail_screen.dart';
@@ -22,7 +24,6 @@ import 'package:qadriyatlar_app/presentation/screens/profile_edit/profile_edit_s
 import 'package:qadriyatlar_app/presentation/screens/questions_screens/question_ask/question_ask_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/questions_screens/question_details/question_details_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/questions_screens/questions_tab/questions_tab_screen.dart';
-import 'package:qadriyatlar_app/presentation/screens/restore_password/restore_password_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/review_write/review_write_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/search_detail/search_detail_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/splash/splash_screen.dart';
@@ -37,9 +38,9 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => SplashScreen(),
         );
-      case AuthScreen.routeName:
+      case SignInScreen.routeName:
         return MaterialPageRoute(
-          builder: (context) => AuthScreen(),
+          builder: (context) => SignInScreen(),
           settings: routeSettings,
         );
       case MainScreen.routeName:
@@ -176,6 +177,16 @@ class AppRoutes {
       case LanguagesScreen.routeName:
         return MaterialPageRoute(
           builder: (context) => LanguagesScreen(),
+          settings: routeSettings,
+        );
+      case SignInScreen.routeName:
+        return MaterialPageRoute(
+          builder: (context) => SignUpScreen(),
+          settings: routeSettings,
+        );
+      case SignUpScreen.routeName:
+        return MaterialPageRoute(
+          builder: (context) => SignUpScreen(),
           settings: routeSettings,
         );
 
