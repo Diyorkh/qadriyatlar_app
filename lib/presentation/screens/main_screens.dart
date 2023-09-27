@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:iconly/iconly.dart';
 import 'package:qadriyatlar_app/core/utils/utils.dart';
 import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/screens/auth/screens/sign_in_screen.dart';
@@ -54,15 +53,17 @@ class MainScreenState extends State<MainScreenWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _getBody(_selectedIndex),
+      body: AnimatedSwitcher(
+        duration: const Duration(microseconds: 500),
+        child: _getBody(_selectedIndex),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 5.0,
         selectedFontSize: 10,
-        backgroundColor: ColorApp.bgColor,
+        backgroundColor: ColorApp.white,
         currentIndex: _selectedIndex,
         selectedItemColor: _selectedItemColor,
         unselectedItemColor: _unselectedItemColor,
-        type: BottomNavigationBarType.fixed,
         onTap: (int index) async {
           setState(() {
             _selectedIndex = index;
@@ -70,23 +71,23 @@ class MainScreenState extends State<MainScreenWidget> {
         },
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: _buildIcon(IconPath.navHome, 0),
+            icon: _buildIcon(IconlyLight.home, 0),
             label: localizations.getLocalization('home_bottom_nav'),
           ),
           BottomNavigationBarItem(
-            icon: _buildIcon(IconPath.navCourses, 1),
+            icon: _buildIcon(IconlyLight.search, 1),
             label: localizations.getLocalization('search_bottom_nav'),
           ),
           BottomNavigationBarItem(
-            icon: _buildIcon(IconPath.navPlay, 2),
+            icon: _buildIcon(IconlyLight.play, 2),
             label: localizations.getLocalization('courses_bottom_nav'),
           ),
           BottomNavigationBarItem(
-            icon: _buildIcon(IconPath.navFavourites, 3),
+            icon: _buildIcon(IconlyLight.heart, 3),
             label: localizations.getLocalization('favorites_bottom_nav'),
           ),
           BottomNavigationBarItem(
-            icon: _buildIcon(IconPath.navProfile, 4),
+            icon: _buildIcon(IconlyLight.profile, 4),
             label: localizations.getLocalization('profile_bottom_nav'),
           ),
         ],
@@ -96,11 +97,10 @@ class MainScreenState extends State<MainScreenWidget> {
 
   Color? _getItemColor(int index) => _selectedIndex == index ? _selectedItemColor : _unselectedItemColor;
 
-  Widget _buildIcon(String iconData, int index) => Padding(
+  Widget _buildIcon(IconData iconData, int index) => Padding(
         padding: const EdgeInsets.only(bottom: 8.0),
-        child: SvgPicture.asset(
+        child: Icon(
           iconData,
-          height: 22.0,
           color: _getItemColor(index),
         ),
       );

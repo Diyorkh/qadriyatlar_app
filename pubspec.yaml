@@ -67,6 +67,7 @@ dependencies:
 
   #ui
   cupertino_icons: ^1.0.5
+  iconly: ^1.0.1
   google_fonts: ^4.0.4
   flutter_rating_bar: ^4.0.1
   flutter_svg: ^1.1.5
