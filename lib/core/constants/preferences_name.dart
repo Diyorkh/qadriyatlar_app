@@ -11,6 +11,9 @@ class PreferencesName {
   /// Selected language
   static const String selectedLangAbbr = 'selectedLangAbbr';
 
+  /// Checks whether the application has started for the first time or not
+  static const String firstEntry = 'firstEntry';
+
   static const String accountLocal = 'accountLocal';
 
   /// Local appSettings data

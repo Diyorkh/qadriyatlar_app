@@ -7,6 +7,7 @@ import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/splash/splash_bloc.dart';
 import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
+import 'package:qadriyatlar_app/presentation/screens/onboarding/onboarding_screen.dart';
 import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
@@ -24,15 +25,29 @@ class SplashScreen extends StatelessWidget {
         child: BlocListener<SplashBloc, SplashState>(
           listener: (context, state) {
             if (state is CloseSplashState) {
-              WidgetsBinding.instance.addPostFrameCallback(
-                (_) {
-                  Navigator.of(context).pushNamedAndRemoveUntil(
-                    MainScreen.routeName,
-                    arguments: MainScreenArgs(),
-                    (_) => false,
-                  );
-                },
-              );
+              bool firstEntry = preferences.getBool(PreferencesName.firstEntry) ?? false;
+
+              if (!firstEntry) {
+                WidgetsBinding.instance.addPostFrameCallback(
+                  (_) {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      OnBoardingScreen.routeName,
+                      arguments: OnBoardingScreen(),
+                      (_) => false,
+                    );
+                  },
+                );
+              } else {
+                WidgetsBinding.instance.addPostFrameCallback(
+                  (_) {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      MainScreen.routeName,
+                      arguments: MainScreenArgs(),
+                      (_) => false,
+                    );
+                  },
+                );
+              }
             }
           },
           child: BlocBuilder<SplashBloc, SplashState>(

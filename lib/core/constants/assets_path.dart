@@ -1,6 +1,9 @@
 class ImagePath {
   static const _folderPath = 'assets/images';
   static const logo = '$_folderPath/logo.png';
+  static const introOne = '$_folderPath/intro.png';
+  static const introTwo = '$_folderPath/intro2.png';
+  static const introThree = '$_folderPath/intro3.png';
 }
 
 class IconPath {

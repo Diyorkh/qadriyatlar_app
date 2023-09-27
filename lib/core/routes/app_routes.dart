@@ -18,6 +18,7 @@ import 'package:qadriyatlar_app/presentation/screens/lesson_types/video_lesson/l
 import 'package:qadriyatlar_app/presentation/screens/lesson_types/video_lesson/widgets/video_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/lesson_types/zoom_lesson/zoom.dart';
 import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
+import 'package:qadriyatlar_app/presentation/screens/onboarding/onboarding_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/orders/orders_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/plans/plans_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/profile_edit/profile_edit_screen.dart';
@@ -179,14 +180,14 @@ class AppRoutes {
           builder: (context) => LanguagesScreen(),
           settings: routeSettings,
         );
-      case SignInScreen.routeName:
+      case SignUpScreen.routeName:
         return MaterialPageRoute(
           builder: (context) => SignUpScreen(),
           settings: routeSettings,
         );
-      case SignUpScreen.routeName:
+      case OnBoardingScreen.routeName:
         return MaterialPageRoute(
-          builder: (context) => SignUpScreen(),
+          builder: (context) => OnBoardingScreen(),
           settings: routeSettings,
         );
 
