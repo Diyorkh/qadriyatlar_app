@@ -62,25 +62,28 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 3,
-      child: Container(
-        padding: EdgeInsets.all(8.0),
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Center(
-          child: Text(
-            unescape.convert(title),
-            maxLines: 4,
-            textScaleFactor: 1.0,
-            textAlign: TextAlign.center,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-              fontSize: 15,
+    return SizedBox(
+      width: 120,
+      child: Card(
+        elevation: 3,
+        child: Container(
+          padding: EdgeInsets.all(8.0),
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Center(
+            child: Text(
+              unescape.convert(title),
+              maxLines: 2,
+              textScaleFactor: 1.0,
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+                fontSize: 15,
+              ),
             ),
           ),
         ),
