@@ -20,6 +20,7 @@ class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              // TODO 27.09.2023 Add translation
               Text(
                 'Salom,',
                 style: TextStyle(
@@ -29,6 +30,7 @@ class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
                 ),
               ),
               const SizedBox(height: 4),
+              // TODO 27.09.2023 Add real text
               Text(
                 'Mirolim Yadgarov',
                 style: GoogleFonts.montserrat(

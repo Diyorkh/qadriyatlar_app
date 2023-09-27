@@ -14,6 +14,9 @@ class PreferencesName {
   /// Checks whether the application has started for the first time or not
   static const String firstEntry = 'firstEntry';
 
+  /// User name
+  static const String userName = 'userName';
+
   static const String accountLocal = 'accountLocal';
 
   /// Local appSettings data

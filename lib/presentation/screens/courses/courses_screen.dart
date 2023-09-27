@@ -17,6 +17,7 @@ import 'package:qadriyatlar_app/presentation/bloc/courses/user_courses_bloc.dart
 import 'package:qadriyatlar_app/presentation/screens/category_detail/category_detail_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
 import 'package:qadriyatlar_app/presentation/screens/user_course/user_course.dart';
+import 'package:qadriyatlar_app/presentation/widgets/custom_app_button.dart';
 import 'package:qadriyatlar_app/presentation/widgets/empty_widget.dart';
 import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
@@ -62,15 +63,16 @@ class _CoursesWidgetState extends State<_CoursesWidget> {
   Widget build(BuildContext context) {
     updateCompletedLesson();
     return Scaffold(
-      backgroundColor: Color(0xFFF3F5F9),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        backgroundColor: ColorApp.mainColor,
+        elevation: 0.0,
+        backgroundColor: Colors.white,
         title: Text(
           localizations.getLocalization('user_courses_screen_title'),
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 18,
           ),
         ),
@@ -209,16 +211,17 @@ class _CourseItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double imgHeight = (MediaQuery.of(context).size.width > 450) ? 370.0 : 160.0;
+    final double imgHeight = (MediaQuery.of(context).size.width > 450) ? 460.0 : 160.0;
 
     return Padding(
       padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 15.0),
       child: Card(
         borderOnForeground: true,
-        elevation: 2.5,
+        elevation: 1,
+        color: const Color.fromRGBO(243, 243, 248, 1),
         shape: RoundedRectangleBorder(
           borderRadius: const BorderRadius.all(
-            Radius.circular(0.0),
+            Radius.circular(10.0),
           ),
         ),
         child: Column(
@@ -268,9 +271,8 @@ class _CourseItem extends StatelessWidget {
                   textScaleFactor: 1.0,
                   maxLines: 2,
                   style: TextStyle(
-                    fontSize: 22,
-                    color: ColorApp.dark,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -286,7 +288,7 @@ class _CourseItem extends StatelessWidget {
                     child: LinearProgressIndicator(
                       value: int.parse(postsBean.progress) / 100,
                       backgroundColor: Color(0xFFD7DAE2),
-                      valueColor: AlwaysStoppedAnimation(ColorApp.secondaryColor),
+                      valueColor: AlwaysStoppedAnimation(ColorApp.mainColor),
                     ),
                   ),
                 ),
@@ -316,15 +318,9 @@ class _CourseItem extends StatelessWidget {
             //Button 'CONTINUE'
             Padding(
               padding: const EdgeInsets.only(top: 10.0, left: 16, right: 16, bottom: 16),
-              child: MaterialButton(
-                minWidth: double.infinity,
-                color: ColorApp.secondaryColor,
+              child: CustomAppButton(
                 onPressed: () => openCourse(context),
-                child: Text(
-                  localizations.getLocalization('continue_button'),
-                  textScaleFactor: 1.0,
-                ),
-                textColor: Colors.white,
+                label: localizations.getLocalization('continue_button'),
               ),
             ),
           ],

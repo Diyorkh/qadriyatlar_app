@@ -39,10 +39,10 @@ class SectionItem {
 
   factory SectionItem.fromJson(Map<String, dynamic> json) => _$SectionItemFromJson(json);
 
-  int id;
-  String? title;
-  final int order;
-  List<SectionItemsBean>? sectionItems;
+  final int? id;
+  final String? title;
+  final int? order;
+  final List<SectionItemsBean>? sectionItems;
 
   Map<String, dynamic> toJson() => _$SectionItemToJson(this);
 }

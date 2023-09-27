@@ -174,7 +174,6 @@ class CourseCard extends StatelessWidget {
     }
 
     return ZoomTapAnimation(
-      onTap: () {},
       child: Card(
         color: const Color.fromRGBO(243, 243, 248, 1),
         shape: RoundedRectangleBorder(
