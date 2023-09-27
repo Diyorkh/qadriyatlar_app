@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/data/models/category/category.dart';
 import 'package:qadriyatlar_app/data/models/course/courses_response.dart';
@@ -7,6 +7,7 @@ import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/screens/category_detail/category_detail_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/course_detail/course_detail_screen.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class NewCoursesWidget extends StatelessWidget {
   NewCoursesWidget(this.title, this.courses, {Key? key}) : super(key: key);
@@ -17,34 +18,39 @@ class NewCoursesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return courses.length != 0
-        ? Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 30.0, left: 30.0, bottom: 20),
-                child: Text(
-                  localizations.getLocalization('new_courses'),
-                  textScaleFactor: 1.0,
-                  style: Theme.of(context).primaryTextTheme.titleLarge?.copyWith(
-                        color: ColorApp.dark,
-                        fontStyle: FontStyle.normal,
-                      ),
+        ? SizedBox(
+            height: 370.0,
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(top: 30.0, left: 20.0, bottom: 10),
+                  child: Text(
+                    localizations.getLocalization('new_courses'),
+                    textScaleFactor: 1.0,
+                    style: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
-              ),
-              DecoratedBox(
-                decoration: BoxDecoration(color: Color(0xFFeef1f7)),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 20.0, bottom: 20),
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(minHeight: 370, maxHeight: 390),
-                    child: ListView.builder(
+                Expanded(
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(color: Color(0xFFeef1f7)),
+                    child: GridView.builder(
+                      shrinkWrap: true,
                       itemCount: courses.length,
-                      padding: const EdgeInsets.all(8.0),
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 1,
+                        childAspectRatio: 1.3,
+                      ),
+                      padding: EdgeInsets.only(left: 5),
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        var item = courses[index];
-                        var padding = (index == 0) ? 20.0 : 0.0;
+                        final item = courses[index];
 
                         double? rating = 0.0;
                         num? reviews = 0;
@@ -60,7 +66,7 @@ class NewCoursesWidget extends StatelessWidget {
                             );
                           },
                           child: Padding(
-                            padding: EdgeInsets.only(left: padding),
+                            padding: const EdgeInsets.all(8.0),
                             child: CourseCard(
                               image: item?.images?.small,
                               category: item!.categoriesObject.isNotEmpty ? item.categoriesObject.first : null,
@@ -78,8 +84,8 @@ class NewCoursesWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         : SizedBox();
   }
@@ -118,7 +124,7 @@ class CourseCard extends StatelessWidget {
 
     if (free!) {
       buildPrice = Padding(
-        padding: const EdgeInsets.only(left: 18.0),
+        padding: const EdgeInsets.only(left: 8.0, bottom: 8.0),
         child: Text(
           localizations.getLocalization('course_free_price'),
           textScaleFactor: 1.0,
@@ -126,22 +132,24 @@ class CourseCard extends StatelessWidget {
                 color: ColorApp.dark,
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.bold,
+                fontSize: 17.0,
               ),
         ),
       );
     } else {
       buildPrice = Expanded(
         child: Padding(
-          padding: const EdgeInsets.only(top: 8.0, left: 16.0, right: 16.0),
+          padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
           child: Row(
             children: <Widget>[
               Text(
                 price!,
                 textScaleFactor: 1.0,
-                style: Theme.of(context)
-                    .primaryTextTheme
-                    .headlineSmall
-                    ?.copyWith(color: ColorApp.dark, fontStyle: FontStyle.normal, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  color: ColorApp.dark,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17,
+                ),
               ),
               Visibility(
                 visible: oldPrice != null,
@@ -153,6 +161,7 @@ class CourseCard extends StatelessWidget {
                     style: Theme.of(context).primaryTextTheme.headlineSmall?.copyWith(
                           color: Color(0xFF999999),
                           fontStyle: FontStyle.normal,
+                          fontSize: 17.0,
                           decoration: TextDecoration.lineThrough,
                         ),
                   ),
@@ -164,10 +173,13 @@ class CourseCard extends StatelessWidget {
       );
     }
 
-    return SizedBox(
-      width: 300,
+    return ZoomTapAnimation(
+      onTap: () {},
       child: Card(
-        borderOnForeground: true,
+        color: const Color.fromRGBO(243, 243, 248, 1),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
         elevation: 3,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -182,8 +194,8 @@ class CourseCard extends StatelessWidget {
                   ),
                   child: Image.network(
                     image!,
-                    width: 320,
-                    height: 160,
+                    height: 110,
+                    width: double.infinity,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -209,7 +221,7 @@ class CourseCard extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
+              padding: const EdgeInsets.only(top: 11.0, left: 8.0, right: 8.0, bottom: 5.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(
@@ -221,60 +233,54 @@ class CourseCard extends StatelessWidget {
                 child: Text(
                   categoryName,
                   textScaleFactor: 1.0,
-                  style: TextStyle(fontSize: 18, color: Color(0xFF2a3045).withOpacity(0.5)),
-                ),
-              ),
-            ),
-            Container(
-              height: 60,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 6.0, left: 16.0, right: 16.0),
-                child: Text(
-                  unescape.convert(title ?? ''),
-                  textScaleFactor: 1.0,
-                  maxLines: 2,
-                  style: TextStyle(fontSize: 22, color: ColorApp.dark),
+                  style: const TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
+              padding: const EdgeInsets.only(top: 6.0, left: 8.0, right: 8.0),
+              child: Text(
+                unescape.convert(title ?? ''),
+                textScaleFactor: 1.0,
+                maxLines: 2,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0, right: 8.0),
               child: Divider(
                 color: Color(0xFFe0e0e0),
                 thickness: 1.3,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 16.0, left: 15.0, right: 16.0),
+              padding: const EdgeInsets.only(left: 8.0, right: 8.0),
               child: Row(
                 children: <Widget>[
-                  RatingBar.builder(
-                    initialRating: stars!,
-                    minRating: 0,
-                    direction: Axis.horizontal,
-                    tapOnlyMode: true,
-                    glow: false,
-                    allowHalfRating: true,
-                    ignoreGestures: true,
-                    itemCount: 5,
-                    itemSize: 19,
-                    itemBuilder: (context, _) => Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    onRatingUpdate: (rating) {},
-                  ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
+                    padding: const EdgeInsets.only(right: 8.0),
                     child: Text(
                       '${stars} (${reviews})',
                       textScaleFactor: 1.0,
                       style: TextStyle(fontSize: 16),
                     ),
                   ),
+                  Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                    size: 20,
+                  ),
                 ],
               ),
             ),
+            const Spacer(),
             buildPrice,
           ],
         ),

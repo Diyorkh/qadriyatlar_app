@@ -1250,13 +1250,19 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "zoom_tap_animation",
+      "rootUri": "file:///Users/diyor/.pub-cache/hosted/pub.dev/zoom_tap_animation-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "qadriyatlar_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-09-27T00:15:34.774790Z",
+  "generated": "2023-09-27T00:52:04.143242Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }

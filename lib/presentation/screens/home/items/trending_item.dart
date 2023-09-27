@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/data/models/category/category.dart';
 import 'package:qadriyatlar_app/data/models/course/courses_response.dart';
@@ -7,6 +7,7 @@ import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/screens/category_detail/category_detail_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/course_detail/course_detail_screen.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class TrendingWidget extends StatelessWidget {
   TrendingWidget(
@@ -36,23 +37,24 @@ class TrendingWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0, left: 30.0, bottom: 20),
+                  padding: const EdgeInsets.only(top: 20.0, left: 20.0, bottom: 20),
                   child: Text(
                     localizations.getLocalization('trending_courses'),
                     textScaleFactor: 1.0,
-                    style: Theme.of(context).primaryTextTheme.titleLarge?.copyWith(
-                          color: primaryTextColor,
-                          fontStyle: FontStyle.normal,
-                        ),
+                    style: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      color: primaryTextColor,
+                    ),
                   ),
                 ),
                 SizedBox(
-                  height: 220,
+                  height: 240,
                   child: ListView.builder(
                     itemCount: courses.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
-                      double leftPadding = (index == 0) ? 30 : 8;
+                      double leftPadding = (index == 0) ? 20 : 8;
 
                       final item = courses[index];
 
@@ -124,7 +126,7 @@ class TrendingCourseItem extends StatelessWidget {
   final bool darkMode;
 
   String get categoryName =>
-      (category != null && category!.isNotEmpty) ? "${unescape.convert(category!.first?.name ?? "")} >" : '';
+      (category != null && category!.isNotEmpty) ? "${unescape.convert(category!.first?.name ?? "")} >" : 'No info';
 
   Color get backgroundColor => darkMode ? ColorApp.dark : Colors.white;
 
@@ -142,10 +144,12 @@ class TrendingCourseItem extends StatelessWidget {
         child: Text(
           localizations.getLocalization('course_free_price'),
           textScaleFactor: 1.0,
-          style: Theme.of(context)
-              .primaryTextTheme
-              .titleMedium
-              ?.copyWith(color: primaryTextColor, fontStyle: FontStyle.normal, fontWeight: FontWeight.bold),
+          style: Theme.of(context).primaryTextTheme.titleMedium?.copyWith(
+                color: primaryTextColor,
+                fontStyle: FontStyle.normal,
+                fontWeight: FontWeight.bold,
+                fontSize: 17,
+              ),
         ),
       );
     } else {
@@ -172,6 +176,7 @@ class TrendingCourseItem extends StatelessWidget {
                         color: secondaryTextColor,
                         fontStyle: FontStyle.normal,
                         decoration: TextDecoration.lineThrough,
+                        fontSize: 17.0,
                       ),
                 ),
               ),
@@ -181,88 +186,80 @@ class TrendingCourseItem extends StatelessWidget {
       );
     }
 
-    return SizedBox(
-      width: 170,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          Image.network(
-            image!,
-            fit: BoxFit.cover,
-            width: 160,
-            height: 80,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 8.0, left: 0.0, right: 16.0),
-            child: GestureDetector(
-              onTap: () {
-                if (category != null && category!.isNotEmpty)
-                  Navigator.pushNamed(
-                    context,
-                    CategoryDetailScreen.routeName,
-                    arguments: CategoryDetailScreenArgs(category!.first),
-                  );
-              },
-              child: Text(
-                categoryName,
-                textScaleFactor: 1.0,
-                style: Theme.of(context).primaryTextTheme.titleMedium?.copyWith(
-                      color: secondaryTextColor,
-                      fontStyle: FontStyle.normal,
-                      fontSize: 12,
-                    ),
+    return ZoomTapAnimation(
+      child: SizedBox(
+        width: 170,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Image.network(
+              image!,
+              fit: BoxFit.cover,
+              height: 100,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 11.0, left: 0.0, right: 16.0),
+              child: GestureDetector(
+                onTap: () {
+                  if (category != null && category!.isNotEmpty)
+                    Navigator.pushNamed(
+                      context,
+                      CategoryDetailScreen.routeName,
+                      arguments: CategoryDetailScreenArgs(category!.first),
+                    );
+                },
+                child: Text(
+                  categoryName,
+                  textScaleFactor: 1.0,
+                  style: Theme.of(context).primaryTextTheme.titleMedium?.copyWith(
+                        color: secondaryTextColor,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 12,
+                      ),
+                ),
               ),
             ),
-          ),
-          Container(
-            height: 32,
-            child: Padding(
+            Padding(
               padding: const EdgeInsets.only(top: 4.0, left: 0.0, right: 16.0),
               child: Text(
                 unescape.convert(title ?? ''),
                 textScaleFactor: 1.0,
                 maxLines: 2,
-                style: Theme.of(context).primaryTextTheme.titleMedium?.copyWith(
-                      color: primaryTextColor,
-                      fontStyle: FontStyle.normal,
-                      fontSize: 12,
-                    ),
+                style: TextStyle(
+                  fontSize: 17,
+                  color: primaryTextColor,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 4.0, left: 0.0, right: 16.0),
-            child: Row(
-              children: <Widget>[
-                RatingBar.builder(
-                  initialRating: stars,
-                  minRating: 0,
-                  direction: Axis.horizontal,
-                  allowHalfRating: true,
-                  ignoreGestures: true,
-                  itemCount: 5,
-                  itemSize: 16,
-                  itemBuilder: (context, _) => Icon(
+            Padding(
+              padding: const EdgeInsets.only(top: 4.0, left: 0.0, right: 16.0),
+              child: Row(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(right: 4.0),
+                    child: Text(
+                      '$stars ($reviews)',
+                      textScaleFactor: 1.0,
+                      style: GoogleFonts.lato(
+                        color: primaryTextColor,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Icon(
                     Icons.star,
                     color: Colors.amber,
+                    size: 20,
                   ),
-                  glow: false,
-                  onRatingUpdate: (double value) {},
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 4.0),
-                  child: Text(
-                    '$stars ($reviews)',
-                    textScaleFactor: 1.0,
-                    style: TextStyle(fontSize: 16, color: primaryTextColor),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          buildPrice,
-        ],
+            buildPrice,
+          ],
+        ),
       ),
     );
   }

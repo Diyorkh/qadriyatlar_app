@@ -1458,6 +1458,13 @@
             </list>
           </value>
         </entry>
+        <entry key="zoom_tap_animation">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/zoom_tap_animation-1.1.0/lib" />
+            </list>
+          </value>
+        </entry>
       </option>
     </properties>
     <CLASSES>
@@ -1665,6 +1672,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xml-6.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/yaml-3.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/youtube_player_flutter-8.1.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/zoom_tap_animation-1.1.0/lib" />
       <root url="file://$USER_HOME$/Documents/Environments/flutter_3.10.1/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$USER_HOME$/Documents/Environments/flutter_3.10.1/packages/flutter/lib" />
       <root url="file://$USER_HOME$/Documents/Environments/flutter_3.10.1/packages/flutter_test/lib" />
