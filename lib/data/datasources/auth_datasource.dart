@@ -17,6 +17,12 @@ abstract class AuthDataSource {
     String? rePassword,
   });
 
+  Future<AuthPhoneResponse> registerAccount({
+    required String phone,
+    required String password,
+    required String name,
+  });
+
   Future<RestorePasswordResponse> restorePassword(String email);
 
   Future<ChangePasswordResponse> changePassword(String oldPassword, String newPassword);
@@ -170,6 +176,32 @@ class AuthDataSourceImpl implements AuthDataSource {
       );
 
       return ChangePasswordResponse.fromJson(response.data);
+    } on DioException catch (e) {
+      throw Exception(e.message);
+    }
+  }
+
+  @override
+  Future<AuthPhoneResponse> registerAccount({
+    required String phone,
+    required String password,
+    required String name,
+  }) async {
+    Map<String, dynamic> queryParams = {
+      'phone': phone,
+      'password': password,
+      'name': name,
+      'register': true,
+      'password_re': password,
+    };
+
+    try {
+      Response response = await _httpService.dio.post(
+        '/login/account',
+        queryParameters: queryParams,
+      );
+
+      return AuthPhoneResponse.fromJson(response.data);
     } on DioException catch (e) {
       throw Exception(e.message);
     }

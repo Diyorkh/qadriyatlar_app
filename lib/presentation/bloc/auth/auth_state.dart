@@ -20,6 +20,12 @@ class AuthVerifyPhoneState extends AuthState {
   final String message;
 }
 
+class AuthLimitPhoneState extends AuthState {
+  AuthLimitPhoneState(this.message);
+
+  final String message;
+}
+
 class SuccessAuthPhoneState extends AuthState {}
 
 class ErrorAuthPhoneState extends AuthState {
@@ -56,6 +62,17 @@ class SuccessLoginAccountState extends AuthState {}
 
 class ErrorLoginAccountState extends AuthState {
   ErrorLoginAccountState(this.message);
+
+  final String message;
+}
+
+// Register Account State
+class LoadingRegisterAccountState extends AuthState {}
+
+class SuccessRegisterAccountState extends AuthState {}
+
+class ErrorRegisterAccountState extends AuthState {
+  ErrorRegisterAccountState(this.message);
 
   final String message;
 }

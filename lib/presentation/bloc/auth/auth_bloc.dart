@@ -1,10 +1,7 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
-import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/core/errors/auth_error.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/data/models/auth_error/auth_error.dart';
@@ -25,6 +22,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           emit(AuthPasswordState(response.message));
         } else if (response.status == AuthPhoneStatus.verify) {
           emit(AuthVerifyPhoneState(response.message));
+        } else if (response.status == AuthPhoneStatus.limit) {
+          emit(AuthLimitPhoneState(response.message));
         }
       } on AuthError catch (e, s) {
         logger.e('Error signUp from API', e, s);
@@ -82,21 +81,25 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       }
     });
 
-    on<DemoAuthEvent>((event, emit) async {
-      emit(LoadingDemoAuthState());
+    on<RegisterAccountEvent>((event, emit) async {
+      emit(LoadingRegisterAccountState());
       try {
-        preferences.setBool(PreferencesName.demoMode, true);
-        await _repository.demoAuth();
-        emit(SuccessDemoAuthState());
+        final response = await _repository.registerAccount(
+          phone: event.userPhone,
+          password: event.userPassword,
+          name: event.userName,
+        );
+        if (response.status == AuthPhoneStatus.error) {
+          emit(ErrorRegisterAccountState(response.message));
+        } else {
+          emit(SuccessRegisterAccountState());
+        }
       } on AuthError catch (e, s) {
-        logger.e('Error calling demoAuth()', e, s);
-        preferences.remove(PreferencesName.demoMode);
-        emit(ErrorDemoAuthState(e.authErrorResponse.message ?? 'Unknown Error'));
+        logger.e('Error signUp from API', e, s);
+        emit(ErrorRegisterAccountState(e.authErrorResponse.message ?? 'Unknown Error'));
       } catch (e, s) {
-        logger.e('Error demoAuth', e, s);
-        preferences.remove(PreferencesName.demoMode);
-        var errorData = json.decode(e.toString());
-        emit(ErrorDemoAuthState(errorData['message']));
+        logger.e('Error signUp', e, s);
+        emit(ErrorRegisterAccountState(e.toString()));
       }
     });
 

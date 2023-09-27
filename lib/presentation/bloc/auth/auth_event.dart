@@ -30,6 +30,18 @@ class LoginAccountEvent extends AuthEvent {
   final bool register;
 }
 
+class RegisterAccountEvent extends AuthEvent {
+  RegisterAccountEvent({
+    required this.userPhone,
+    required this.userPassword,
+    required this.userName,
+  });
+
+  final String userPhone;
+  final String userPassword;
+  final String userName;
+}
+
 class AuthSocialsEvent extends AuthEvent {
   AuthSocialsEvent({
     required this.providerType,

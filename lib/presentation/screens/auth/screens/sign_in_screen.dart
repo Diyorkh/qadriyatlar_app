@@ -57,9 +57,7 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
               backgroundColor: Colors.white,
               leading: Navigator.of(context).canPop()
                   ? IconButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
+                      onPressed: () => Navigator.of(context).pop(),
                       icon: Icon(
                         Icons.arrow_back_ios_new_outlined,
                         color: ColorApp.mainColor,

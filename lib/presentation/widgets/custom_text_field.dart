@@ -10,11 +10,13 @@ class CustomTextField extends StatelessWidget {
     this.helperText,
     this.validator,
     this.suffixWidget,
+    this.errorText,
   });
 
   final TextEditingController controller;
   final String? hintText;
   final String? helperText;
+  final String? errorText;
   final FormFieldValidator<String>? validator;
   final IconData? suffixIcon;
   final Widget? suffixWidget;
@@ -25,8 +27,23 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       textAlignVertical: TextAlignVertical.center,
       decoration: InputDecoration(
+        errorText: errorText,
+        errorMaxLines: 3,
         hintText: hintText,
         helperText: helperText,
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0),
+          borderSide: BorderSide(
+            width: 2,
+            color: ColorApp.redColor,
+          ),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0),
+          borderSide: BorderSide(
+            color: ColorApp.redColor,
+          ),
+        ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20.0),
           borderSide: BorderSide(

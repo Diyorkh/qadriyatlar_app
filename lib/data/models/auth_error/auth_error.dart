@@ -48,4 +48,4 @@ class AuthPhoneResponse {
   Map<String, dynamic> toJson() => _$AuthPhoneResponseToJson(this);
 }
 
-enum AuthPhoneStatus { password, verify, error }
+enum AuthPhoneStatus { password, verify, error, limit }

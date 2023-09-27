@@ -19,6 +19,12 @@ abstract class AuthRepository {
     String? rePassword,
   });
 
+  Future<AuthPhoneResponse> registerAccount({
+    required String phone,
+    required String password,
+    required String name,
+  });
+
   Future<RestorePasswordResponse> restorePassword(String email);
 
   Future authSocialsUser(String providerType, String? idToken, String accessToken);
@@ -63,6 +69,25 @@ class AuthRepositoryImpl extends AuthRepository {
       password: password,
       register: register,
       rePassword: rePassword,
+    );
+
+    if (response.token != null && response.token!.isNotEmpty) {
+      _saveToken(response.token!);
+    }
+
+    return response;
+  }
+
+  @override
+  Future<AuthPhoneResponse> registerAccount({
+    required String phone,
+    required String password,
+    required String name,
+  }) async {
+    AuthPhoneResponse response = await _authDataSource.registerAccount(
+      phone: phone,
+      password: password,
+      name: name,
     );
 
     if (response.token != null && response.token!.isNotEmpty) {

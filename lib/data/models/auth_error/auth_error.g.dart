@@ -51,4 +51,5 @@ const _$AuthPhoneStatusEnumMap = {
   AuthPhoneStatus.password: 'password',
   AuthPhoneStatus.verify: 'verify',
   AuthPhoneStatus.error: 'error',
+  AuthPhoneStatus.limit: 'limit',
 };
