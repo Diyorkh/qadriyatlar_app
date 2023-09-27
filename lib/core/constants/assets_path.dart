@@ -77,4 +77,5 @@ class IconPath {
   static const xlsx = '$_folderPath/xlsx.svg';
   static const zip = '$_folderPath/zip.svg';
   static const zip2 = '$_folderPath/zip2.svg';
+  static const phone = '$_folderPath/phone.svg';
 }

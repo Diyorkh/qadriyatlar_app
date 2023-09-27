@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:qadriyatlar_app/core/constants/assets_path.dart';
 import 'package:qadriyatlar_app/core/utils/utils.dart';
 import 'package:qadriyatlar_app/main.dart';
-import 'package:qadriyatlar_app/presentation/screens/auth/auth_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/auth/screens/sign_in_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/courses/courses_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/favorites/favorites_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/home/home_screen.dart';
@@ -117,7 +117,7 @@ class MainScreenState extends State<MainScreenWidget> {
         return FavoritesScreen();
       case 4:
         if (!isAuth()) {
-          return AuthScreen();
+          return SignInScreen();
         } else {
           return ProfileScreen();
         }
