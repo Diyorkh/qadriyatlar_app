@@ -39,115 +39,115 @@ class _FavoritesScreenWidgetState extends State<_FavoritesScreenWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF3F5F9),
-      appBar: AppBar(
-        backgroundColor: ColorApp.mainColor,
-        automaticallyImplyLeading: false,
-        centerTitle: true,
-        title: Text(
-          localizations.getLocalization('favorites_title'),
-          textScaleFactor: 1.0,
-          style: TextStyle(color: Colors.white, fontSize: 18),
-        ),
-      ),
-      body: BlocListener<FavoritesBloc, FavoritesState>(
-        listener: (context, state) {
-          if (state is SuccessDeleteFavoriteCourseState) {
-            BlocProvider.of<FavoritesBloc>(context).add(FetchFavorites());
-          }
-        },
-        child: GestureDetector(
-          onTap: () {
-            setState(() {
-              selectedId = null;
-            });
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: BlocListener<FavoritesBloc, FavoritesState>(
+          listener: (context, state) {
+            if (state is SuccessDeleteFavoriteCourseState) {
+              BlocProvider.of<FavoritesBloc>(context).add(FetchFavorites());
+            }
           },
-          child: BlocBuilder<FavoritesBloc, FavoritesState>(
-            builder: (context, state) {
-              if (state is InitialFavoritesState) {
-                return LoaderWidget(
-                  loaderColor: ColorApp.mainColor,
-                );
-              }
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedId = null;
+              });
+            },
+            child: BlocBuilder<FavoritesBloc, FavoritesState>(
+              builder: (context, state) {
+                if (state is InitialFavoritesState) {
+                  return LoaderWidget(
+                    loaderColor: ColorApp.mainColor,
+                  );
+                }
 
-              if (state is UnauthorizedState) {
-                return UnauthorizedWidget(
-                  onTap: () => Navigator.pushReplacementNamed(
-                    context,
-                    MainScreen.routeName,
-                    arguments: MainScreenArgs(selectedIndex: 4),
-                  ),
-                );
-              }
+                if (state is UnauthorizedState) {
+                  return UnauthorizedWidget(
+                    onTap: () => Navigator.pushReplacementNamed(
+                      context,
+                      MainScreen.routeName,
+                      arguments: MainScreenArgs(selectedIndex: 4),
+                    ),
+                  );
+                }
 
-              if (state is EmptyFavoritesState) {
-                return EmptyWidget(
-                  iconData: IconPath.emptyCourses,
-                  title: localizations.getLocalization('no_user_favorites_screen_title'),
-                );
-              }
+                if (state is EmptyFavoritesState) {
+                  return EmptyWidget(
+                    image: ImagePath.ghost,
+                    title: localizations.getLocalization('no_user_favorites_screen_title'),
+                    buttonText: 'Kurslarni ko"ring',
+                    onTap: () {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        MainScreen.routeName,
+                        arguments: MainScreenArgs(selectedIndex: 4),
+                      );
+                    },
+                  );
+                }
 
-              if (state is LoadedFavoritesState) {
-                return Padding(
-                  padding: const EdgeInsets.only(left: 16.0, top: 10.0, right: 16.0),
-                  child: AlignedGridView.count(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 4,
-                    crossAxisSpacing: 4,
-                    itemCount: state.favoriteCourses.length,
-                    itemBuilder: (context, index) {
-                      var item = state.favoriteCourses[index];
-                      var itemId = item!.id;
-                      var itemState = CourseGridItemEditingState.primary;
+                if (state is LoadedFavoritesState) {
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 16.0, top: 10.0, right: 16.0),
+                    child: AlignedGridView.count(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 4,
+                      crossAxisSpacing: 4,
+                      itemCount: state.favoriteCourses.length,
+                      itemBuilder: (context, index) {
+                        var item = state.favoriteCourses[index];
+                        var itemId = item!.id;
+                        var itemState = CourseGridItemEditingState.primary;
 
-                      if (selectedId == null) {
-                        itemState = CourseGridItemEditingState.primary;
-                      } else {
-                        if (selectedId == itemId) {
-                          itemState = CourseGridItemEditingState.selected;
+                        if (selectedId == null) {
+                          itemState = CourseGridItemEditingState.primary;
                         } else {
-                          itemState = CourseGridItemEditingState.shadowed;
+                          if (selectedId == itemId) {
+                            itemState = CourseGridItemEditingState.selected;
+                          } else {
+                            itemState = CourseGridItemEditingState.shadowed;
+                          }
                         }
-                      }
-                      return CourseGridItemSelectable(
-                        coursesBean: item,
-                        onTap: () {
-                          if (selectedId != itemId) {
+                        return CourseGridItemSelectable(
+                          coursesBean: item,
+                          onTap: () {
+                            if (selectedId != itemId) {
+                              setState(() {
+                                selectedId = null;
+                              });
+                            }
+                          },
+                          onDeletePressed: () {
                             setState(() {
                               selectedId = null;
                             });
-                          }
-                        },
-                        onDeletePressed: () {
-                          setState(() {
-                            selectedId = null;
-                          });
-                          BlocProvider.of<FavoritesBloc>(context).add(DeleteEvent(itemId));
-                        },
-                        onSelected: () {
-                          setState(() {
+                            BlocProvider.of<FavoritesBloc>(context).add(DeleteEvent(itemId));
+                          },
+                          onSelected: () {
                             setState(() {
-                              selectedId = itemId;
+                              setState(() {
+                                selectedId = itemId;
+                              });
                             });
-                          });
-                        },
-                        itemState: itemState,
-                      );
-                    },
-                  ),
-                );
-              }
+                          },
+                          itemState: itemState,
+                        );
+                      },
+                    ),
+                  );
+                }
 
-              if (state is ErrorFavoritesState) {
+                if (state is ErrorFavoritesState) {
+                  return ErrorCustomWidget(
+                    onTap: () => BlocProvider.of<FavoritesBloc>(context).add(FetchFavorites()),
+                  );
+                }
+
                 return ErrorCustomWidget(
                   onTap: () => BlocProvider.of<FavoritesBloc>(context).add(FetchFavorites()),
                 );
-              }
-
-              return ErrorCustomWidget(
-                onTap: () => BlocProvider.of<FavoritesBloc>(context).add(FetchFavorites()),
-              );
-            },
+              },
+            ),
           ),
         ),
       ),

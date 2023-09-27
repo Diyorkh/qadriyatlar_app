@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qadriyatlar_app/main.dart';
-import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/presentation/widgets/custom_app_button.dart';
 
 class UnauthorizedWidget extends StatelessWidget {
   const UnauthorizedWidget({Key? key, required this.onTap}) : super(key: key);
@@ -20,17 +20,10 @@ class UnauthorizedWidget extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          const SizedBox(height: 15),
-          Container(
-            height: 45,
-            width: double.infinity,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: ColorApp.mainColor,
-              ),
-              onPressed: onTap,
-              child: Text(localizations.getLocalization('login_label_text')),
-            ),
+          const SizedBox(height: 40),
+          CustomAppButton(
+            onPressed: onTap,
+            label: localizations.getLocalization('login_label_text'),
           ),
         ],
       ),
