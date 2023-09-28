@@ -27,6 +27,13 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"આની સાથે શેર કરો"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>ની સાથે શેર કરો"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"સંકુચિત કરો"</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"જવાબ"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"વીડિયો"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"નકારો"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"સમાપ્ત કરો"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"ઇનકમિંગ કૉલ"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"ચાલુ કૉલ"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"ઇનકમિંગ કૉલનું સ્ક્રીનિંગ થાય છે"</string>
     <string gender="unknown" name="com_facebook_device_auth_instructions">&lt;b>facebook.com/device&lt;/b>ની મુલાકાત લો અને ઉપર બતાવેલો કોડ લખો.</string>
     <string gender="unknown" name="com_facebook_image_download_unknown_error">ફોટો ડાઉનલોડ કરતી વખતે એક અનપેક્ષિત ભૂલ આવી.</string>
     <string gender="unknown" name="com_facebook_internet_permission_error_message">WebView લોગ ઇન માટે ઇન્ટરનેટ પરવાનગીની જરૂર છે</string>

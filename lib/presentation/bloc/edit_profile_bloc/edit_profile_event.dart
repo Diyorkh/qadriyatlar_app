@@ -15,10 +15,6 @@ class SaveEvent extends EditProfileEvent {
     this.lastName,
     this.password,
     this.description,
-    this.position,
-    this.facebook,
-    this.twitter,
-    this.instagram,
     this.photo,
     this.onlyPhoto = false,
   });
@@ -27,10 +23,6 @@ class SaveEvent extends EditProfileEvent {
   final String? lastName;
   final String? password;
   final String? description;
-  final String? position;
-  final String? facebook;
-  final String? twitter;
-  final String? instagram;
   final File? photo;
   final bool onlyPhoto;
 }

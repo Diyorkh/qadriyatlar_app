@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qadriyatlar_app/core/constants/assets_path.dart';
-import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/profile/profile_bloc.dart';
 import 'package:qadriyatlar_app/presentation/screens/detail_profile/detail_profile_screen.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
@@ -28,11 +27,12 @@ class ProfileWidget extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(40.0)),
                     child: CachedNetworkImage(
-                      width: 50.0,
+                      width: 70.0,
                       fit: BoxFit.fill,
                       imageUrl: state.account.avatarUrl ?? '',
                       placeholder: (context, url) => Padding(
@@ -44,40 +44,55 @@ class ProfileWidget extends StatelessWidget {
                       errorWidget: (context, url, error) {
                         return SizedBox(
                           width: 50.0,
-                          child: Image.asset(ImagePath.logo),
+                          child: Image.asset(ImagePath.profile),
                         );
                       },
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          localizations.getLocalization('greeting_user'),
-                          style: Theme.of(context).primaryTextTheme.titleSmall!.copyWith(
-                                color: ColorApp.kDarkGray,
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              (state.account.meta!.firstName != '' && state.account.meta!.lastName != '')
+                                  ? '${state.account.meta!.firstName} ${state.account.meta!.lastName}'
+                                  : state.account.login!,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              softWrap: false,
+                              style: Theme.of(context).primaryTextTheme.headlineSmall!.copyWith(
+                                    color: ColorApp.dark,
+                                  ),
+                            ),
+                            Text(
+                              state.account.email!,
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.grey,
                               ),
+                            ),
+                          ],
                         ),
-                        Container(
-                          width: double.infinity,
-                          height: 28,
-                          constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width - 110),
-                          child: Text(
-                            (state.account.meta!.firstName != '' && state.account.meta!.lastName != '')
-                                ? '${state.account.meta!.firstName} ${state.account.meta!.lastName}'
-                                : state.account.login!,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            softWrap: false,
-                            style: Theme.of(context).primaryTextTheme.headlineSmall!.copyWith(
-                                  color: ColorApp.dark,
-                                ),
-                          ),
+                      ),
+                      const SizedBox(width: 10.0),
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(
+                            context,
+                            DetailProfileScreen.routeName,
+                            arguments: DetailProfileScreenArgs(),
+                          );
+                        },
+                        icon: const Icon(
+                          Icons.edit_outlined,
+                          color: Colors.grey,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),

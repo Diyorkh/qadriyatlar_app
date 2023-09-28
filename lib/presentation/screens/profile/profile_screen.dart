@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:qadriyatlar_app/core/constants/assets_path.dart';
+import 'package:iconly/iconly.dart';
 import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/profile/profile_bloc.dart';
 import 'package:qadriyatlar_app/presentation/screens/auth/components/google_signin.dart';
-import 'package:qadriyatlar_app/presentation/screens/detail_profile/detail_profile_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/languages/languages_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
 import 'package:qadriyatlar_app/presentation/screens/orders/orders_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/profile/widgets/privacy_policy_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/profile/widgets/profile_widget.dart';
 import 'package:qadriyatlar_app/presentation/screens/profile/widgets/tile_item.dart';
 import 'package:qadriyatlar_app/presentation/screens/profile_edit/profile_edit_screen.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
 import 'package:qadriyatlar_app/presentation/widgets/unauthorized_widget.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
+import 'package:qadriyatlar_app/theme/const_styles.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen() : super();
@@ -71,66 +73,91 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
 
           return Scaffold(
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(0),
+              preferredSize: Size.fromHeight(60),
               child: AppBar(
-                backgroundColor: ColorApp.mainColor,
+                centerTitle: true,
+                title: Text(
+                  'Profile',
+                  style: kAppBarTextStyle.copyWith(
+                    color: Colors.black,
+                  ),
+                ),
+                elevation: 0.0,
+                backgroundColor: Colors.white,
               ),
             ),
             body: SingleChildScrollView(
               child: SafeArea(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     // Header Profile
                     BlocProvider.value(
                       value: BlocProvider.of<ProfileBloc>(context),
                       child: ProfileWidget(),
                     ),
-
-                    // Divider
-                    Divider(
-                      height: 5.0,
-                      thickness: 1.0,
-                      color: Color(0xFFE5E5E5),
+                    SizedBox(height: 30),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: const Text(
+                        "Qo'shimcha",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Colors.grey,
+                          fontSize: 15,
+                        ),
+                      ),
                     ),
-
                     // View my profile
                     TileWidget(
-                      title: localizations.getLocalization('view_my_profile'),
-                      assetPath: IconPath.profileIcon,
+                      leadingBackColor: Colors.red[600],
+                      title: 'Sevimlar',
+                      icon: IconlyLight.heart,
                       onClick: () {
-                        if (state is LoadedProfileState)
-                          Navigator.pushNamed(
-                            context,
-                            DetailProfileScreen.routeName,
-                            arguments: DetailProfileScreenArgs(),
-                          );
+                        Navigator.pushReplacementNamed(
+                          context,
+                          MainScreen.routeName,
+                          arguments: MainScreenArgs(selectedIndex: 3),
+                        );
                       },
                     ),
-
-                    // My orders
-                    TileWidget(
-                      title: localizations.getLocalization('my_orders'),
-                      assetPath: IconPath.orders,
-                      onClick: () {
-                        Navigator.of(context).pushNamed(OrdersScreen.routeName);
-                      },
-                    ),
-
                     // My courses
                     TileWidget(
-                      title: localizations.getLocalization('my_courses'),
-                      assetPath: IconPath.navCourses,
-                      onClick: () => Navigator.pushNamed(
+                      title: 'Mening kurslarim',
+                      leadingBackColor: Colors.cyan[600],
+                      icon: IconlyLight.bag_2,
+                      onClick: () => Navigator.pushReplacementNamed(
                         context,
                         MainScreen.routeName,
                         arguments: MainScreenArgs(selectedIndex: 2),
                       ),
                     ),
-
+                    const SizedBox(height: 30),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: const Text(
+                        'Sozlamalar',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Colors.grey,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                    // My orders
+                    TileWidget(
+                      leadingBackColor: Colors.green[600],
+                      title: "To'lov usuli",
+                      icon: IconlyLight.wallet,
+                      onClick: () {
+                        Navigator.of(context).pushNamed(OrdersScreen.routeName);
+                      },
+                    ),
                     // Settings
                     TileWidget(
-                      title: localizations.getLocalization('settings'),
-                      assetPath: IconPath.settings,
+                      leadingBackColor: Colors.yellow[600],
+                      title: 'Settings',
+                      icon: IconlyLight.setting,
                       onClick: () {
                         if (state is LoadedProfileState) {
                           Navigator.pushNamed(
@@ -142,13 +169,36 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                       },
                     ),
 
-                    // Logout
+                    // Settings
                     TileWidget(
-                      title: localizations.getLocalization('logout'),
-                      assetPath: IconPath.logout,
-                      onClick: () => _showLogoutDialog(context),
-                      textColor: ColorApp.lipstick,
-                      iconColor: ColorApp.lipstick,
+                      leadingBackColor: Colors.grey[400],
+                      title: 'Til',
+                      icon: Icons.language_outlined,
+                      onClick: () => Navigator.of(context).pushNamed(LanguagesScreen.routeName),
+                    ),
+
+                    // Settings
+                    TileWidget(
+                      leadingBackColor: Colors.grey[400],
+                      title: 'Foydalanuvchi shartnomasi',
+                      icon: IconlyLight.document,
+                      onClick: () => Navigator.pushNamed(
+                        context,
+                        PrivacyPolicyScreen.routeName,
+                        arguments: PrivacyPolicyScreen,
+                      ),
+                    ),
+
+                    Center(
+                      child: TextButton(
+                        onPressed: () => _showLogoutDialog(context),
+                        child: Text(
+                          'Chiqish',
+                          style: TextStyle(
+                            color: Colors.red,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),

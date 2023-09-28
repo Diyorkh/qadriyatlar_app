@@ -19,7 +19,11 @@ class LanguagesBloc extends Bloc<LanguagesEvent, LanguagesState> {
       try {
         final List<LanguagesResponse> languagesResponse = await _languagesRepository.getLanguages();
 
-        emit(LoadedLanguagesState(languagesResponse: languagesResponse));
+        if (languagesResponse.isEmpty) {
+          emit(LanguagesEmptyState());
+        } else {
+          emit(LoadedLanguagesState(languagesResponse: languagesResponse));
+        }
       } catch (e, s) {
         logger.e('Error with method getCourses() - Home Simple Bloc', e, s);
         emit(ErrorLanguagesState(e.toString()));

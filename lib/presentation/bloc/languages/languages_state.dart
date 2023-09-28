@@ -13,6 +13,8 @@ class LoadedLanguagesState extends LanguagesState {
   final List<LanguagesResponse> languagesResponse;
 }
 
+class LanguagesEmptyState extends LanguagesState {}
+
 class ErrorLanguagesState extends LanguagesState {
   ErrorLanguagesState(this.message);
 

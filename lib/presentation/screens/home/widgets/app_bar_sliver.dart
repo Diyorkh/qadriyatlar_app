@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
@@ -30,9 +32,8 @@ class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
                 ),
               ),
               const SizedBox(height: 4),
-              // TODO 27.09.2023 Add real text
               Text(
-                'Mirolim Yadgarov',
+                preferences.getString(PreferencesName.userName) ?? 'No info',
                 style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.bold,
                   fontSize: 38 * value,

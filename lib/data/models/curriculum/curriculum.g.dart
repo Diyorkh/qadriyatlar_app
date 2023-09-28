@@ -6,24 +6,21 @@ part of 'curriculum.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-CurriculumResponse _$CurriculumResponseFromJson(Map<String, dynamic> json) =>
-    CurriculumResponse(
+CurriculumResponse _$CurriculumResponseFromJson(Map<String, dynamic> json) => CurriculumResponse(
       currentLessonId: json['current_lesson_id'] as String?,
       progressPercent: json['progress_percent'] as String,
       lessonType: json['lesson_type'] as String?,
       sections: (json['sections'] as List<dynamic>)
-          .map((e) => e == null
-              ? null
-              : SectionItem.fromJson(e as Map<String, dynamic>))
+          .map(
+            (e) => e == null ? null : SectionItem.fromJson(e as Map<String, dynamic>),
+          )
           .toList(),
-      materials: (json['materials'] as List<dynamic>)
-          .map((e) => MaterialItem.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      materials:
+          (json['materials'] as List<dynamic>).map((e) => MaterialItem.fromJson(e as Map<String, dynamic>)).toList(),
       scorm: json['scorm'],
     );
 
-Map<String, dynamic> _$CurriculumResponseToJson(CurriculumResponse instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$CurriculumResponseToJson(CurriculumResponse instance) => <String, dynamic>{
       'current_lesson_id': instance.currentLessonId,
       'progress_percent': instance.progressPercent,
       'lesson_type': instance.lessonType,
@@ -41,8 +38,7 @@ SectionItem _$SectionItemFromJson(Map<String, dynamic> json) => SectionItem(
           .toList(),
     );
 
-Map<String, dynamic> _$SectionItemToJson(SectionItem instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$SectionItemToJson(SectionItem instance) => <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'order': instance.order,
@@ -66,8 +62,7 @@ MaterialItem _$MaterialItemFromJson(Map<String, dynamic> json) => MaterialItem(
       questions: json['questions'],
     );
 
-Map<String, dynamic> _$MaterialItemToJson(MaterialItem instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$MaterialItemToJson(MaterialItem instance) => <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'post_id': instance.postId,
@@ -84,8 +79,7 @@ Map<String, dynamic> _$MaterialItemToJson(MaterialItem instance) =>
       'questions': instance.questions,
     };
 
-SectionItemsBean _$SectionItemsBeanFromJson(Map<String, dynamic> json) =>
-    SectionItemsBean(
+SectionItemsBean _$SectionItemsBeanFromJson(Map<String, dynamic> json) => SectionItemsBean(
       itemId: json['item_id'] as int?,
       title: json['title'] as String?,
       type: json['type'] as String?,
@@ -98,8 +92,7 @@ SectionItemsBean _$SectionItemsBeanFromJson(Map<String, dynamic> json) =>
       ..duration = json['duration'] as String?
       ..questions = json['questions'] as String?;
 
-Map<String, dynamic> _$SectionItemsBeanToJson(SectionItemsBean instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$SectionItemsBeanToJson(SectionItemsBean instance) => <String, dynamic>{
       'item_id': instance.itemId,
       'title': instance.title,
       'type': instance.type,

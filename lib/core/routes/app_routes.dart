@@ -21,6 +21,7 @@ import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
 import 'package:qadriyatlar_app/presentation/screens/onboarding/onboarding_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/orders/orders_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/plans/plans_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/profile/widgets/privacy_policy_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/profile_edit/profile_edit_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/questions_screens/question_ask/question_ask_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/questions_screens/question_details/question_details_screen.dart';
@@ -188,6 +189,11 @@ class AppRoutes {
       case OnBoardingScreen.routeName:
         return MaterialPageRoute(
           builder: (context) => OnBoardingScreen(),
+          settings: routeSettings,
+        );
+      case PrivacyPolicyScreen.routeName:
+        return MaterialPageRoute(
+          builder: (context) => PrivacyPolicyScreen(),
           settings: routeSettings,
         );
 

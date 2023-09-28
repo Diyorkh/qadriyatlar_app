@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:qadriyatlar_app/core/constants/assets_path.dart';
 import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
 import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/languages/languages_bloc.dart';
+import 'package:qadriyatlar_app/presentation/widgets/empty_widget.dart';
 import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
@@ -29,12 +31,22 @@ class _LanguagesScreenState extends State<LanguagesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorApp.mainColor,
+        elevation: 0.0,
+        backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
           // TODO: 19.07.2023 Add translations
           localizations.getLocalization('edit_profile_title'),
-          style: kAppBarTextStyle,
+          style: kAppBarTextStyle.copyWith(
+            color: Colors.black,
+          ),
+        ),
+        leading: IconButton(
+          onPressed: () => Navigator.of(context).pop(),
+          icon: Icon(
+            Icons.arrow_back_ios_new_outlined,
+            color: Colors.black,
+          ),
         ),
       ),
       body: BlocListener<LanguagesBloc, LanguagesState>(
@@ -98,6 +110,13 @@ class _LanguagesScreenState extends State<LanguagesScreen> {
                     ),
                   ],
                 ),
+              );
+            }
+
+            if (state is LanguagesEmptyState) {
+              return EmptyWidget(
+                image: ImagePath.ghost,
+                title: 'Languages is empty',
               );
             }
 

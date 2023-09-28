@@ -8,19 +8,17 @@ import 'package:image_picker/image_picker.dart';
 import 'package:qadriyatlar_app/core/constants/assets_path.dart';
 import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
 import 'package:qadriyatlar_app/core/env.dart';
-import 'package:qadriyatlar_app/core/utils/utils.dart';
 import 'package:qadriyatlar_app/data/models/account/account.dart';
 import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/edit_profile_bloc/edit_profile_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/profile/profile_bloc.dart';
-import 'package:qadriyatlar_app/presentation/screens/change_password/change_password_screen.dart';
-import 'package:qadriyatlar_app/presentation/screens/profile_edit/widgets/change_language_widget.dart';
 import 'package:qadriyatlar_app/presentation/screens/splash/splash_screen.dart';
+import 'package:qadriyatlar_app/presentation/widgets/custom_app_button.dart';
+import 'package:qadriyatlar_app/presentation/widgets/custom_text_field.dart';
 import 'package:qadriyatlar_app/presentation/widgets/dialog_author.dart';
 import 'package:qadriyatlar_app/presentation/widgets/flutter_toast.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
-import 'package:qadriyatlar_app/theme/const_dimensions.dart';
 import 'package:qadriyatlar_app/theme/const_styles.dart';
 
 class ProfileEditScreenArgs {
@@ -96,10 +94,7 @@ class _ProfileEditWidgetState extends State<_ProfileEditWidget> {
     _emailController.dispose();
     _bioController.dispose();
     _occupationController.dispose();
-    _passwordController.dispose();
-    _facebookController.dispose();
-    _twitterController.dispose();
-    _instagramController.dispose();
+
     super.dispose();
   }
 
@@ -107,11 +102,21 @@ class _ProfileEditWidgetState extends State<_ProfileEditWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorApp.mainColor,
+        backgroundColor: Colors.white,
+        elevation: 0.0,
         centerTitle: true,
+        leading: IconButton(
+          onPressed: () => Navigator.of(context).pop(),
+          icon: Icon(
+            Icons.arrow_back_ios_new_outlined,
+            color: Colors.black,
+          ),
+        ),
         title: Text(
           localizations.getLocalization('edit_profile_title'),
-          style: kAppBarTextStyle,
+          style: kAppBarTextStyle.copyWith(
+            color: Colors.black,
+          ),
         ),
       ),
       body: BlocListener<EditProfileBloc, EditProfileState>(
@@ -293,49 +298,31 @@ class _ProfileEditWidgetState extends State<_ProfileEditWidget> {
                     ),
                   ),
                   // FirstName
+                  const SizedBox(height: 10.0),
                   Padding(
-                    padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
-                    child: TextFormField(
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    child: CustomTextField(
                       controller: _firstNameController,
-                      enabled: enableInputs,
-                      readOnly: preferences.getBool(PreferencesName.demoMode) ?? false,
-                      cursorColor: ColorApp.mainColor,
-                      decoration: InputDecoration(
-                        labelText: localizations.getLocalization('first_name'),
-                        filled: true,
-                        labelStyle: TextStyle(
-                          color: myFocusNode.hasFocus ? Colors.black : Colors.black,
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: ColorApp.mainColor, width: 2),
-                        ),
-                      ),
+                      hintText: localizations.getLocalization('first_name'),
+                      borderColor: Colors.grey,
                     ),
                   ),
-                  // LastName
+                  const SizedBox(height: 20.0),
                   Padding(
-                    padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
-                    child: TextFormField(
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    child: CustomTextField(
                       controller: _lastNameController,
-                      enabled: enableInputs,
-                      readOnly: preferences.getBool(PreferencesName.demoMode) ?? false,
-                      cursorColor: ColorApp.mainColor,
-                      decoration: InputDecoration(
-                        labelText: localizations.getLocalization('last_name'),
-                        filled: true,
-                        labelStyle: TextStyle(
-                          color: myFocusNode.hasFocus ? Colors.black : Colors.black,
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: ColorApp.mainColor, width: 2),
-                        ),
-                      ),
+                      hintText: localizations.getLocalization('last_name'),
+                      borderColor: Colors.grey,
+                    ),
+                  ),
+                  const SizedBox(height: 20.0),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    child: CustomTextField(
+                      controller: _bioController,
+                      hintText: localizations.getLocalization('bio'),
+                      borderColor: Colors.grey,
                     ),
                   ),
                   // Occupation
@@ -363,140 +350,14 @@ class _ProfileEditWidgetState extends State<_ProfileEditWidget> {
                           ),
                         )
                       : const SizedBox(),
-                  // Email
-                  Padding(
-                    padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
-                    child: TextFormField(
-                      controller: _emailController,
-                      enabled: enableInputs,
-                      validator: validateEmail,
-                      readOnly: preferences.getBool(PreferencesName.demoMode) ?? false,
-                      cursorColor: ColorApp.mainColor,
-                      decoration: InputDecoration(
-                        labelText: localizations.getLocalization('email_label_text'),
-                        helperText: localizations.getLocalization('email_helper_text'),
-                        filled: true,
-                        labelStyle: TextStyle(
-                          color: myFocusNode.hasFocus ? Colors.black : Colors.black,
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: ColorApp.mainColor, width: 2),
-                        ),
-                      ),
-                    ),
-                  ),
-                  // Bio
-                  Padding(
-                    padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
-                    child: TextFormField(
-                      controller: _bioController,
-                      enabled: enableInputs,
-                      maxLines: 5,
-                      readOnly: preferences.getBool(PreferencesName.demoMode) ?? false,
-                      textCapitalization: TextCapitalization.sentences,
-                      cursorColor: ColorApp.mainColor,
-                      decoration: InputDecoration(
-                        labelText: localizations.getLocalization('bio'),
-                        helperText: localizations.getLocalization('bio_helper'),
-                        filled: true,
-                        labelStyle: TextStyle(
-                          color: myFocusNode.hasFocus ? Colors.black : Colors.black,
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: ColorApp.mainColor, width: 2),
-                        ),
-                      ),
-                    ),
-                  ),
-                  // Facebook
-                  Padding(
-                    padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
-                    child: TextFormField(
-                      controller: _facebookController,
-                      enabled: enableInputs,
-                      readOnly: preferences.getBool(PreferencesName.demoMode) ?? false,
-                      cursorColor: ColorApp.mainColor,
-                      decoration: InputDecoration(
-                        labelText: 'Facebook',
-                        hintText: localizations.getLocalization('enter_url'),
-                        filled: true,
-                        labelStyle: TextStyle(
-                          color: myFocusNode.hasFocus ? Colors.black : Colors.black,
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: ColorApp.mainColor, width: 2),
-                        ),
-                      ),
-                    ),
-                  ),
-                  // Twitter
-                  Padding(
-                    padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
-                    child: TextFormField(
-                      controller: _twitterController,
-                      enabled: enableInputs,
-                      cursorColor: ColorApp.mainColor,
-                      readOnly: preferences.getBool(PreferencesName.demoMode) ?? false,
-                      decoration: InputDecoration(
-                        labelText: 'Twitter',
-                        hintText: localizations.getLocalization('enter_url'),
-                        filled: true,
-                        labelStyle: TextStyle(
-                          color: myFocusNode.hasFocus ? Colors.black : Colors.black,
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: ColorApp.mainColor, width: 2),
-                        ),
-                      ),
-                    ),
-                  ),
-                  // Instagram
-                  Padding(
-                    padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
-                    child: TextFormField(
-                      controller: _instagramController,
-                      enabled: enableInputs,
-                      cursorColor: ColorApp.mainColor,
-                      readOnly: preferences.getBool(PreferencesName.demoMode) ?? false,
-                      decoration: InputDecoration(
-                        labelText: 'Instagram',
-                        hintText: localizations.getLocalization('enter_url'),
-                        filled: true,
-                        labelStyle: TextStyle(
-                          color: myFocusNode.hasFocus ? Colors.black : Colors.black,
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: ColorApp.mainColor, width: 2),
-                        ),
-                      ),
-                    ),
-                  ),
-                  // Languages
-                  ChangeLanguageWidget(),
                   // Button Save
                   Padding(
                     padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
                     child: SizedBox(
-                      height: kButtonHeight,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: ColorApp.mainColor,
-                        ),
+                      height: 50,
+                      child: CustomAppButton(
+                        bgColor: Colors.grey[300],
+                        colorText: Colors.black,
                         onPressed: state is LoadingEditProfileState
                             ? null
                             : () {
@@ -510,76 +371,33 @@ class _ProfileEditWidgetState extends State<_ProfileEditWidget> {
                                         lastName: _lastNameController.text,
                                         password: _passwordController.text,
                                         description: _bioController.text,
-                                        position: _occupationController.text,
-                                        facebook: _facebookController.text,
-                                        twitter: _twitterController.text,
-                                        instagram: _instagramController.text,
                                         photo: _imageFile,
                                       ),
                                     );
                                   }
                                 }
                               },
-                        child: state is LoadingEditProfileState
-                            ? LoaderWidget()
-                            : Text(
-                                localizations.getLocalization('save_button'),
-                                textScaleFactor: 1.0,
-                              ),
+                        loaderIndicator: state is LoadingEditProfileState,
+                        label: localizations.getLocalization('save_button'),
                       ),
-                    ),
-                  ),
-                  // Button Change Password
-                  Padding(
-                    padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
-                    child: MaterialButton(
-                      minWidth: double.infinity,
-                      color: ColorApp.mainColor,
-                      onPressed: () {
-                        if (preferences.getBool(PreferencesName.demoMode) ?? false) {
-                          showDialogError(context, localizations.getLocalization('demo_mode'));
-                        } else {
-                          Navigator.of(context).pushNamed(ChangePasswordScreen.routeName);
-                        }
-                      },
-                      child: Text(
-                        localizations.getLocalization('change_password'),
-                      ),
-                      textColor: Colors.white,
                     ),
                   ),
                   // Button Delete Account
                   Padding(
                     padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 18.0),
-                    child: new MaterialButton(
-                      minWidth: double.infinity,
-                      color: Colors.red.shade600,
-                      onPressed: () {
-                        if (preferences.getBool(PreferencesName.demoMode) ?? false) {
-                          showDialogError(context, localizations.getLocalization('demo_mode'));
-                        } else {
-                          _showDeleteAccountDialog(context, state);
-                        }
-                      },
-                      child: Text(
-                        localizations.getLocalization('delete_account'),
+                    child: SizedBox(
+                      height: 50,
+                      child: CustomAppButton(
+                        bgColor: Colors.red.shade600,
+                        onPressed: () {
+                          if (preferences.getBool(PreferencesName.demoMode) ?? false) {
+                            showDialogError(context, localizations.getLocalization('demo_mode'));
+                          } else {
+                            _showDeleteAccountDialog(context, state);
+                          }
+                        },
+                        label: localizations.getLocalization('delete_account'),
                       ),
-                      textColor: Colors.white,
-                    ),
-                  ),
-                  // Cancel button
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 18.0,
-                      right: 18.0,
-                    ),
-                    child: TextButton(
-                      child: Text(
-                        localizations.getLocalization('cancel_button'),
-                        textScaleFactor: 1.0,
-                        style: TextStyle(color: ColorApp.mainColor),
-                      ),
-                      onPressed: () => BlocProvider.of<EditProfileBloc>(context).add(CloseScreenEvent()),
                     ),
                   ),
                 ],

@@ -27,6 +27,13 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Del med"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Del med <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Skjul"</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Svar"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Video"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Avvis"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Legg på"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Innkommende anrop"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Pågående samtale"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Filtrerer et innkommende anrop"</string>
     <string gender="unknown" name="com_facebook_device_auth_instructions">Gå til &lt;b>facebook.com/device&lt;/b>, og skriv inn koden som vises ovenfor.</string>
     <string gender="unknown" name="com_facebook_image_download_unknown_error">Det oppstod en uvented feil under nedlasting av et bilde.</string>
     <string gender="unknown" name="com_facebook_internet_permission_error_message">WebView-innlogging krever INTERNETT-tillatelse</string>

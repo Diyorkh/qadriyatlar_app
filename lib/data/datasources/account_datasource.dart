@@ -12,10 +12,6 @@ abstract class AccountDataSource {
     String? lastName,
     String? password,
     String? description,
-    String? position,
-    String? facebook,
-    String? instagram,
-    String? twitter,
   );
 
   Future<Response> uploadProfilePhoto(File file);
@@ -55,25 +51,17 @@ class AccountRemoteDataSource extends AccountDataSource {
     String? lastName,
     String? password,
     String? description,
-    String? position,
-    String? facebook,
-    String? instagram,
-    String? twitter,
   ) async {
     try {
       Map<String, String> data = {
         'first_name': firstName!,
         'last_name': lastName!,
-        'position': position ?? '',
         'description': description ?? '',
-        'facebook': facebook ?? '',
-        'instagram': instagram ?? '',
-        'twitter': twitter ?? '',
       };
 
       if (password!.isNotEmpty) data.addAll({'password': password});
 
-      _httpService.dio.post(
+      await _httpService.dio.post(
         '/account/edit_profile/',
         data: data,
         options: Options(

@@ -8,11 +8,15 @@ class CustomAppButton extends StatelessWidget {
     required this.label,
     this.onPressed,
     this.loaderIndicator = false,
+    this.bgColor,
+    this.colorText,
   });
 
   final String label;
   final VoidCallback? onPressed;
   final bool loaderIndicator;
+  final Color? bgColor;
+  final Color? colorText;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,7 @@ class CustomAppButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: ColorApp.mainColor,
+          backgroundColor: bgColor ?? ColorApp.mainColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -31,10 +35,10 @@ class CustomAppButton extends StatelessWidget {
             ? LoaderWidget()
             : Text(
                 label,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
+                style: TextStyle(
+                  color: colorText ?? Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
       ),

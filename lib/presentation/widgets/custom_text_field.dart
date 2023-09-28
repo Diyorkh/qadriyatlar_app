@@ -11,15 +11,19 @@ class CustomTextField extends StatelessWidget {
     this.validator,
     this.suffixWidget,
     this.errorText,
+    this.label,
+    this.borderColor,
   });
 
   final TextEditingController controller;
   final String? hintText;
   final String? helperText;
   final String? errorText;
+  final String? label;
   final FormFieldValidator<String>? validator;
   final IconData? suffixIcon;
   final Widget? suffixWidget;
+  final Color? borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +31,7 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       textAlignVertical: TextAlignVertical.center,
       decoration: InputDecoration(
+        label: label != null ? Text(label!) : null,
         errorText: errorText,
         errorMaxLines: 3,
         hintText: hintText,
@@ -48,13 +53,13 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(20.0),
           borderSide: BorderSide(
             width: 2,
-            color: ColorApp.mainColor,
+            color: borderColor ?? ColorApp.mainColor,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20.0),
           borderSide: BorderSide(
-            color: ColorApp.mainColor,
+            color: borderColor ?? ColorApp.mainColor,
           ),
         ),
         suffixIcon: suffixWidget ??

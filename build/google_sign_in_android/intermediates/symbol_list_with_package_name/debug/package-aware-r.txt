@@ -196,6 +196,7 @@ id clip_horizontal
 id clip_vertical
 id dark
 id dialog_button
+id edit_text_id
 id end
 id end_padder
 id fill
@@ -203,6 +204,7 @@ id fill_horizontal
 id fill_vertical
 id forever
 id fragment_container_view_tag
+id hide_ime_id
 id icon
 id icon_group
 id icon_only
@@ -258,6 +260,8 @@ integer cancel_button_image_alpha
 integer google_play_services_version
 integer status_bar_notification_info_maxnum
 layout custom_dialog
+layout ime_base_split_test_activity
+layout ime_secondary_split_test_activity
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action

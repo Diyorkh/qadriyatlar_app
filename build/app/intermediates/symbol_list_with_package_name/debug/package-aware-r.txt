@@ -695,6 +695,8 @@ color browser_actions_text_color
 color browser_actions_title_color
 color button_material_dark
 color button_material_light
+color call_notification_answer_color
+color call_notification_decline_color
 color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
@@ -1053,6 +1055,12 @@ drawable corner
 drawable floating_action_mode_shape
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_call_answer
+drawable ic_call_answer_low
+drawable ic_call_answer_video
+drawable ic_call_answer_video_low
+drawable ic_call_decline
+drawable ic_call_decline_low
 drawable ic_launcher_background
 drawable ic_push
 drawable launch_background
@@ -1350,6 +1358,7 @@ id pullToRefresh
 id radio
 id ratio
 id rectangles
+id report_drawn
 id reverseSawtooth
 id right
 id right_icon
@@ -1571,6 +1580,13 @@ string action_reload
 string action_share
 string androidx_startup
 string app_name
+string call_notification_answer_action
+string call_notification_answer_video_action
+string call_notification_decline_action
+string call_notification_hang_up_action
+string call_notification_incoming_text
+string call_notification_ongoing_text
+string call_notification_screening_text
 string com_crashlytics_android_build_id
 string com_facebook_device_auth_instructions
 string com_facebook_image_download_unknown_error

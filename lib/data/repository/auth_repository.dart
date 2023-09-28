@@ -144,6 +144,7 @@ class AuthRepositoryImpl extends AuthRepository {
     preferences.remove(PreferencesName.apiToken);
     preferences.remove(PreferencesName.demoMode);
     preferences.remove(PreferencesName.appLogo);
+    preferences.remove(PreferencesName.userName);
     await CacheManager().cleanCache();
   }
 

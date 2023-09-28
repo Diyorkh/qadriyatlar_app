@@ -14,10 +14,6 @@ abstract class AccountRepository {
     String? lastName,
     String? password,
     String? description,
-    String? position,
-    String? facebook,
-    String? twitter,
-    String? instagram,
     File? photo,
   });
 
@@ -46,21 +42,13 @@ class AccountRepositoryImpl implements AccountRepository {
     String? lastName,
     String? password,
     String? description,
-    String? position,
-    String? facebook,
-    String? twitter,
-    String? instagram,
     File? photo,
   }) async {
     final editProfileResponse = await _accountDataSource.editProfile(
-      firstName!,
-      lastName!,
-      password!,
-      description!,
-      position!,
-      facebook!,
-      instagram!,
-      twitter!,
+      firstName,
+      lastName,
+      password,
+      description,
     );
 
     return editProfileResponse;

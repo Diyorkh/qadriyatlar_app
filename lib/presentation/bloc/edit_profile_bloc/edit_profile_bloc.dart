@@ -20,10 +20,6 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
           lastName: event.lastName,
           password: event.password,
           description: event.description,
-          position: event.position,
-          facebook: event.facebook,
-          twitter: event.twitter,
-          instagram: event.instagram,
         );
 
         try {

@@ -27,6 +27,13 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"వీరితో షేర్ చేస్తుంది"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>తో షేర్ చేస్తుంది"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"కుదిస్తుంది"</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"పికప్ చేయండి"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"వీడియో కాల్"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"కట్ చేయండి"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"ముగించండి"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"ఇన్‌కమింగ్ కాల్"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"కాల్ కొనసాగుతోంది"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"ఇన్‌కమింగ్ కాల్‌ను స్క్రీన్ చేయండి"</string>
     <string gender="unknown" name="com_facebook_device_auth_instructions">&lt;b>facebook.com/device&lt;/b>ని సందర్శించి పైన చూపిన కోడ్‌ను నమోదు చేయండి.</string>
     <string gender="unknown" name="com_facebook_image_download_unknown_error">ఒక చిత్రాన్ని డౌన్‌లోడ్ చేయడంలో అనుకోని లోపం సంభవించింది.</string>
     <string gender="unknown" name="com_facebook_internet_permission_error_message">WebView లాగిన్ కోసం ఇంటర్నెట్ అనుమతి అవసరమవుతుంది</string>

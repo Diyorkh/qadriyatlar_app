@@ -5,6 +5,7 @@ class ImagePath {
   static const introTwo = '$_folderPath/intro2.png';
   static const introThree = '$_folderPath/intro3.png';
   static const ghost = '$_folderPath/ghost.png';
+  static const profile = '$_folderPath/profile.jpg';
 }
 
 class IconPath {

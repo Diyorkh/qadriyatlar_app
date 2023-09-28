@@ -1,5 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
+import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/core/utils/logger.dart';
 import 'package:qadriyatlar_app/core/utils/utils.dart';
 import 'package:qadriyatlar_app/data/models/account/account.dart';
@@ -22,6 +24,10 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 
       try {
         Account account = await _accountRepository.getUserAccount();
+
+        if (account.login != null && account.login!.isNotEmpty) {
+          preferences.setString(PreferencesName.userName, account.login!);
+        }
 
         _accountRepository.saveAccountLocal(account);
 
