@@ -33,7 +33,7 @@ class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
               ),
               const SizedBox(height: 4),
               Text(
-                preferences.getString(PreferencesName.userName) ?? 'No info',
+                preferences.getString(PreferencesName.userName) ?? 'Qadriyatlar Academy',
                 style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.bold,
                   fontSize: 38 * value,

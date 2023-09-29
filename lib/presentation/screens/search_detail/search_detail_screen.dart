@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:provider/provider.dart';
 import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/search_detail/search_detail_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/search/components/recent_search_service.dart';
 import 'package:qadriyatlar_app/presentation/widgets/course_grid_item.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
@@ -49,16 +51,16 @@ class SearchDetailWidget extends StatefulWidget {
 }
 
 class _SearchDetailWidgetState extends State<SearchDetailWidget> {
-  final TextEditingController _searchQuery = TextEditingController();
+  final _searchQueryController = TextEditingController();
 
   @override
   void initState() {
     if (widget.searchText != null && widget.searchText!.isNotEmpty) {
-      _searchQuery.text = widget.searchText!;
+      _searchQueryController.text = widget.searchText!;
     }
 
     BlocProvider.of<SearchDetailBloc>(context).add(
-      FetchEvent(_searchQuery.text, widget.categoryId),
+      FetchEvent(_searchQueryController.text, widget.categoryId),
     );
 
     super.initState();
@@ -77,12 +79,17 @@ class _SearchDetailWidgetState extends State<SearchDetailWidget> {
           autofocus: true,
           cursorColor: ColorApp.mainColor,
           style: TextStyle(fontSize: 20),
-          controller: _searchQuery,
+          textInputAction: TextInputAction.search,
+          controller: _searchQueryController,
+          onSubmitted: (value) {
+            Provider.of<RecentSearchService>(context, listen: false).createRecentSearches(value);
+          },
           onChanged: (value) {
-            if (value.trim().length > 1)
+            if (value.trim().length > 1) {
               BlocProvider.of<SearchDetailBloc>(context).add(
                 FetchEvent(value, widget.categoryId),
               );
+            }
           },
           decoration: InputDecoration(
             border: InputBorder.none,
@@ -117,7 +124,7 @@ class _SearchDetailWidgetState extends State<SearchDetailWidget> {
                       style: TextStyle(color: Colors.grey[500], fontSize: 22),
                     ),
                     Text(
-                      _searchQuery.text,
+                      _searchQueryController.text,
                       textScaleFactor: 1.0,
                       style: TextStyle(color: Colors.grey[500], fontSize: 18),
                     ),
@@ -134,7 +141,7 @@ class _SearchDetailWidgetState extends State<SearchDetailWidget> {
                   crossAxisSpacing: 4.0,
                   itemCount: state.courses.length,
                   itemBuilder: (context, index) {
-                    var item = state.courses[index];
+                    final item = state.courses[index];
 
                     return CourseGridItem(item);
                   },

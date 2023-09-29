@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:overlay_support/overlay_support.dart';
+import 'package:provider/provider.dart';
 import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
 import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/core/routes/app_routes.dart';
@@ -21,6 +22,8 @@ import 'package:qadriyatlar_app/presentation/bloc/languages/languages_bloc.dart'
 import 'package:qadriyatlar_app/presentation/bloc/profile/profile_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/search/search_screen_bloc.dart';
 import 'package:qadriyatlar_app/presentation/screens/auth/components/google_signin.dart';
+import 'package:qadriyatlar_app/presentation/screens/search/components/recent_search_service.dart';
+import 'package:qadriyatlar_app/presentation/screens/search/components/recent_viewed_service.dart';
 import 'package:qadriyatlar_app/presentation/screens/splash/splash_screen.dart';
 import 'package:qadriyatlar_app/theme/app_theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -111,15 +114,21 @@ class MyAppState extends State<MyApp> {
           create: (BuildContext context) => LanguagesBloc()..add(LoadLanguagesEvent()),
         ),
       ],
-      child: OverlaySupport(
-        child: MaterialApp(
-          title: 'Masterstudy',
-          theme: AppTheme().themeLight,
-          initialRoute: SplashScreen.routeName,
-          debugShowCheckedModeBanner: false,
-          navigatorKey: navigatorKey,
-          onGenerateRoute: (RouteSettings settings) => AppRoutes().generateRoute(settings, context),
-          onUnknownRoute: (RouteSettings settings) => AppRoutes().onUnknownRoute(settings, context),
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider<RecentSearchService>(create: (context) => RecentSearchService()),
+          ChangeNotifierProvider<RecentViewedService>(create: (context) => RecentViewedService()),
+        ],
+        child: OverlaySupport(
+          child: MaterialApp(
+            title: 'Masterstudy',
+            theme: AppTheme().themeLight,
+            initialRoute: SplashScreen.routeName,
+            debugShowCheckedModeBanner: false,
+            navigatorKey: navigatorKey,
+            onGenerateRoute: (RouteSettings settings) => AppRoutes().generateRoute(settings, context),
+            onUnknownRoute: (RouteSettings settings) => AppRoutes().onUnknownRoute(settings, context),
+          ),
         ),
       ),
     );

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:provider/provider.dart';
 import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/data/models/course/courses_response.dart';
 import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/screens/category_detail/category_detail_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/course_detail/course_detail_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/search/components/recent_viewed_service.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class CourseGridItem extends StatelessWidget {
@@ -16,11 +18,15 @@ class CourseGridItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.all(Radius.circular(12.0)),
-      onTap: () => Navigator.pushNamed(
-        context,
-        CourseScreen.routeName,
-        arguments: CourseScreenArgs.fromCourseBean(coursesBean!),
-      ),
+      onTap: () {
+        Provider.of<RecentViewedService>(context,listen: false).addRecentViewed(coursesBean);
+
+        Navigator.pushNamed(
+          context,
+          CourseScreen.routeName,
+          arguments: CourseScreenArgs.fromCourseBean(coursesBean!),
+        );
+      },
       child: CourseGridCard(coursesBean: coursesBean),
     );
   }

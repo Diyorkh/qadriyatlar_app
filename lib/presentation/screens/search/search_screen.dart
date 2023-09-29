@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:qadriyatlar_app/core/constants/assets_path.dart';
-import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/search/search_screen_bloc.dart';
+import 'package:qadriyatlar_app/presentation/screens/search/widgets/popular_searches.dart';
+import 'package:qadriyatlar_app/presentation/screens/search/widgets/recent_courses.dart';
+import 'package:qadriyatlar_app/presentation/screens/search/widgets/recent_searches.dart';
 import 'package:qadriyatlar_app/presentation/screens/search_detail/search_detail_screen.dart';
 import 'package:qadriyatlar_app/presentation/widgets/course_grid_item.dart';
 import 'package:qadriyatlar_app/presentation/widgets/empty_widget.dart';
@@ -38,18 +40,13 @@ class SearchScreenWidgetState extends State<SearchScreenWidget> {
     return Scaffold(
       backgroundColor: Color(0xFFF3F5F9),
       appBar: AppBar(
-        backgroundColor: ColorApp.mainColor,
+        backgroundColor: Color(0xFFF3F5F9),
+        elevation: 0.0,
         automaticallyImplyLeading: false,
-        centerTitle: true,
-        title: Text(
-          localizations.getLocalization('search_title'),
-          textScaleFactor: 1.0,
-          style: TextStyle(color: Colors.white, fontSize: 18),
-        ),
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(kToolbarHeight + 16),
+          preferredSize: const Size.fromHeight(30),
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 16.0, left: 2, right: 2),
+            padding: const EdgeInsets.only(bottom: 16.0, left: 5, right: 5),
             child: InkWell(
               onTap: () => Navigator.of(context).pushNamed(
                 SearchDetailScreen.routeName,
@@ -57,10 +54,13 @@ class SearchScreenWidgetState extends State<SearchScreenWidget> {
               ),
               child: Card(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(2.0),
+                  borderRadius: BorderRadius.circular(12.0),
+                  side: BorderSide(
+                    color: Colors.grey,
+                  ),
                 ),
-                elevation: 4,
-                color: Colors.white,
+                elevation: 0,
+                color: Color(0xFFF3F5F9),
                 child: Padding(
                   padding: const EdgeInsets.all(4.0),
                   child: Padding(
@@ -105,29 +105,11 @@ class SearchScreenWidgetState extends State<SearchScreenWidget> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Visibility(
-                    visible: state.popularSearch.isNotEmpty,
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 30.0, left: 30.0),
-                      child: Text(
-                        localizations.getLocalization('popular_searchs'),
-                        textScaleFactor: 1.0,
-                        style: Theme.of(context).primaryTextTheme.headlineSmall?.copyWith(
-                              color: ColorApp.dark,
-                              fontStyle: FontStyle.normal,
-                            ),
-                      ),
-                    ),
+                  RecentCourses(),
+                  PopularSearches(
+                    popularSearch: state.popularSearch,
                   ),
-                  if (state.popularSearch.isNotEmpty)
-                    Padding(
-                      padding: const EdgeInsets.only(left: 22.0, right: 22.0, top: 16),
-                      child: Wrap(
-                        spacing: 6.0,
-                        runSpacing: 6.0,
-                        children: state.popularSearch.map((value) => chip(unescape.convert(value!))).toList(),
-                      ),
-                    ),
+                  RecentSearches(),
                   state.newCourses.isEmpty
                       ? Padding(
                           padding: const EdgeInsets.only(top: 30.0),
@@ -140,7 +122,7 @@ class SearchScreenWidgetState extends State<SearchScreenWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(top: 30.0, left: 30.0),
+                              padding: const EdgeInsets.only(top: 20.0, left: 15.0,bottom: 10),
                               child: Text(
                                 localizations.getLocalization('new_courses'),
                                 textScaleFactor: 1.0,
@@ -151,7 +133,7 @@ class SearchScreenWidgetState extends State<SearchScreenWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 22.0, right: 22.0),
+                              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                               child: AlignedGridView.count(
                                 crossAxisCount: 2,
                                 mainAxisSpacing: 4.0,
@@ -160,7 +142,7 @@ class SearchScreenWidgetState extends State<SearchScreenWidget> {
                                 physics: NeverScrollableScrollPhysics(),
                                 itemCount: state.newCourses.length,
                                 itemBuilder: (BuildContext context, int index) {
-                                  var item = state.newCourses[index];
+                                  final item = state.newCourses[index];
                                   return CourseGridItem(item);
                                 },
                               ),
@@ -182,29 +164,6 @@ class SearchScreenWidgetState extends State<SearchScreenWidget> {
             onTap: () => BlocProvider.of<SearchScreenBloc>(context).add(FetchEvent()),
           );
         },
-      ),
-    );
-  }
-
-  Widget chip(String label) {
-    return GestureDetector(
-      onTap: () => Navigator.of(context).pushNamed(
-        SearchDetailScreen.routeName,
-        arguments: SearchDetailScreenArgs(searchText: label),
-      ),
-      child: Chip(
-        labelPadding: EdgeInsets.all(5.0),
-        label: Text(
-          label,
-          textScaleFactor: 1.0,
-          style: TextStyle(
-            color: Colors.black,
-          ),
-        ),
-        backgroundColor: Colors.white,
-        elevation: 2.0,
-        shadowColor: Colors.grey[60],
-        padding: EdgeInsets.all(6.0),
       ),
     );
   }

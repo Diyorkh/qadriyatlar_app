@@ -31,4 +31,8 @@ class PreferencesName {
   static const String appView = 'appView';
 
   static const String userCourses = 'userCourses';
+
+  static const String recentSearches = 'recentSearches';
+
+  static const String recentViewed = 'recentViewed';
 }
