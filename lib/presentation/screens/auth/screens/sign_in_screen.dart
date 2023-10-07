@@ -7,7 +7,7 @@ import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/auth/auth_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/edit_profile_bloc/edit_profile_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/languages/languages_bloc.dart';
-import 'package:qadriyatlar_app/presentation/screens/auth/widget/auth_phone_widget.dart';
+import 'package:qadriyatlar_app/presentation/screens/auth/widget/sign_in_form_widget.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
 import 'package:qadriyatlar_app/theme/const_styles.dart';
@@ -151,7 +151,7 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
                     ),
                   ),
                   const SizedBox(height: 60.0),
-                  AuthPhoneWidget(),
+                  SignInPhoneFormWidget(),
                 ],
               ),
             ),

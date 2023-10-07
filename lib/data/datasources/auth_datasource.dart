@@ -3,6 +3,7 @@ import 'package:qadriyatlar_app/core/errors/auth_error.dart';
 import 'package:qadriyatlar_app/core/services/http_service.dart';
 import 'package:qadriyatlar_app/data/models/auth_error/auth_error.dart';
 import 'package:qadriyatlar_app/data/models/change_password/change_password.dart';
+import 'package:qadriyatlar_app/data/models/restore_password/phone_restore_password.dart';
 import 'package:qadriyatlar_app/data/models/restore_password/restore_password.dart';
 
 abstract class AuthDataSource {
@@ -24,6 +25,10 @@ abstract class AuthDataSource {
   });
 
   Future<RestorePasswordResponse> restorePassword(String email);
+
+  Future<PhoneRestorePasswordResponse> phoneRestorePassword(String phone);
+
+  Future<PhoneRestorePasswordResponse> changePasswordByPhone(String phone, String password, String passwordRe);
 
   Future<ChangePasswordResponse> changePassword(String oldPassword, String newPassword);
 
@@ -202,6 +207,40 @@ class AuthDataSourceImpl implements AuthDataSource {
       );
 
       return AuthPhoneResponse.fromJson(response.data);
+    } on DioException catch (e) {
+      throw Exception(e.message);
+    }
+  }
+
+  @override
+  Future<PhoneRestorePasswordResponse> phoneRestorePassword(String phone) async {
+    try {
+      Response response = await _httpService.dio.post(
+        '/lost-password',
+        data: {
+          'phone': phone,
+        },
+      );
+
+      return PhoneRestorePasswordResponse.fromJson(response.data);
+    } on DioException catch (e) {
+      throw Exception(e.message);
+    }
+  }
+
+  @override
+  Future<PhoneRestorePasswordResponse> changePasswordByPhone(String phone, String password, String passwordRe) async {
+    try {
+      Response response = await _httpService.dio.post(
+        '/reset-password',
+        data: {
+          'phone': phone,
+          'password': password,
+          'password_re': passwordRe,
+        },
+      );
+
+      return PhoneRestorePasswordResponse.fromJson(response.data);
     } on DioException catch (e) {
       throw Exception(e.message);
     }

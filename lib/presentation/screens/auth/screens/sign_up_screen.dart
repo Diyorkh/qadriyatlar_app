@@ -22,7 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final _userPhoneController = TextEditingController();
   final _userPasswordController = TextEditingController();
 
-  bool _passwordVisible = false;
+  bool _passwordVisible = true;
 
   @override
   void dispose() {
@@ -103,7 +103,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           CustomTextField(
                             controller: _userPhoneController,
                             hintText: 'Telefon Raqami', // TODO: Add translations
-                            suffixIcon: Icons.person_outline_rounded,
+                            suffixIcon: Icons.phone,
                             validator: (String? val) {
                               if (val!.isEmpty) {
                                 return 'Fill the form'; // TODO: Add translations
@@ -115,6 +115,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           const SizedBox(height: 20.0),
                           CustomTextField(
                             controller: _userPasswordController,
+                            obscure: _passwordVisible,
                             // TODO: Add translations
                             hintText: 'Parol',
                             suffixWidget: IconButton(
@@ -142,17 +143,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           const SizedBox(height: 80.0),
                           CustomAppButton(
                             loaderIndicator: state is LoadingRegisterAccountState,
-                            onPressed: () {
-                              if (_regKey.currentState!.validate()) {
-                                BlocProvider.of<AuthBloc>(context).add(
-                                  RegisterAccountEvent(
-                                    userName: _userNameController.text,
-                                    userPassword: _userPasswordController.text,
-                                    userPhone: _userPhoneController.text,
-                                  ),
-                                );
-                              }
-                            },
+                            onPressed: state is LoadingRegisterAccountState
+                                ? null
+                                : () {
+                                    if (_regKey.currentState!.validate()) {
+                                      BlocProvider.of<AuthBloc>(context).add(
+                                        RegisterAccountEvent(
+                                          userName: _userNameController.text,
+                                          userPassword: _userPasswordController.text,
+                                          userPhone: _userPhoneController.text,
+                                        ),
+                                      );
+                                    }
+                                  },
                             // TODO: Add translations
                             label: "Ro'yxatdan o'tish",
                           ),

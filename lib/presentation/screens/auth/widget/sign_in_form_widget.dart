@@ -10,14 +10,14 @@ import 'package:qadriyatlar_app/presentation/widgets/flutter_toast.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
 import 'package:qadriyatlar_app/theme/const_styles.dart';
 
-class AuthPhoneWidget extends StatefulWidget {
-  const AuthPhoneWidget({super.key});
+class SignInPhoneFormWidget extends StatefulWidget {
+  const SignInPhoneFormWidget({super.key});
 
   @override
-  State<AuthPhoneWidget> createState() => _AuthPhoneWidgetState();
+  State<SignInPhoneFormWidget> createState() => _SignInPhoneFormWidgetState();
 }
 
-class _AuthPhoneWidgetState extends State<AuthPhoneWidget> {
+class _SignInPhoneFormWidgetState extends State<SignInPhoneFormWidget> {
   final _formKey = GlobalKey<FormState>();
 
   final _phoneController = TextEditingController();
@@ -64,6 +64,7 @@ class _AuthPhoneWidgetState extends State<AuthPhoneWidget> {
                 ),
                 const SizedBox(height: 30),
                 CustomTextField(
+                  obscure: passwordVisible,
                   controller: _passwordController,
                   suffixWidget: IconButton(
                     onPressed: () {

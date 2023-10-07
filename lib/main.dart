@@ -13,6 +13,8 @@ import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/core/routes/app_routes.dart';
 import 'package:qadriyatlar_app/data/repository/localization_repository.dart';
 import 'package:qadriyatlar_app/firebase_options.dart';
+import 'package:qadriyatlar_app/presentation/bloc/auth/auth_bloc.dart';
+import 'package:qadriyatlar_app/presentation/bloc/auth/phone_restore_password/phone_restore_password_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/course/course_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/courses/user_courses_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/edit_profile_bloc/edit_profile_bloc.dart';
@@ -113,6 +115,12 @@ class MyAppState extends State<MyApp> {
         BlocProvider<LanguagesBloc>(
           create: (BuildContext context) => LanguagesBloc()..add(LoadLanguagesEvent()),
         ),
+        BlocProvider<PhoneRestorePasswordBloc>(
+          create: (BuildContext context) => PhoneRestorePasswordBloc(),
+        ),
+        BlocProvider<AuthBloc>(
+          create: (BuildContext context) => AuthBloc(),
+        ),
       ],
       child: MultiProvider(
         providers: [
@@ -121,7 +129,7 @@ class MyAppState extends State<MyApp> {
         ],
         child: OverlaySupport(
           child: MaterialApp(
-            title: 'Masterstudy',
+            title: 'Qadriyatlar Academiyasi',
             theme: AppTheme().themeLight,
             initialRoute: SplashScreen.routeName,
             debugShowCheckedModeBanner: false,

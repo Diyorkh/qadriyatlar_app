@@ -181,8 +181,8 @@ class DialogAuthorWidget extends StatelessWidget {
                   ),
                   //Facebook
                   Visibility(
-                    visible: state.courseDetailResponse.author.meta.facebookIcon != null &&
-                        state.courseDetailResponse.author.meta.facebookIcon != '',
+                    visible: state.courseDetailResponse.author.meta.facebook != null &&
+                        state.courseDetailResponse.author.meta.facebook != '',
                     child: Padding(
                       padding: EdgeInsets.only(left: 20.0, right: 5.0),
                       child: GestureDetector(
@@ -209,8 +209,8 @@ class DialogAuthorWidget extends StatelessWidget {
                   ),
                   //Twitter
                   Visibility(
-                    visible: state.courseDetailResponse.author.meta.twitterIcon != null &&
-                        state.courseDetailResponse.author.meta.twitterIcon != '',
+                    visible: state.courseDetailResponse.author.meta.twitter != null &&
+                        state.courseDetailResponse.author.meta.twitter != '',
                     child: Padding(
                       padding: EdgeInsets.only(left: 5.0, right: 5.0),
                       child: GestureDetector(
@@ -231,8 +231,8 @@ class DialogAuthorWidget extends StatelessWidget {
                   ),
                   //Instagram
                   Visibility(
-                    visible: state.courseDetailResponse.author.meta.instagramIcon != null &&
-                        state.courseDetailResponse.author.meta.instagramIcon != '',
+                    visible: state.courseDetailResponse.author.meta.instagram != null &&
+                        state.courseDetailResponse.author.meta.instagram != '',
                     child: Padding(
                       padding: EdgeInsets.only(left: 5.0, right: 5.0),
                       child: GestureDetector(

@@ -58,4 +58,6 @@ class AuthSocialsEvent extends AuthEvent {
 
 class CloseDialogEvent extends AuthEvent {}
 
+class ResetStatesEvent extends AuthEvent {}
+
 class DemoAuthEvent extends AuthEvent {}

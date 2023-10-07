@@ -123,6 +123,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(ErrorAuthSocialsState(e.toString()));
       }
     });
+
+    on<ResetStatesEvent>((event, emit) {
+      emit(InitialAuthState());
+    });
   }
 
   final AuthRepository _repository = AuthRepositoryImpl();

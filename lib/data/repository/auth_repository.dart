@@ -5,6 +5,7 @@ import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/data/datasources/auth_datasource.dart';
 import 'package:qadriyatlar_app/data/models/auth_error/auth_error.dart';
 import 'package:qadriyatlar_app/data/models/change_password/change_password.dart';
+import 'package:qadriyatlar_app/data/models/restore_password/phone_restore_password.dart';
 import 'package:qadriyatlar_app/data/models/restore_password/restore_password.dart';
 
 abstract class AuthRepository {
@@ -27,9 +28,13 @@ abstract class AuthRepository {
 
   Future<RestorePasswordResponse> restorePassword(String email);
 
+  Future<PhoneRestorePasswordResponse> phoneRestorePassword(String phone);
+
   Future authSocialsUser(String providerType, String? idToken, String accessToken);
 
   Future<ChangePasswordResponse> changePassword(String oldPassword, String newPassword);
+
+  Future<PhoneRestorePasswordResponse> changePasswordByPhone(String phone, String password, String passwordRe);
 
   Future<String> demoAuth();
 
@@ -156,4 +161,12 @@ class AuthRepositoryImpl extends AuthRepository {
 
     return token;
   }
+
+  @override
+  Future<PhoneRestorePasswordResponse> phoneRestorePassword(String phone) async =>
+      _authDataSource.phoneRestorePassword(phone);
+
+  @override
+  Future<PhoneRestorePasswordResponse> changePasswordByPhone(String phone, String password, String passwordRe) async =>
+      await _authDataSource.changePasswordByPhone(phone, password, passwordRe);
 }

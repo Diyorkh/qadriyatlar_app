@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qadriyatlar_app/core/constants/assets_path.dart';
 import 'package:qadriyatlar_app/presentation/bloc/profile/profile_bloc.dart';
 import 'package:qadriyatlar_app/presentation/screens/detail_profile/detail_profile_screen.dart';
+import 'package:qadriyatlar_app/presentation/screens/profile_edit/profile_edit_screen.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
 import 'package:shimmer/shimmer.dart';
@@ -83,8 +84,8 @@ class ProfileWidget extends StatelessWidget {
                         onPressed: () {
                           Navigator.pushNamed(
                             context,
-                            DetailProfileScreen.routeName,
-                            arguments: DetailProfileScreenArgs(),
+                            ProfileEditScreen.routeName,
+                            arguments: ProfileEditScreenArgs(state.account),
                           );
                         },
                         icon: const Icon(
