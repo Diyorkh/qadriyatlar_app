@@ -7,37 +7,44 @@ part of 'course_detail_response.dart';
 // **************************************************************************
 
 CourseDetailResponse _$CourseDetailResponseFromJson(
-  Map<String, dynamic> json,
-) =>
+        Map<String, dynamic> json) =>
     CourseDetailResponse(
       id: json['id'] as int,
       title: json['title'] as String,
-      images: json['images'] == null ? null : ImagesBean.fromJson(json['images'] as Map<String, dynamic>),
+      images: json['images'] == null
+          ? null
+          : ImagesBean.fromJson(json['images'] as Map<String, dynamic>),
       notSaleable: json['not_saleable'] as bool,
-      categories: (json['categories'] as List<dynamic>).map((e) => e as String?).toList(),
-      price: json['price'] == null ? null : PriceBean.fromJson(json['price'] as Map<String, dynamic>),
-      rating: json['rating'] == null ? null : RatingBean.fromJson(json['rating'] as Map<String, dynamic>),
+      categories: (json['categories'] as List<dynamic>)
+          .map((e) => e as String?)
+          .toList(),
+      price: json['price'] == null
+          ? null
+          : PriceBean.fromJson(json['price'] as Map<String, dynamic>),
+      rating: json['rating'] == null
+          ? null
+          : RatingBean.fromJson(json['rating'] as Map<String, dynamic>),
       featured: json['featured'],
       status: json['status'],
-      author: json['author'] == null ? null : AuthorBean.fromJson(json['author'] as Map<String, dynamic>),
+      author: json['author'] == null
+          ? null
+          : AuthorBean.fromJson(json['author'] as Map<String, dynamic>),
       url: json['url'] as String?,
       description: json['description'] as String?,
       meta: (json['meta'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : MetaBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) =>
+              e == null ? null : MetaBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       announcement: json['announcement'] as String?,
       purchaseLabel: json['purchase_label'] as String?,
       curriculum: (json['curriculum'] as List<dynamic>?)
-          ?.map(
-            (e) => e == null ? null : CurriculumBean.fromJson(e as Map<String, dynamic>),
-          )
+          ?.map((e) => e == null
+              ? null
+              : CurriculumBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       faq: (json['faq'] as List<dynamic>?)
-          ?.map(
-            (e) => e == null ? null : FaqBean.fromJson(e as Map<String, dynamic>),
-          )
+          ?.map((e) =>
+              e == null ? null : FaqBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       isFavorite: json['is_favorite'] as bool?,
       trial: json['trial'] as bool,
@@ -45,16 +52,14 @@ CourseDetailResponse _$CourseDetailResponseFromJson(
       firstLessonType: json['first_lesson_type'] as String?,
       hasAccess: json['has_access'] as bool?,
       categoriesObject: (json['categories_object'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : Category.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) =>
+              e == null ? null : Category.fromJson(e as Map<String, dynamic>))
           .toList(),
       tokenAuth: json['token_auth'],
     );
 
 Map<String, dynamic> _$CourseDetailResponseToJson(
-  CourseDetailResponse instance,
-) =>
+        CourseDetailResponse instance) =>
     <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
@@ -92,7 +97,8 @@ Map<String, dynamic> _$FaqBeanToJson(FaqBean instance) => <String, dynamic>{
       'answer': instance.answer,
     };
 
-CurriculumBean _$CurriculumBeanFromJson(Map<String, dynamic> json) => CurriculumBean(
+CurriculumBean _$CurriculumBeanFromJson(Map<String, dynamic> json) =>
+    CurriculumBean(
       type: json['type'] as String?,
       view: json['view'] as String?,
       label: json['label'] as String?,
@@ -101,7 +107,8 @@ CurriculumBean _$CurriculumBeanFromJson(Map<String, dynamic> json) => Curriculum
       hasPreview: json['has_preview'],
     );
 
-Map<String, dynamic> _$CurriculumBeanToJson(CurriculumBean instance) => <String, dynamic>{
+Map<String, dynamic> _$CurriculumBeanToJson(CurriculumBean instance) =>
+    <String, dynamic>{
       'type': instance.type,
       'view': instance.view,
       'label': instance.label,
@@ -127,11 +134,16 @@ AuthorBean _$AuthorBeanFromJson(Map<String, dynamic> json) => AuthorBean(
       login: json['login'] as String,
       avatarUrl: json['avatar_url'] as String?,
       url: json['url'] as String?,
-      meta: json['meta'] == null ? null : AuthorMetaBean.fromJson(json['meta'] as Map<String, dynamic>),
-      rating: json['rating'] == null ? null : AuthorRatingBean.fromJson(json['rating'] as Map<String, dynamic>),
+      meta: json['meta'] == null
+          ? null
+          : AuthorMetaBean.fromJson(json['meta'] as Map<String, dynamic>),
+      rating: json['rating'] == null
+          ? null
+          : AuthorRatingBean.fromJson(json['rating'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$AuthorBeanToJson(AuthorBean instance) => <String, dynamic>{
+Map<String, dynamic> _$AuthorBeanToJson(AuthorBean instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'login': instance.login,
       'avatar_url': instance.avatarUrl,
@@ -140,7 +152,8 @@ Map<String, dynamic> _$AuthorBeanToJson(AuthorBean instance) => <String, dynamic
       'rating': instance.rating,
     };
 
-AuthorMetaBean _$AuthorMetaBeanFromJson(Map<String, dynamic> json) => AuthorMetaBean(
+AuthorMetaBean _$AuthorMetaBeanFromJson(Map<String, dynamic> json) =>
+    AuthorMetaBean(
       facebook: json['facebook'] as String?,
       twitter: json['twitter'] as String?,
       instagram: json['instagram'] as String?,
@@ -151,7 +164,8 @@ AuthorMetaBean _$AuthorMetaBeanFromJson(Map<String, dynamic> json) => AuthorMeta
       lastName: json['last_name'] as String?,
     );
 
-Map<String, dynamic> _$AuthorMetaBeanToJson(AuthorMetaBean instance) => <String, dynamic>{
+Map<String, dynamic> _$AuthorMetaBeanToJson(AuthorMetaBean instance) =>
+    <String, dynamic>{
       'facebook': instance.facebook,
       'twitter': instance.twitter,
       'instagram': instance.instagram,
@@ -162,7 +176,8 @@ Map<String, dynamic> _$AuthorMetaBeanToJson(AuthorMetaBean instance) => <String,
       'last_name': instance.lastName,
     };
 
-AuthorRatingBean _$AuthorRatingBeanFromJson(Map<String, dynamic> json) => AuthorRatingBean(
+AuthorRatingBean _$AuthorRatingBeanFromJson(Map<String, dynamic> json) =>
+    AuthorRatingBean(
       total: json['total'] as num?,
       average: json['average'] as num?,
       marksNum: json['marks_num'] as num?,
@@ -170,7 +185,8 @@ AuthorRatingBean _$AuthorRatingBeanFromJson(Map<String, dynamic> json) => Author
       percent: json['percent'] as num?,
     );
 
-Map<String, dynamic> _$AuthorRatingBeanToJson(AuthorRatingBean instance) => <String, dynamic>{
+Map<String, dynamic> _$AuthorRatingBeanToJson(AuthorRatingBean instance) =>
+    <String, dynamic>{
       'total': instance.total,
       'average': instance.average,
       'marks_num': instance.marksNum,
@@ -182,10 +198,13 @@ RatingBean _$RatingBeanFromJson(Map<String, dynamic> json) => RatingBean(
       total: json['total'] as int,
       average: json['average'] as num?,
       percent: json['percent'] as num?,
-      details: json['details'] == null ? null : DetailsBean.fromJson(json['details'] as Map<String, dynamic>),
+      details: json['details'] == null
+          ? null
+          : DetailsBean.fromJson(json['details'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$RatingBeanToJson(RatingBean instance) => <String, dynamic>{
+Map<String, dynamic> _$RatingBeanToJson(RatingBean instance) =>
+    <String, dynamic>{
       'average': instance.average,
       'total': instance.total,
       'percent': instance.percent,
@@ -200,7 +219,8 @@ DetailsBean _$DetailsBeanFromJson(Map<String, dynamic> json) => DetailsBean(
       five: json['5'] as num,
     );
 
-Map<String, dynamic> _$DetailsBeanToJson(DetailsBean instance) => <String, dynamic>{
+Map<String, dynamic> _$DetailsBeanToJson(DetailsBean instance) =>
+    <String, dynamic>{
       '1': instance.one,
       '2': instance.two,
       '3': instance.three,
@@ -225,15 +245,18 @@ ImagesBean _$ImagesBeanFromJson(Map<String, dynamic> json) => ImagesBean(
       small: json['small'] as String?,
     );
 
-Map<String, dynamic> _$ImagesBeanToJson(ImagesBean instance) => <String, dynamic>{
+Map<String, dynamic> _$ImagesBeanToJson(ImagesBean instance) =>
+    <String, dynamic>{
       'full': instance.full,
       'small': instance.small,
     };
 
-TokenAuthToCourse _$TokenAuthToCourseFromJson(Map<String, dynamic> json) => TokenAuthToCourse(
+TokenAuthToCourse _$TokenAuthToCourseFromJson(Map<String, dynamic> json) =>
+    TokenAuthToCourse(
       tokenAuth: json['token_auth'] as String?,
     );
 
-Map<String, dynamic> _$TokenAuthToCourseToJson(TokenAuthToCourse instance) => <String, dynamic>{
+Map<String, dynamic> _$TokenAuthToCourseToJson(TokenAuthToCourse instance) =>
+    <String, dynamic>{
       'token_auth': instance.tokenAuth,
     };

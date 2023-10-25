@@ -77,7 +77,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
               child: AppBar(
                 centerTitle: true,
                 title: Text(
-                  'Profile',
+                  localizations.getLocalization('profile_bottom_nav'),
                   style: kAppBarTextStyle.copyWith(
                     color: Colors.black,
                   ),
@@ -99,8 +99,8 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                     SizedBox(height: 30),
                     Padding(
                       padding: const EdgeInsets.only(left: 15.0),
-                      child: const Text(
-                        "Qo'shimcha",
+                      child: Text(
+                        localizations.getLocalization('additional'),
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: Colors.grey,
@@ -111,7 +111,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                     // View my profile
                     TileWidget(
                       leadingBackColor: Colors.red[600],
-                      title: 'Sevimlar',
+                      title: localizations.getLocalization('favorites_title'),
                       icon: IconlyLight.heart,
                       onClick: () {
                         Navigator.pushReplacementNamed(
@@ -123,7 +123,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                     ),
                     // My courses
                     TileWidget(
-                      title: 'Mening kurslarim',
+                      title: localizations.getLocalization('user_courses_screen_title'),
                       leadingBackColor: Colors.cyan[600],
                       icon: IconlyLight.bag_2,
                       onClick: () => Navigator.pushReplacementNamed(
@@ -135,8 +135,8 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                     const SizedBox(height: 30),
                     Padding(
                       padding: const EdgeInsets.only(left: 15.0),
-                      child: const Text(
-                        'Sozlamalar',
+                      child: Text(
+                        localizations.getLocalization('settings'),
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: Colors.grey,
@@ -147,7 +147,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                     // My orders
                     TileWidget(
                       leadingBackColor: Colors.green[600],
-                      title: "To'lov usuli",
+                      title: localizations.getLocalization('user_orders_title'),
                       icon: IconlyLight.wallet,
                       onClick: () {
                         Navigator.of(context).pushNamed(OrdersScreen.routeName);
@@ -156,7 +156,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                     // Settings
                     TileWidget(
                       leadingBackColor: Colors.yellow[600],
-                      title: 'Settings',
+                      title: localizations.getLocalization('settings'),
                       icon: IconlyLight.setting,
                       onClick: () {
                         if (state is LoadedProfileState) {
@@ -172,7 +172,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                     // Settings
                     TileWidget(
                       leadingBackColor: Colors.grey[400],
-                      title: 'Til',
+                      title: localizations.getLocalization('languages'),
                       icon: Icons.language_outlined,
                       onClick: () => Navigator.of(context).pushNamed(LanguagesScreen.routeName),
                     ),
@@ -180,7 +180,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                     // Settings
                     TileWidget(
                       leadingBackColor: Colors.grey[400],
-                      title: 'Foydalanuvchi shartnomasi',
+                      title: localizations.getLocalization('user_agreement'),
                       icon: IconlyLight.document,
                       onClick: () => Navigator.pushNamed(
                         context,
@@ -193,7 +193,7 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
                       child: TextButton(
                         onPressed: () => _showLogoutDialog(context),
                         child: Text(
-                          'Chiqish',
+                          localizations.getLocalization('logout'),
                           style: TextStyle(
                             color: Colors.red,
                           ),

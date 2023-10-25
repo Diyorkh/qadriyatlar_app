@@ -6,29 +6,34 @@ part of 'assignment_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-AssignmentResponse _$AssignmentResponseFromJson(Map<String, dynamic> json) => AssignmentResponse(
+AssignmentResponse _$AssignmentResponseFromJson(Map<String, dynamic> json) =>
+    AssignmentResponse(
       id: json['id'] as int?,
       label: json['label'] as String?,
-      files: (json['files'] as List<dynamic>?)?.map((e) => FilesBean.fromJson(e as Map<String, dynamic>)).toList(),
+      files: (json['files'] as List<dynamic>?)
+          ?.map((e) => FilesBean.fromJson(e as Map<String, dynamic>))
+          .toList(),
       status: json['status'] as String,
       comment: json['comment'] as String?,
       translations: json['translations'] == null
           ? null
           : TranslationBean.fromJson(
-              json['translations'] as Map<String, dynamic>,
-            ),
+              json['translations'] as Map<String, dynamic>),
       title: json['title'] as String,
       content: json['content'] as String,
       draftId: json['draft_id'] as int?,
       button: json['button'] as String?,
-      section: json['section'] == null ? null : SectionBean.fromJson(json['section'] as Map<String, dynamic>),
+      section: json['section'] == null
+          ? null
+          : SectionBean.fromJson(json['section'] as Map<String, dynamic>),
       prevLessonType: json['prev_lesson_type'] as String,
       nextLessonType: json['next_lesson_type'] as String,
       prevLesson: json['prev_lesson'],
       nextLesson: json['next_lesson'],
     );
 
-Map<String, dynamic> _$AssignmentResponseToJson(AssignmentResponse instance) => <String, dynamic>{
+Map<String, dynamic> _$AssignmentResponseToJson(AssignmentResponse instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'status': instance.status,
       'comment': instance.comment,
@@ -52,26 +57,31 @@ SectionBean _$SectionBeanFromJson(Map<String, dynamic> json) => SectionBean(
       index: json['index'] as int,
     );
 
-Map<String, dynamic> _$SectionBeanToJson(SectionBean instance) => <String, dynamic>{
+Map<String, dynamic> _$SectionBeanToJson(SectionBean instance) =>
+    <String, dynamic>{
       'label': instance.label,
       'number': instance.number,
       'index': instance.index,
     };
 
-TranslationBean _$TranslationBeanFromJson(Map<String, dynamic> json) => TranslationBean(
+TranslationBean _$TranslationBeanFromJson(Map<String, dynamic> json) =>
+    TranslationBean(
       title: json['title'] as String,
       content: json['content'] as String,
       files: json['files'] as String,
     );
 
-Map<String, dynamic> _$TranslationBeanToJson(TranslationBean instance) => <String, dynamic>{
+Map<String, dynamic> _$TranslationBeanToJson(TranslationBean instance) =>
+    <String, dynamic>{
       'title': instance.title,
       'content': instance.content,
       'files': instance.files,
     };
 
 FilesBean _$FilesBeanFromJson(Map<String, dynamic> json) => FilesBean(
-      data: json['data'] == null ? null : FileBean.fromJson(json['data'] as Map<String, dynamic>),
+      data: json['data'] == null
+          ? null
+          : FileBean.fromJson(json['data'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$FilesBeanToJson(FilesBean instance) => <String, dynamic>{

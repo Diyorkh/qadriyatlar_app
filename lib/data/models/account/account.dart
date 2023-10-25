@@ -14,6 +14,7 @@ class Account {
     this.url,
     this.roles,
     this.meta,
+    this.phone,
     this.rating,
     this.profileUrl,
   });
@@ -29,6 +30,7 @@ class Account {
   String? url;
   List<String>? roles;
   MetaBean? meta;
+  final String? phone;
   RatingBean? rating;
   @JsonKey(name: 'profile_url')
   String? profileUrl;

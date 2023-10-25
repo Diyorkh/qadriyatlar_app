@@ -6,38 +6,44 @@ part of 'instructors_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-InstructorsResponse _$InstructorsResponseFromJson(Map<String, dynamic> json) => InstructorsResponse(
+InstructorsResponse _$InstructorsResponseFromJson(Map<String, dynamic> json) =>
+    InstructorsResponse(
       page: json['page'] as int,
       data: (json['data'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : InstructorBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) => e == null
+              ? null
+              : InstructorBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       totalPages: json['total_pages'] as int,
     );
 
 Map<String, dynamic> _$InstructorsResponseToJson(
-  InstructorsResponse instance,
-) =>
+        InstructorsResponse instance) =>
     <String, dynamic>{
       'page': instance.page,
       'data': instance.data,
       'total_pages': instance.totalPages,
     };
 
-InstructorBean _$InstructorBeanFromJson(Map<String, dynamic> json) => InstructorBean(
+InstructorBean _$InstructorBeanFromJson(Map<String, dynamic> json) =>
+    InstructorBean(
       id: json['id'] as int,
       login: json['login'] as String,
       avatar: json['avatar'] as String,
       avatarUrl: json['avatar_url'] as String,
       email: json['email'] as String,
       url: json['url'] as String,
-      meta: json['meta'] == null ? null : MetaBean.fromJson(json['meta'] as Map<String, dynamic>),
-      rating: json['rating'] == null ? null : RatingBean.fromJson(json['rating'] as Map<String, dynamic>),
+      meta: json['meta'] == null
+          ? null
+          : MetaBean.fromJson(json['meta'] as Map<String, dynamic>),
+      rating: json['rating'] == null
+          ? null
+          : RatingBean.fromJson(json['rating'] as Map<String, dynamic>),
       profileUrl: json['profile_url'] as String,
     );
 
-Map<String, dynamic> _$InstructorBeanToJson(InstructorBean instance) => <String, dynamic>{
+Map<String, dynamic> _$InstructorBeanToJson(InstructorBean instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'login': instance.login,
       'avatar': instance.avatar,
@@ -57,7 +63,8 @@ RatingBean _$RatingBeanFromJson(Map<String, dynamic> json) => RatingBean(
       percent: json['percent'] as num,
     );
 
-Map<String, dynamic> _$RatingBeanToJson(RatingBean instance) => <String, dynamic>{
+Map<String, dynamic> _$RatingBeanToJson(RatingBean instance) =>
+    <String, dynamic>{
       'total': instance.total,
       'average': instance.average,
       'marks_num': instance.marksNum,

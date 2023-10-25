@@ -6,20 +6,21 @@ part of 'orders_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-OrdersResponse _$OrdersResponseFromJson(Map<String, dynamic> json) => OrdersResponse(
+OrdersResponse _$OrdersResponseFromJson(Map<String, dynamic> json) =>
+    OrdersResponse(
       posts: (json['posts'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : OrderBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) =>
+              e == null ? null : OrderBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       memberships: (json['memberships'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : MembershipBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) => e == null
+              ? null
+              : MembershipBean.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$OrdersResponseToJson(OrdersResponse instance) => <String, dynamic>{
+Map<String, dynamic> _$OrdersResponseToJson(OrdersResponse instance) =>
+    <String, dynamic>{
       'posts': instance.posts,
       'memberships': instance.memberships,
     };
@@ -27,9 +28,8 @@ Map<String, dynamic> _$OrdersResponseToJson(OrdersResponse instance) => <String,
 OrderBean _$OrderBeanFromJson(Map<String, dynamic> json) => OrderBean(
       userId: json['user_id'] as String,
       items: (json['items'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : ItemsBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) =>
+              e == null ? null : ItemsBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       date: json['date'] as String,
       status: json['status'] as String,
@@ -37,16 +37,20 @@ OrderBean _$OrderBeanFromJson(Map<String, dynamic> json) => OrderBean(
       orderKey: json['order_key'] as String,
       orderTotal: json['_order_total'] as String,
       orderCurrency: json['_order_currency'] as String,
-      i18n: json['i18n'] == null ? null : I18nBean.fromJson(json['i18n'] as Map<String, dynamic>),
+      i18n: json['i18n'] == null
+          ? null
+          : I18nBean.fromJson(json['i18n'] as Map<String, dynamic>),
       id: json['id'] as num,
       dateFormatted: json['date_formatted'] as String,
       cartItems: (json['cart_items'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : CartItemsBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) => e == null
+              ? null
+              : CartItemsBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       total: json['total'] as String,
-      user: json['user'] == null ? null : UserBean.fromJson(json['user'] as Map<String, dynamic>),
+      user: json['user'] == null
+          ? null
+          : UserBean.fromJson(json['user'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$OrderBeanToJson(OrderBean instance) => <String, dynamic>{
@@ -84,7 +88,8 @@ Map<String, dynamic> _$UserBeanToJson(UserBean instance) => <String, dynamic>{
       'url': instance.url,
     };
 
-CartItemsBean _$CartItemsBeanFromJson(Map<String, dynamic> json) => CartItemsBean(
+CartItemsBean _$CartItemsBeanFromJson(Map<String, dynamic> json) =>
+    CartItemsBean(
       cartItemId: json['cart_item_id'] as int,
       title: json['title'] as String,
       image: json['image'] as String,
@@ -95,7 +100,8 @@ CartItemsBean _$CartItemsBeanFromJson(Map<String, dynamic> json) => CartItemsBea
       imageUrl: json['image_url'] as String,
     );
 
-Map<String, dynamic> _$CartItemsBeanToJson(CartItemsBean instance) => <String, dynamic>{
+Map<String, dynamic> _$CartItemsBeanToJson(CartItemsBean instance) =>
+    <String, dynamic>{
       'cart_item_id': instance.cartItemId,
       'title': instance.title,
       'image': instance.image,
@@ -152,7 +158,8 @@ Map<String, dynamic> _$ItemsBeanToJson(ItemsBean instance) => <String, dynamic>{
       'price': instance.price,
     };
 
-MembershipBean _$MembershipBeanFromJson(Map<String, dynamic> json) => MembershipBean(
+MembershipBean _$MembershipBeanFromJson(Map<String, dynamic> json) =>
+    MembershipBean(
       ID: json['ID'] as String,
       id: json['id'] as String,
       subscriptionId: json['subscription_id'] as String,
@@ -174,12 +181,15 @@ MembershipBean _$MembershipBeanFromJson(Map<String, dynamic> json) => Membership
       courseNumber: json['course_number'] as String,
       usedQuotas: json['used_quotas'] as num,
       quotasLeft: json['quotas_left'] as num,
-      button: json['button'] == null ? null : ButtonBean.fromJson(json['button'] as Map<String, dynamic>),
+      button: json['button'] == null
+          ? null
+          : ButtonBean.fromJson(json['button'] as Map<String, dynamic>),
       features: json['features'] as String,
       status: json['status'] as String,
     );
 
-Map<String, dynamic> _$MembershipBeanToJson(MembershipBean instance) => <String, dynamic>{
+Map<String, dynamic> _$MembershipBeanToJson(MembershipBean instance) =>
+    <String, dynamic>{
       'ID': instance.ID,
       'id': instance.id,
       'subscription_id': instance.subscriptionId,
@@ -211,7 +221,8 @@ ButtonBean _$ButtonBeanFromJson(Map<String, dynamic> json) => ButtonBean(
       url: json['url'] as String,
     );
 
-Map<String, dynamic> _$ButtonBeanToJson(ButtonBean instance) => <String, dynamic>{
+Map<String, dynamic> _$ButtonBeanToJson(ButtonBean instance) =>
+    <String, dynamic>{
       'text': instance.text,
       'url': instance.url,
     };

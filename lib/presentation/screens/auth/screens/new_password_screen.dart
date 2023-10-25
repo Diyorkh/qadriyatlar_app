@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/auth/phone_restore_password/phone_restore_password_bloc.dart';
 import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
 import 'package:qadriyatlar_app/presentation/widgets/custom_app_button.dart';
@@ -38,7 +39,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
         elevation: 0.0,
         backgroundColor: Colors.white,
         title: Text(
-          'Change password',
+          localizations.getLocalization('change_password'),
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -69,7 +70,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                 }
 
                 if (state is ErrorChangePasswordState) {
-                  showFlutterToast(title: state.message ?? 'Unknown error');
+                  showFlutterToast(title: state.message ?? localizations.getLocalization('unknown_error'));
                 }
               },
               child: BlocBuilder<PhoneRestorePasswordBloc, PhoneRestorePasswordState>(
@@ -79,11 +80,10 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                       CustomTextField(
                         controller: _newPasswordController,
                         obscure: true,
-                        // TODO: Add translations
-                        hintText: 'Password',
+                        hintText: localizations.getLocalization('password_label_text'),
                         validator: (String? val) {
                           if (val!.isEmpty) {
-                            return 'Fill the form'; // TODO: Add translations
+                            return localizations.getLocalization('password_empty_error_text');
                           }
                           return null;
                         },
@@ -92,15 +92,14 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                       CustomTextField(
                         controller: _newPasswordConfirmController,
                         obscure: true,
-                        // TODO: Add translations
-                        hintText: 'Password confirm',
+                        hintText: localizations.getLocalization('confirm_password_helper'),
                         validator: (String? val) {
                           if (val!.isEmpty) {
-                            return 'Fill the form'; // TODO: Add translations
+                            return localizations.getLocalization('confirm_password_helper');
                           }
 
                           if (val != _newPasswordController.text) {
-                            return 'Check the password is correctly';
+                            return localizations.getLocalization('password_dont_match');
                           }
 
                           return null;
@@ -122,7 +121,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                                 }
                               },
                         loaderIndicator: state is LoadingChangePasswordState,
-                        label: 'Confirm',
+                        label: localizations.getLocalization('change_password'),
                       ),
                     ],
                   );

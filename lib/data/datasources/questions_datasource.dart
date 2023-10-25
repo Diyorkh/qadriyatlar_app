@@ -34,6 +34,7 @@ class QuestionsRemoteDataSource extends QuestionsDataSource {
 
       return QuestionsResponse.fromJson(response.data);
     } on DioException catch (e) {
+
       throw Exception(e.message);
     }
   }

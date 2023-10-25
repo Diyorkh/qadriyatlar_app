@@ -7,15 +7,14 @@ part of 'popular_searches_response.dart';
 // **************************************************************************
 
 PopularSearchesResponse _$PopularSearchesResponseFromJson(
-  Map<String, dynamic> json,
-) =>
+        Map<String, dynamic> json) =>
     PopularSearchesResponse(
-      searches: (json['searches'] as List<dynamic>).map((e) => e as String).toList(),
+      searches:
+          (json['searches'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$PopularSearchesResponseToJson(
-  PopularSearchesResponse instance,
-) =>
+        PopularSearchesResponse instance) =>
     <String, dynamic>{
       'searches': instance.searches,
     };

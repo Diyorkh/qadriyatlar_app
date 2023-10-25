@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/screens/search/components/recent_search_service.dart';
 import 'package:qadriyatlar_app/presentation/screens/search_detail/search_detail_screen.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
@@ -19,20 +20,18 @@ class RecentSearches extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // TODO: 29.09.2023 Add translations
                 Text(
-                  'Recent Searches',
+                  localizations.getLocalization('recent_searches'),
                   textScaleFactor: 1.0,
                   style: Theme.of(context).primaryTextTheme.headlineSmall?.copyWith(
                         color: ColorApp.dark,
                         fontStyle: FontStyle.normal,
                       ),
                 ),
-                // TODO: 29.09.2023 Add translations
                 InkWell(
                   onTap: () => Provider.of<RecentSearchService>(context, listen: false).deleteRecentSearches(),
                   child: Text(
-                    'CLEAR',
+                    localizations.getLocalization('clear'),
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,

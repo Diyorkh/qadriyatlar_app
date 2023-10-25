@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/auth/auth_bloc.dart';
 import 'package:qadriyatlar_app/presentation/screens/main_screens.dart';
 import 'package:qadriyatlar_app/presentation/widgets/custom_app_button.dart';
@@ -62,17 +63,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         children: [
                           const SizedBox(height: 50.0),
                           Center(
-                            child: const Text(
-                              // TODO: Add translations
-                              'Yangi akkaunt yarating',
+                            child: Text(
+                              localizations.getLocalization('create_account'),
                               style: headline1,
                             ),
                           ),
                           const SizedBox(height: 10.0),
                           Center(
-                            child: const Text(
-                              // TODO: Add translations
-                              "Iltimos, davom etish uchun shaklni to'ldiring",
+                            child: Text(
+                              localizations.getLocalization('complete_the_form'),
                               style: headline3,
                             ),
                           ),
@@ -89,24 +88,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           const SizedBox(height: 20.0),
                           CustomTextField(
                             controller: _userNameController,
-                            // TODO: Add translations
-                            hintText: "To'liq Ism",
+                            hintText: localizations.getLocalization('full_name'),
                             suffixIcon: Icons.person_outline_rounded,
                             validator: (String? val) {
                               if (val!.isEmpty) {
-                                return 'Fill the form'; // TODO: Add translations
+                                return localizations.getLocalization('fill_the_form');
                               }
                               return null;
                             },
                           ),
                           const SizedBox(height: 20.0),
                           CustomTextField(
+                            keyboardType: TextInputType.phone,
                             controller: _userPhoneController,
-                            hintText: 'Telefon Raqami', // TODO: Add translations
+                            hintText: localizations.getLocalization('phone_number'),
                             suffixIcon: Icons.phone,
                             validator: (String? val) {
                               if (val!.isEmpty) {
-                                return 'Fill the form'; // TODO: Add translations
+                                return localizations.getLocalization('fill_the_phone_number');
                               }
 
                               return null;
@@ -116,8 +115,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           CustomTextField(
                             controller: _userPasswordController,
                             obscure: _passwordVisible,
-                            // TODO: Add translations
-                            hintText: 'Parol',
+                            hintText: localizations.getLocalization('password_label_text'),
                             suffixWidget: IconButton(
                               onPressed: () {
                                 setState(() {
@@ -131,11 +129,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             ),
                             validator: (String? val) {
                               if (val!.isEmpty) {
-                                return 'Fill the form'; // TODO: Add translations
+                                return localizations.getLocalization('password_empty_error_text');
                               }
 
                               if (val.length <= 4) {
-                                return 'Password not correctly'; // TODO: Add translations
+                                return localizations.getLocalization('password_sign_in_helper_text');
                               }
                               return null;
                             },
@@ -156,8 +154,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       );
                                     }
                                   },
-                            // TODO: Add translations
-                            label: "Ro'yxatdan o'tish",
+                            label: localizations.getLocalization('auth_sign_up_tab'),
                           ),
                           const SizedBox(height: 20.0),
                           TextButton(
@@ -165,17 +162,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             child: RichText(
                               text: TextSpan(
                                 children: [
-                                  // TODO: Add translations
                                   TextSpan(
-                                    text: 'Akkauntingiz bormi? ',
+                                    text: '${localizations.getLocalization('do_you_have_account')} ',
                                     style: headline.copyWith(
                                       color: Colors.grey,
                                       fontSize: 14.0,
                                     ),
                                   ),
-                                  // TODO: Add translations
                                   TextSpan(
-                                    text: ' Kirish',
+                                    text: ' ${localizations.getLocalization('login_label_text')}',
                                     style: headlineDot.copyWith(
                                       fontSize: 14.0,
                                     ),

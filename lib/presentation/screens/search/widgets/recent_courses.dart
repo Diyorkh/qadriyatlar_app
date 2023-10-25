@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/screens/course_detail/course_detail_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/search/components/recent_viewed_service.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
@@ -23,20 +24,18 @@ class _RecentCoursesState extends State<RecentCourses> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // TODO: 29.09.2023 Add translations
                 Text(
-                  'Recently Viewed',
+                  localizations.getLocalization('recently_viewed'),
                   textScaleFactor: 1.0,
                   style: Theme.of(context).primaryTextTheme.headlineSmall?.copyWith(
                         color: ColorApp.dark,
                         fontStyle: FontStyle.normal,
                       ),
                 ),
-                // TODO: 29.09.2023 Add translations
                 InkWell(
                   onTap: () => Provider.of<RecentViewedService>(context, listen: false).clearRecentViewed(),
                   child: Text(
-                    'CLEAR',
+                    localizations.getLocalization('clear'),
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,

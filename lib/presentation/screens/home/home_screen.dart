@@ -11,70 +11,80 @@ import 'package:qadriyatlar_app/presentation/widgets/error_widget.dart';
 import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen() : super();
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    if (BlocProvider.of<HomeBloc>(context).state is! LoadedHomeState) {
+      BlocProvider.of<HomeBloc>(context).add(LoadHomeEvent());
+    }
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => HomeBloc()..add(LoadHomeEvent()),
-      child: Scaffold(
-        body: SafeArea(
-          child: BlocBuilder<HomeBloc, HomeState>(
-            builder: (context, state) {
-              if (state is InitialHomeState) {
-                return LoaderWidget(
-                  loaderColor: ColorApp.mainColor,
-                );
-              }
+    return Scaffold(
+      body: SafeArea(
+        child: BlocBuilder<HomeBloc, HomeState>(
+          builder: (context, state) {
+            if (state is InitialHomeState) {
+              return LoaderWidget(
+                loaderColor: ColorApp.mainColor,
+              );
+            }
 
-              if (state is LoadedHomeState) {
-                return CustomScrollView(
-                  slivers: [
-                    SliverPersistentHeader(
-                      delegate: SliverAppBarDelegate(),
+            if (state is LoadedHomeState) {
+              return CustomScrollView(
+                slivers: [
+                  SliverPersistentHeader(
+                    delegate: SliverAppBarDelegate(),
+                  ),
+                  SliverToBoxAdapter(
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      primary: false,
+                      itemCount: state.layout.length,
+                      itemBuilder: (context, index) {
+                        HomeLayoutBean? item = state.layout[index];
+
+                        switch (item?.id) {
+                          case 1:
+                            return CategoriesWidget(item?.name, state.categoryList);
+                          case 2:
+                            return NewCoursesWidget(item?.name, state.coursesNew);
+                          case 3:
+                            return TrendingWidget(true, item?.name, state.coursesTrending);
+                          case 4:
+                            return TopInstructorsWidget(item?.name, state.instructors);
+                          case 5:
+                            return TrendingWidget(false, item?.name, state.coursesFree);
+                          default:
+                            return NewCoursesWidget(item?.name, state.coursesNew);
+                        }
+                      },
                     ),
-                    SliverToBoxAdapter(
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        primary: false,
-                        itemCount: state.layout.length,
-                        itemBuilder: (context, index) {
-                          HomeLayoutBean? item = state.layout[index];
+                  ),
+                ],
+              );
+            }
 
-                          switch (item?.id) {
-                            case 1:
-                              return CategoriesWidget(item?.name, state.categoryList);
-                            case 2:
-                              return NewCoursesWidget(item?.name, state.coursesNew);
-                            case 3:
-                              return TrendingWidget(true, item?.name, state.coursesTrending);
-                            case 4:
-                              return TopInstructorsWidget(item?.name, state.instructors);
-                            case 5:
-                              return TrendingWidget(false, item?.name, state.coursesFree);
-                            default:
-                              return NewCoursesWidget(item?.name, state.coursesNew);
-                          }
-                        },
-                      ),
-                    ),
-                  ],
-                );
-              }
-
-              if (state is ErrorHomeState) {
-                return ErrorCustomWidget(
-                  onTap: () => BlocProvider.of<HomeBloc>(context).add(LoadHomeEvent()),
-                );
-              }
-
+            if (state is ErrorHomeState) {
               return ErrorCustomWidget(
                 onTap: () => BlocProvider.of<HomeBloc>(context).add(LoadHomeEvent()),
               );
-            },
-          ),
+            }
+
+            return ErrorCustomWidget(
+              onTap: () => BlocProvider.of<HomeBloc>(context).add(LoadHomeEvent()),
+            );
+          },
         ),
       ),
     );

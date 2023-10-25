@@ -7,6 +7,7 @@ class EmptyWidget extends StatelessWidget {
     Key? key,
     this.iconData,
     required this.title,
+    this.subtitle,
     this.buttonText,
     this.onTap,
     this.image,
@@ -15,6 +16,7 @@ class EmptyWidget extends StatelessWidget {
   final String? iconData;
   final String? image;
   final String title;
+  final String? subtitle;
   final String? buttonText;
   final VoidCallback? onTap;
 
@@ -61,6 +63,19 @@ class EmptyWidget extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
+          if (subtitle != null)
+            Padding(
+              padding: const EdgeInsets.only(top: 5.0),
+              child: Text(
+                subtitle!,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
           buildButton ?? const SizedBox(),
         ],
       ),

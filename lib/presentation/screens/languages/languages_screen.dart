@@ -35,8 +35,7 @@ class _LanguagesScreenState extends State<LanguagesScreen> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          // TODO: 19.07.2023 Add translations
-          localizations.getLocalization('edit_profile_title'),
+          localizations.getLocalization('languages'),
           style: kAppBarTextStyle.copyWith(
             color: Colors.black,
           ),

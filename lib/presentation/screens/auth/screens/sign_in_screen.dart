@@ -138,15 +138,15 @@ class _SignInScreenWidgetState extends State<SignInScreenWidget> {
               child: ListView(
                 children: <Widget>[
                   Center(
-                    child: const Text(
-                      'Xush kelibsiz!', // TODO: 27.09.2023 Add Translations
+                    child: Text(
+                      localizations.getLocalization('welcome'),
                       style: headline1,
                     ),
                   ),
                   const SizedBox(height: 10.0),
                   Center(
-                    child: const Text(
-                      'Iltimos, akkauntingizga kiring', // TODO: 27.09.2023 Add Translations
+                    child: Text(
+                      localizations.getLocalization('login_to_account'),
                       style: headline3,
                     ),
                   ),

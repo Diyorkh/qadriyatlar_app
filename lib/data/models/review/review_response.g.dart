@@ -6,16 +6,17 @@ part of 'review_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ReviewResponse _$ReviewResponseFromJson(Map<String, dynamic> json) => ReviewResponse(
+ReviewResponse _$ReviewResponseFromJson(Map<String, dynamic> json) =>
+    ReviewResponse(
       posts: (json['posts'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : ReviewBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) =>
+              e == null ? null : ReviewBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       total: json['total'] as bool,
     );
 
-Map<String, dynamic> _$ReviewResponseToJson(ReviewResponse instance) => <String, dynamic>{
+Map<String, dynamic> _$ReviewResponseToJson(ReviewResponse instance) =>
+    <String, dynamic>{
       'posts': instance.posts,
       'total': instance.total,
     };
@@ -29,7 +30,8 @@ ReviewBean _$ReviewBeanFromJson(Map<String, dynamic> json) => ReviewBean(
       mark: json['mark'] as num,
     );
 
-Map<String, dynamic> _$ReviewBeanToJson(ReviewBean instance) => <String, dynamic>{
+Map<String, dynamic> _$ReviewBeanToJson(ReviewBean instance) =>
+    <String, dynamic>{
       'user': instance.user,
       'avatar_url': instance.avatarUrl,
       'time': instance.time,

@@ -49,22 +49,35 @@ class _BottomWidgetState extends State<BottomWidget> {
                   child: MaterialButton(
                     height: 45,
                     color: ColorApp.secondaryColor,
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(
-                        UserCourseScreen.routeName,
-                        arguments: UserCourseScreenArgs(
-                          course_id: state.courseDetailResponse.id.toString(),
-                          title: widget.coursesBean.title,
-                          app_image: widget.coursesBean.images?.small,
-                          avatar_url: state.courseDetailResponse.author?.avatarUrl,
-                          login: state.courseDetailResponse.author?.login,
-                          authorId: '0',
-                          progress: '1',
-                          lessonType: '',
-                          lessonId: '',
-                          isFirstStart: true,
-                        ),
-                      );
+                    onPressed: () async  {
+                      if (!isAuth()) {
+                        showNotAuthorizedDialog(
+                          context,
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              MainScreen.routeName,
+                              arguments: MainScreenArgs(selectedIndex: 4),
+                            );
+                          },
+                        );
+                      } else {
+                        Navigator.of(context).pushNamed(
+                          UserCourseScreen.routeName,
+                          arguments: UserCourseScreenArgs(
+                            course_id: state.courseDetailResponse.id.toString(),
+                            title: widget.coursesBean.title,
+                            app_image: widget.coursesBean.images?.small,
+                            avatar_url: state.courseDetailResponse.author?.avatarUrl,
+                            login: state.courseDetailResponse.author?.login,
+                            authorId: '0',
+                            progress: '1',
+                            lessonType: '',
+                            lessonId: '',
+                            isFirstStart: true,
+                          ),
+                        );
+                      }
                     },
                     child: Text(
                       localizations.getLocalization('start_course_button'),

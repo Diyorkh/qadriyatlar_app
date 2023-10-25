@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pinput/pinput.dart';
+import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/auth/auth_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/auth/phone_restore_password/phone_restore_password_bloc.dart';
 import 'package:qadriyatlar_app/presentation/screens/auth/screens/new_password_screen.dart';
@@ -91,22 +92,20 @@ class _RestorePasswordWidgetState extends State<_RestorePasswordWidget> {
               child: Column(
                 children: [
                   const SizedBox(height: 50),
-                  // TODO: Add translation
-                  const Text(
-                    'Xush kelibsiz!',
+                  Text(
+                    localizations.getLocalization('welcome'),
                     style: headline1,
                   ),
                   const SizedBox(height: 80),
                   CustomTextField(
+                    keyboardType: TextInputType.phone,
                     errorText: state is ErrorPhoneRestorePasswordState ? state.message : null,
                     controller: _phoneController,
-                    // TODO: Add translations
-                    hintText: 'Raqam',
+                    hintText: localizations.getLocalization('phone_number'),
                     suffixIcon: Icons.phone,
                     validator: (String? val) {
                       if (val!.isEmpty) {
-                        // TODO: Add translations
-                        return 'Fill the form';
+                        return localizations.getLocalization('fill_the_phone_number');
                       }
 
                       return null;
@@ -124,7 +123,7 @@ class _RestorePasswordWidgetState extends State<_RestorePasswordWidget> {
                             }
                           },
                     loaderIndicator: state is LoadingPhoneRestorePasswordState,
-                    label: 'Kirish', // TODO: Add translations
+                    label: localizations.getLocalization('login_label_text'),
                   ),
                 ],
               ),
@@ -167,11 +166,11 @@ class _RestorePasswordWidgetState extends State<_RestorePasswordWidget> {
                           errorText: state is InvalidVerifyCodeState ? '${state.message}' : null,
                           validator: (String? val) {
                             if (val!.isEmpty) {
-                              return 'code_error';
+                              return localizations.getLocalization('code_error');
                             }
 
                             if (val.length != 5) {
-                              return 'code_password_reset_error';
+                              return localizations.getLocalization('code_error');
                             }
 
                             return null;
@@ -215,7 +214,9 @@ class _RestorePasswordWidgetState extends State<_RestorePasswordWidget> {
                             );
                           },
                         ),
-                        const SizedBox(height: 20,),
+                        const SizedBox(
+                          height: 20,
+                        ),
                         if (state is LoadingVerifyPhoneState)
                           LoaderWidget(
                             loaderColor: ColorApp.mainColor,

@@ -6,17 +6,19 @@ part of 'courses_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-CoursesResponse _$CoursesResponseFromJson(Map<String, dynamic> json) => CoursesResponse(
+CoursesResponse _$CoursesResponseFromJson(Map<String, dynamic> json) =>
+    CoursesResponse(
       page: json['page'] as int?,
       courses: (json['courses'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : CoursesBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) => e == null
+              ? null
+              : CoursesBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       totalPages: json['total_pages'] as int?,
     );
 
-Map<String, dynamic> _$CoursesResponseToJson(CoursesResponse instance) => <String, dynamic>{
+Map<String, dynamic> _$CoursesResponseToJson(CoursesResponse instance) =>
+    <String, dynamic>{
       'page': instance.page,
       'courses': instance.courses,
       'total_pages': instance.totalPages,
@@ -25,22 +27,32 @@ Map<String, dynamic> _$CoursesResponseToJson(CoursesResponse instance) => <Strin
 CoursesBean _$CoursesBeanFromJson(Map<String, dynamic> json) => CoursesBean(
       id: json['id'] as int,
       title: json['title'] as String?,
-      images: json['images'] == null ? null : ImagesBean.fromJson(json['images'] as Map<String, dynamic>),
+      images: json['images'] == null
+          ? null
+          : ImagesBean.fromJson(json['images'] as Map<String, dynamic>),
       notSaleable: json['not_saleable'] as bool,
-      categories: (json['categories'] as List<dynamic>).map((e) => e as String?).toList(),
-      price: json['price'] == null ? null : PriceBean.fromJson(json['price'] as Map<String, dynamic>),
-      rating: json['rating'] == null ? null : RatingBean.fromJson(json['rating'] as Map<String, dynamic>),
+      categories: (json['categories'] as List<dynamic>)
+          .map((e) => e as String?)
+          .toList(),
+      price: json['price'] == null
+          ? null
+          : PriceBean.fromJson(json['price'] as Map<String, dynamic>),
+      rating: json['rating'] == null
+          ? null
+          : RatingBean.fromJson(json['rating'] as Map<String, dynamic>),
       isFavorite: json['is_favorite'] as bool,
       featured: json['featured'] as String?,
-      status: json['status'] == null ? null : StatusBean.fromJson(json['status'] as Map<String, dynamic>),
+      status: json['status'] == null
+          ? null
+          : StatusBean.fromJson(json['status'] as Map<String, dynamic>),
       categoriesObject: (json['categories_object'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : Category.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) =>
+              e == null ? null : Category.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$CoursesBeanToJson(CoursesBean instance) => <String, dynamic>{
+Map<String, dynamic> _$CoursesBeanToJson(CoursesBean instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'images': instance.images,
@@ -71,7 +83,8 @@ StatusBean _$StatusBeanFromJson(Map<String, dynamic> json) => StatusBean(
       label: json['label'] as String?,
     );
 
-Map<String, dynamic> _$StatusBeanToJson(StatusBean instance) => <String, dynamic>{
+Map<String, dynamic> _$StatusBeanToJson(StatusBean instance) =>
+    <String, dynamic>{
       'status': instance.status,
       'label': instance.label,
     };
@@ -82,7 +95,8 @@ RatingBean _$RatingBeanFromJson(Map<String, dynamic> json) => RatingBean(
       percent: json['percent'] as num?,
     );
 
-Map<String, dynamic> _$RatingBeanToJson(RatingBean instance) => <String, dynamic>{
+Map<String, dynamic> _$RatingBeanToJson(RatingBean instance) =>
+    <String, dynamic>{
       'average': instance.average,
       'total': instance.total,
       'percent': instance.percent,
@@ -93,7 +107,8 @@ ImagesBean _$ImagesBeanFromJson(Map<String, dynamic> json) => ImagesBean(
       small: json['small'] as String?,
     );
 
-Map<String, dynamic> _$ImagesBeanToJson(ImagesBean instance) => <String, dynamic>{
+Map<String, dynamic> _$ImagesBeanToJson(ImagesBean instance) =>
+    <String, dynamic>{
       'full': instance.full,
       'small': instance.small,
     };

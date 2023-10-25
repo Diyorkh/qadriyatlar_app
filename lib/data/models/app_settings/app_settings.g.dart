@@ -7,17 +7,22 @@ part of 'app_settings.dart';
 // **************************************************************************
 
 AppSettings _$AppSettingsFromJson(Map<String, dynamic> json) => AppSettings(
-      addons: json['addons'] == null ? null : AddonsBean.fromJson(json['addons'] as Map<String, dynamic>),
+      addons: json['addons'] == null
+          ? null
+          : AddonsBean.fromJson(json['addons'] as Map<String, dynamic>),
       homeLayout: (json['home_layout'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : HomeLayoutBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) => e == null
+              ? null
+              : HomeLayoutBean.fromJson(e as Map<String, dynamic>))
           .toList(),
-      options: json['options'] == null ? null : OptionsBean.fromJson(json['options'] as Map<String, dynamic>),
+      options: json['options'] == null
+          ? null
+          : OptionsBean.fromJson(json['options'] as Map<String, dynamic>),
       demo: json['demo'] as bool?,
     );
 
-Map<String, dynamic> _$AppSettingsToJson(AppSettings instance) => <String, dynamic>{
+Map<String, dynamic> _$AppSettingsToJson(AppSettings instance) =>
+    <String, dynamic>{
       'addons': instance.addons,
       'home_layout': instance.homeLayout,
       'options': instance.options,
@@ -38,7 +43,8 @@ AddonsBean _$AddonsBeanFromJson(Map<String, dynamic> json) => AddonsBean(
       multiInstructors: json['multi_instructors'] as String?,
     );
 
-Map<String, dynamic> _$AddonsBeanToJson(AddonsBean instance) => <String, dynamic>{
+Map<String, dynamic> _$AddonsBeanToJson(AddonsBean instance) =>
+    <String, dynamic>{
       'shareware': instance.shareware,
       'sequential_drip_content': instance.sequentialDripContent,
       'gradebook': instance.gradebook,
@@ -52,13 +58,15 @@ Map<String, dynamic> _$AddonsBeanToJson(AddonsBean instance) => <String, dynamic
       'multi_instructors': instance.multiInstructors,
     };
 
-HomeLayoutBean _$HomeLayoutBeanFromJson(Map<String, dynamic> json) => HomeLayoutBean(
+HomeLayoutBean _$HomeLayoutBeanFromJson(Map<String, dynamic> json) =>
+    HomeLayoutBean(
       id: json['id'] as int,
       name: json['name'] as String,
       enabled: json['enabled'] as bool,
     );
 
-Map<String, dynamic> _$HomeLayoutBeanToJson(HomeLayoutBean instance) => <String, dynamic>{
+Map<String, dynamic> _$HomeLayoutBeanToJson(HomeLayoutBean instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'enabled': instance.enabled,
@@ -69,16 +77,20 @@ OptionsBean _$OptionsBeanFromJson(Map<String, dynamic> json) => OptionsBean(
       googleOauth: json['google_oauth'] as bool?,
       facebookOauth: json['facebook_oauth'] as bool?,
       logo: json['logo'] as String?,
-      mainColor: json['main_color'] == null ? null : ColorBean.fromJson(json['main_color'] as Map<String, dynamic>),
+      mainColor: json['main_color'] == null
+          ? null
+          : ColorBean.fromJson(json['main_color'] as Map<String, dynamic>),
       mainColorHex: json['main_color_hex'] as String?,
-      secondaryColor:
-          json['secondary_color'] == null ? null : ColorBean.fromJson(json['secondary_color'] as Map<String, dynamic>),
+      secondaryColor: json['secondary_color'] == null
+          ? null
+          : ColorBean.fromJson(json['secondary_color'] as Map<String, dynamic>),
       secondaryColorHex: json['secondary_color_hex'] as String?,
       appView: json['app_view'] as bool,
       postsCount: json['posts_count'] as num,
     );
 
-Map<String, dynamic> _$OptionsBeanToJson(OptionsBean instance) => <String, dynamic>{
+Map<String, dynamic> _$OptionsBeanToJson(OptionsBean instance) =>
+    <String, dynamic>{
       'subscriptions': instance.subscriptions,
       'google_oauth': instance.googleOauth,
       'facebook_oauth': instance.facebookOauth,

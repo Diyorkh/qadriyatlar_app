@@ -20,7 +20,8 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
       }
 
       try {
-        final courses = await coursesRepository.getFavoriteCourses();
+        final courses = await _coursesRepository.getFavoriteCourses();
+
         if (courses.courses.isNotEmpty) {
           emit(LoadedFavoritesState(courses.courses));
         } else {
@@ -28,15 +29,18 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
         }
       } catch (e, s) {
         logger.e('Error getFavoriteCourses', e, s);
-        emit(ErrorFavoritesState());
+        emit(ErrorFavoritesState(e.toString()));
       }
     });
 
     on<DeleteEvent>((event, emit) async {
       try {
         final courses = (state as LoadedFavoritesState).favoriteCourses;
+
         courses.removeWhere((item) => item?.id == event.courseId);
-        await coursesRepository.deleteFavoriteCourse(event.courseId);
+
+        await _coursesRepository.deleteFavoriteCourse(event.courseId);
+
         emit(SuccessDeleteFavoriteCourseState());
       } catch (e, s) {
         logger.e('Error deleteFavorite', e, s);
@@ -44,5 +48,5 @@ class FavoritesBloc extends Bloc<FavoritesEvent, FavoritesState> {
     });
   }
 
-  final CoursesRepository coursesRepository = CoursesRepositoryImpl();
+  final CoursesRepository _coursesRepository = CoursesRepositoryImpl();
 }

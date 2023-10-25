@@ -7,16 +7,14 @@ part of 'change_password.dart';
 // **************************************************************************
 
 ChangePasswordResponse _$ChangePasswordResponseFromJson(
-  Map<String, dynamic> json,
-) =>
+        Map<String, dynamic> json) =>
     ChangePasswordResponse(
       modified: Modified.fromJson(json['modified'] as Map<String, dynamic>),
       values: json['values'],
     );
 
 Map<String, dynamic> _$ChangePasswordResponseToJson(
-  ChangePasswordResponse instance,
-) =>
+        ChangePasswordResponse instance) =>
     <String, dynamic>{
       'modified': instance.modified,
       'values': instance.values,

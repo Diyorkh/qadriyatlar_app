@@ -118,13 +118,20 @@ class CourseCard extends StatelessWidget {
   String get categoryName =>
       category != null && category!.name.isNotEmpty ? '${unescape.convert(category!.name)} >' : '';
 
+  bool get ratingIsNull => reviews == 0.0 || reviews == 0 ? true : false;
+
   @override
   Widget build(BuildContext context) {
     Widget buildPrice;
 
     if (free!) {
-      buildPrice = Padding(
-        padding: const EdgeInsets.only(left: 8.0, bottom: 8.0),
+      buildPrice = Container(
+        margin: EdgeInsets.only(left: 8, bottom: 8),
+        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+        decoration: BoxDecoration(
+          color: ColorApp.secondaryColor,
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+        ),
         child: Text(
           localizations.getLocalization('course_free_price'),
           textScaleFactor: 1.0,
@@ -143,7 +150,7 @@ class CourseCard extends StatelessWidget {
           child: Row(
             children: <Widget>[
               Text(
-                price!,
+                price ?? '',
                 textScaleFactor: 1.0,
                 style: const TextStyle(
                   color: ColorApp.dark,
@@ -263,19 +270,20 @@ class CourseCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 8.0, right: 8.0),
               child: Row(
                 children: <Widget>[
+                  Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                    size: 20,
+                  ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
+                    padding: const EdgeInsets.only(left: 8.0),
                     child: Text(
                       '${stars} (${reviews})',
                       textScaleFactor: 1.0,
                       style: TextStyle(fontSize: 16),
                     ),
                   ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                    size: 20,
-                  ),
+
                 ],
               ),
             ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qadriyatlar_app/core/constants/preferences_name.dart';
 import 'package:qadriyatlar_app/core/env.dart';
+import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
@@ -11,6 +12,7 @@ class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
 
     return AppBar(
       elevation: 0.0,
+      centerTitle: false,
       surfaceTintColor: ColorApp.white,
       backgroundColor: Colors.white,
       toolbarHeight: 120 - shrinkOffset,
@@ -22,9 +24,8 @@ class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              // TODO 27.09.2023 Add translation
               Text(
-                'Salom,',
+                '${localizations.getLocalization('hello')},',
                 style: TextStyle(
                   fontSize: fontSize * value,
                   fontWeight: FontWeight.w500,
@@ -48,7 +49,7 @@ class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   }
 
   @override
-  double get maxExtent => 120.0; // Increase the maxExtent value
+  double get maxExtent => 120.0;
 
   @override
   double get minExtent => 56.0;

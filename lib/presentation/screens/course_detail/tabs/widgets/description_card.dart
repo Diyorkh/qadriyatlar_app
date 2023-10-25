@@ -18,7 +18,8 @@ class DescriptionCard extends StatefulWidget {
 }
 
 class _DescriptionCardState extends State<DescriptionCard> {
-  bool showMore = false;
+  bool _showMore = false;
+
   double? contentHeight;
 
   @override
@@ -30,7 +31,7 @@ class _DescriptionCardState extends State<DescriptionCard> {
   Widget build(BuildContext context) {
     double webContainerHeight;
 
-    if (contentHeight != null && showMore) {
+    if (contentHeight != null && _showMore) {
       webContainerHeight = contentHeight!;
     } else {
       webContainerHeight = 160;
@@ -55,15 +56,15 @@ class _DescriptionCardState extends State<DescriptionCard> {
           child: InkWell(
             onTap: () {
               setState(() {
-                showMore = !showMore;
-                if (!showMore) widget.scrollCallback.call();
+                _showMore = !_showMore;
+                if (!_showMore) widget.scrollCallback.call();
               });
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  showMore
+                  _showMore
                       ? localizations.getLocalization('show_less_button')
                       : localizations.getLocalization('show_more_button'),
                   textScaleFactor: 1.0,

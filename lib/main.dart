@@ -19,6 +19,7 @@ import 'package:qadriyatlar_app/presentation/bloc/course/course_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/courses/user_courses_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/edit_profile_bloc/edit_profile_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/favorites/favorites_bloc.dart';
+import 'package:qadriyatlar_app/presentation/bloc/home/home_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/home_simple/home_simple_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/languages/languages_bloc.dart';
 import 'package:qadriyatlar_app/presentation/bloc/profile/profile_bloc.dart';
@@ -46,8 +47,8 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
       statusBarBrightness: Brightness.light,
-      statusBarColor: Colors.grey.withOpacity(0.4), // top bar color
-      statusBarIconBrightness: Brightness.light, // top bar icons color
+      statusBarColor: Colors.grey.withOpacity(0.4),
+      statusBarIconBrightness: Brightness.light,
     ),
   );
 
@@ -91,6 +92,9 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider<HomeBloc>(
+          create: (BuildContext context) => HomeBloc(),
+        ),
         BlocProvider<HomeSimpleBloc>(
           create: (BuildContext context) => HomeSimpleBloc()..add(LoadHomeSimpleEvent()),
         ),

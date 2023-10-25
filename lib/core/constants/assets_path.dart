@@ -83,4 +83,5 @@ class IconPath {
   static const zip = '$_folderPath/zip.svg';
   static const zip2 = '$_folderPath/zip2.svg';
   static const phone = '$_folderPath/phone.svg';
+  static const ghost = '$_folderPath/ghost.svg';
 }

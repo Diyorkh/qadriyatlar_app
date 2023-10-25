@@ -13,21 +13,14 @@ import 'package:qadriyatlar_app/presentation/widgets/loader_widget.dart';
 import 'package:qadriyatlar_app/presentation/widgets/unauthorized_widget.dart';
 import 'package:qadriyatlar_app/theme/app_color.dart';
 
-class FavoritesScreen extends StatelessWidget {
-  FavoritesScreen();
+class FavoritesScreen extends StatefulWidget {
+  const FavoritesScreen({super.key});
 
   @override
-  Widget build(BuildContext context) => _FavoritesScreenWidget();
+  State<FavoritesScreen> createState() => _FavoritesScreenState();
 }
 
-class _FavoritesScreenWidget extends StatefulWidget {
-  _FavoritesScreenWidget();
-
-  @override
-  State<StatefulWidget> createState() => _FavoritesScreenWidgetState();
-}
-
-class _FavoritesScreenWidgetState extends State<_FavoritesScreenWidget> {
+class _FavoritesScreenState extends State<FavoritesScreen> {
   int? selectedId;
 
   @override
@@ -40,6 +33,19 @@ class _FavoritesScreenWidgetState extends State<_FavoritesScreenWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        title: Text(
+          localizations.getLocalization('favorites_title'),
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 18,
+          ),
+        ),
+      ),
       body: SafeArea(
         child: BlocListener<FavoritesBloc, FavoritesState>(
           listener: (context, state) {
@@ -73,14 +79,17 @@ class _FavoritesScreenWidgetState extends State<_FavoritesScreenWidget> {
 
                 if (state is EmptyFavoritesState) {
                   return EmptyWidget(
+                    // TODO: 19.10.2023 Change picture
                     image: ImagePath.ghost,
                     title: localizations.getLocalization('no_user_favorites_screen_title'),
-                    buttonText: 'Kurslarni ko"ring',
+                    // TODO: 19.10.2023 Add translation
+                    subtitle: 'Keep track of the job listings you"reinterested in by clicking the icon',
+                    buttonText: localizations.getLocalization('view_courses'),
                     onTap: () {
                       Navigator.pushReplacementNamed(
                         context,
                         MainScreen.routeName,
-                        arguments: MainScreenArgs(selectedIndex: 4),
+                        arguments: MainScreenArgs(selectedIndex: 0),
                       );
                     },
                   );
@@ -95,8 +104,8 @@ class _FavoritesScreenWidgetState extends State<_FavoritesScreenWidget> {
                       crossAxisSpacing: 4,
                       itemCount: state.favoriteCourses.length,
                       itemBuilder: (context, index) {
-                        var item = state.favoriteCourses[index];
-                        var itemId = item!.id;
+                        final item = state.favoriteCourses[index];
+                        final itemId = item!.id;
                         var itemState = CourseGridItemEditingState.primary;
 
                         if (selectedId == null) {
@@ -179,17 +188,9 @@ class CourseGridItemSelectable extends StatelessWidget {
       onTap: onTap,
       child: Stack(
         children: <Widget>[
-          CourseGridItem(coursesBean),
-          Visibility(
-            visible: itemState == CourseGridItemEditingState.selected,
-            child: Container(
-              height: 205,
-              margin: const EdgeInsets.all(8.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                border: Border.all(color: ColorApp.mainColor, width: 2),
-              ),
-            ),
+          CourseGridItem(
+            coursesBean,
+            isSelected: itemState == CourseGridItemEditingState.selected,
           ),
           Visibility(
             visible: itemState == CourseGridItemEditingState.selected,

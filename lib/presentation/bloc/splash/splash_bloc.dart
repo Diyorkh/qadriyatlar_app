@@ -39,7 +39,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
           _homeRepository.saveLocal(appSettings);
 
           if (appSettings.options!.logo != null) {
-            preferences.setString(PreferencesName.appLogo, appSettings.options!.logo!);
+            // preferences.setString(PreferencesName.appLogo, appSettings.options!.logo!);
           } else {
             preferences.remove(PreferencesName.appLogo);
           }
@@ -84,7 +84,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         List<AppSettings> appSettingLocal = await _homeRepository.getAppSettingsLocal();
 
         if (appSettingLocal.first.options!.logo != null) {
-          preferences.setString(PreferencesName.appLogo, appSettingLocal.first.options!.logo!);
+          // preferences.setString(PreferencesName.appLogo, appSettingLocal.first.options!.logo!);
         }
 
         demoEnabled = appSettingLocal.first.demo ?? false;

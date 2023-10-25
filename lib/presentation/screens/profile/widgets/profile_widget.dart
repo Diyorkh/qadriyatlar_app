@@ -69,7 +69,7 @@ class ProfileWidget extends StatelessWidget {
                                   ),
                             ),
                             Text(
-                              state.account.email!,
+                              state.account.phone ?? 'No info',
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w500,

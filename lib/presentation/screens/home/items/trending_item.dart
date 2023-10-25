@@ -139,8 +139,13 @@ class TrendingCourseItem extends StatelessWidget {
     Widget buildPrice;
 
     if (free!) {
-      buildPrice = Padding(
-        padding: const EdgeInsets.only(top: 8.0),
+      buildPrice = Container(
+        margin: EdgeInsets.only(left: 0, top: 2, bottom: 8.0),
+        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+        decoration: BoxDecoration(
+          color: ColorApp.secondaryColor,
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+        ),
         child: Text(
           localizations.getLocalization('course_free_price'),
           textScaleFactor: 1.0,
@@ -220,16 +225,19 @@ class TrendingCourseItem extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 4.0, left: 0.0, right: 16.0),
-              child: Text(
-                unescape.convert(title ?? ''),
-                textScaleFactor: 1.0,
-                maxLines: 2,
-                style: TextStyle(
-                  fontSize: 17,
-                  color: primaryTextColor,
-                  fontWeight: FontWeight.bold,
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 4.0, left: 0.0, right: 16.0),
+                child: Text(
+                  unescape.convert(title ?? ''),
+                  textScaleFactor: 1.0,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 17,
+                    color: primaryTextColor,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -237,8 +245,13 @@ class TrendingCourseItem extends StatelessWidget {
               padding: const EdgeInsets.only(top: 4.0, left: 0.0, right: 16.0),
               child: Row(
                 children: <Widget>[
+                  Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                    size: 20,
+                  ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 4.0),
+                    padding: const EdgeInsets.only(left: 4.0),
                     child: Text(
                       '$stars ($reviews)',
                       textScaleFactor: 1.0,
@@ -248,11 +261,6 @@ class TrendingCourseItem extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                    size: 20,
                   ),
                 ],
               ),

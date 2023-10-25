@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/screens/languages/languages_screen.dart';
 
 class ChangeLanguageWidget extends StatelessWidget {
@@ -18,9 +19,8 @@ class ChangeLanguageWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // TODO: 20.07.2023 Add translation
                 Text(
-                  'Change language',
+                  localizations.getLocalization('change_language'),
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
                     color: Colors.black,

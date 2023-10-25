@@ -6,21 +6,24 @@ part of 'user_plans_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserPlansResponse _$UserPlansResponseFromJson(Map<String, dynamic> json) => UserPlansResponse(
+UserPlansResponse _$UserPlansResponseFromJson(Map<String, dynamic> json) =>
+    UserPlansResponse(
       subscriptions: (json['subscriptions'] as List<dynamic>)
-          .map(
-            (e) => e == null ? null : UserPlansBean.fromJson(e as Map<String, dynamic>),
-          )
+          .map((e) => e == null
+              ? null
+              : UserPlansBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       otherSubscriptions: json['other_subscriptions'] as bool,
     );
 
-Map<String, dynamic> _$UserPlansResponseToJson(UserPlansResponse instance) => <String, dynamic>{
+Map<String, dynamic> _$UserPlansResponseToJson(UserPlansResponse instance) =>
+    <String, dynamic>{
       'subscriptions': instance.subscriptions,
       'other_subscriptions': instance.otherSubscriptions,
     };
 
-UserPlansBean _$UserPlansBeanFromJson(Map<String, dynamic> json) => UserPlansBean(
+UserPlansBean _$UserPlansBeanFromJson(Map<String, dynamic> json) =>
+    UserPlansBean(
       ID: json['ID'] as String,
       id: json['id'] as String,
       subscriptionId: json['subscription_id'] as String,
@@ -42,11 +45,14 @@ UserPlansBean _$UserPlansBeanFromJson(Map<String, dynamic> json) => UserPlansBea
       courseNumber: json['course_number'] as String,
       usedQuotas: json['used_quotas'] as num,
       quotasLeft: json['quotas_left'] as num,
-      button: json['button'] == null ? null : ButtonBean.fromJson(json['button'] as Map<String, dynamic>),
+      button: json['button'] == null
+          ? null
+          : ButtonBean.fromJson(json['button'] as Map<String, dynamic>),
       features: json['features'] as String,
     );
 
-Map<String, dynamic> _$UserPlansBeanToJson(UserPlansBean instance) => <String, dynamic>{
+Map<String, dynamic> _$UserPlansBeanToJson(UserPlansBean instance) =>
+    <String, dynamic>{
       'ID': instance.ID,
       'id': instance.id,
       'subscription_id': instance.subscriptionId,
@@ -77,7 +83,8 @@ ButtonBean _$ButtonBeanFromJson(Map<String, dynamic> json) => ButtonBean(
       url: json['url'] as String,
     );
 
-Map<String, dynamic> _$ButtonBeanToJson(ButtonBean instance) => <String, dynamic>{
+Map<String, dynamic> _$ButtonBeanToJson(ButtonBean instance) =>
+    <String, dynamic>{
       'text': instance.text,
       'url': instance.url,
     };

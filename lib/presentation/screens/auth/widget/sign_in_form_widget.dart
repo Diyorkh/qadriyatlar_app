@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:qadriyatlar_app/main.dart';
 import 'package:qadriyatlar_app/presentation/bloc/auth/auth_bloc.dart';
 import 'package:qadriyatlar_app/presentation/screens/auth/screens/restore_password_screen.dart';
 import 'package:qadriyatlar_app/presentation/screens/auth/screens/sign_up_screen.dart';
@@ -51,12 +52,13 @@ class _SignInPhoneFormWidgetState extends State<SignInPhoneFormWidget> {
             child: Column(
               children: [
                 CustomTextField(
+                  keyboardType: TextInputType.phone,
                   controller: _phoneController,
                   suffixIcon: Icons.phone,
-                  hintText: 'Raqam', // TODO: Add translations
+                  hintText: localizations.getLocalization('phone_number'),
                   validator: (String? val) {
                     if (val!.isEmpty) {
-                      return 'Fill the form'; // TODO: 27.09.2023 Add Translations
+                      return localizations.getLocalization('fill_the_phone_number');
                     }
 
                     return null;
@@ -79,14 +81,14 @@ class _SignInPhoneFormWidgetState extends State<SignInPhoneFormWidget> {
                   ),
                   validator: (String? val) {
                     if (val!.isEmpty) {
-                      return 'Fill the form'; // TODO: Add translations
+                      return localizations.getLocalization('password_empty_error_text');
                     }
                     if (val.length <= 4) {
-                      return 'Password not correctly'; // TODO: Add translations
+                      return localizations.getLocalization('password_sign_in_characters_count_error_text');
                     }
                     return null;
                   },
-                  hintText: 'Parol', // TODO: Add translations
+                  hintText: localizations.getLocalization('password_label_text'),
                 ),
                 const SizedBox(height: 10.0),
                 Align(
@@ -94,16 +96,14 @@ class _SignInPhoneFormWidgetState extends State<SignInPhoneFormWidget> {
                   child: TextButton(
                     onPressed: () => Navigator.pushNamed(context, RestorePasswordScreen.routeName),
                     child: Text(
-                      // TODO: Add translations
-                      'Parolni unutdingizmi?',
+                      localizations.getLocalization('forgot_password'),
                       style: headline3,
                     ),
                   ),
                 ),
                 const SizedBox(height: 100.0),
                 CustomAppButton(
-                  // TODO: Add translations
-                  label: "Ro'yxatdan o'tish",
+                  label: localizations.getLocalization('auth_sign_up_tab'),
                   loaderIndicator: state is LoadingLoginAccountState,
                   onPressed: state is LoadingLoginAccountState
                       ? null
@@ -126,16 +126,14 @@ class _SignInPhoneFormWidgetState extends State<SignInPhoneFormWidget> {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          // TODO: Add translations
-                          text: "Akkauntingiz yo'qmi? ",
+                          text: localizations.getLocalization('dont_have_account'),
                           style: headline.copyWith(
                             color: Colors.grey,
                             fontSize: 14.0,
                           ),
                         ),
                         TextSpan(
-                          // TODO: Add translations
-                          text: " Ro'yxatdan o'ting",
+                          text: " ${localizations.getLocalization('auth_sign_up_tab')}",
                           style: headlineDot.copyWith(
                             fontSize: 14.0,
                           ),

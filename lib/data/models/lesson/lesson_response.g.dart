@@ -6,17 +6,19 @@ part of 'lesson_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-LessonResponse _$LessonResponseFromJson(Map<String, dynamic> json) => LessonResponse(
+LessonResponse _$LessonResponseFromJson(Map<String, dynamic> json) =>
+    LessonResponse(
       id: json['id'],
-      section: json['section'] == null ? null : SectionBean.fromJson(json['section'] as Map<String, dynamic>),
+      section: json['section'] == null
+          ? null
+          : SectionBean.fromJson(json['section'] as Map<String, dynamic>),
       title: json['title'] as String?,
       type: json['type'] as String?,
       content: json['content'] as String?,
       videoType: $enumDecode(_$VideoTypeCodeEnumMap, json['video_type']),
       materials: (json['materials'] as List<dynamic>?)
-          ?.map(
-            (e) => e == null ? null : Materials.fromJson(e as Map<String, dynamic>),
-          )
+          ?.map((e) =>
+              e == null ? null : Materials.fromJson(e as Map<String, dynamic>))
           .toList(),
       video: json['video'] as String?,
       videoPoster: json['video_poster'] as String?,
@@ -27,15 +29,17 @@ LessonResponse _$LessonResponseFromJson(Map<String, dynamic> json) => LessonResp
       completed: json['completed'] as bool,
       nextLessonAvailable: json['next_lesson_available'] as bool,
       viewLink: json['view_link'] as String?,
-      quizData:
-          (json['quiz_data'] as List<dynamic>?)?.map((e) => QuizDataBean.fromJson(e as Map<String, dynamic>)).toList(),
+      quizData: (json['quiz_data'] as List<dynamic>?)
+          ?.map((e) => QuizDataBean.fromJson(e as Map<String, dynamic>))
+          .toList(),
       time: json['time'] as num?,
       timeLeft: json['time_left'] as num?,
       quizTime: json['quiz_time'],
       fromCache: json['fromCache'] as bool?,
     );
 
-Map<String, dynamic> _$LessonResponseToJson(LessonResponse instance) => <String, dynamic>{
+Map<String, dynamic> _$LessonResponseToJson(LessonResponse instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'section': instance.section,
       'title': instance.title,
@@ -74,7 +78,8 @@ SectionBean _$SectionBeanFromJson(Map<String, dynamic> json) => SectionBean(
       index: json['index'],
     );
 
-Map<String, dynamic> _$SectionBeanToJson(SectionBean instance) => <String, dynamic>{
+Map<String, dynamic> _$SectionBeanToJson(SectionBean instance) =>
+    <String, dynamic>{
       'label': instance.label,
       'number': instance.number,
       'index': instance.index,

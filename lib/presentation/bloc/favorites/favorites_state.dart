@@ -13,7 +13,11 @@ class LoadedFavoritesState extends FavoritesState {
   final List<CoursesBean?> favoriteCourses;
 }
 
-class ErrorFavoritesState extends FavoritesState {}
+class ErrorFavoritesState extends FavoritesState {
+  ErrorFavoritesState(this.message);
+
+  final String? message;
+}
 
 class SuccessDeleteFavoriteCourseState extends FavoritesState {}
 

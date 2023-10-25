@@ -21,7 +21,6 @@ class _PopularSearchesState extends State<PopularSearches> {
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // TODO: 29.09.2023 Add translations
               Padding(
                 padding: const EdgeInsets.only(top: 30.0, left: 15.0),
                 child: Text(

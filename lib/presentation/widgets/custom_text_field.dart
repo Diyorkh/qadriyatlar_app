@@ -14,6 +14,8 @@ class CustomTextField extends StatelessWidget {
     this.label,
     this.borderColor,
     this.obscure = false,
+    this.textInputAction,
+    this.keyboardType,
   });
 
   final TextEditingController controller;
@@ -26,6 +28,8 @@ class CustomTextField extends StatelessWidget {
   final Widget? suffixWidget;
   final Color? borderColor;
   final bool obscure;
+  final TextInputAction? textInputAction;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +37,8 @@ class CustomTextField extends StatelessWidget {
       obscureText: obscure,
       controller: controller,
       textAlignVertical: TextAlignVertical.center,
+      textInputAction: textInputAction,
+      keyboardType: keyboardType,
       decoration: InputDecoration(
         label: label != null ? Text(label!) : null,
         errorText: errorText,

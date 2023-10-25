@@ -6,16 +6,18 @@ part of 'question_add_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-QuestionAddResponse _$QuestionAddResponseFromJson(Map<String, dynamic> json) => QuestionAddResponse(
+QuestionAddResponse _$QuestionAddResponseFromJson(Map<String, dynamic> json) =>
+    QuestionAddResponse(
       error: json['error'] as bool,
       status: json['status'] as String,
       message: json['message'] as String,
-      comment: json['comment'] == null ? null : QuestionAddBean.fromJson(json['comment'] as Map<String, dynamic>),
+      comment: json['comment'] == null
+          ? null
+          : QuestionAddBean.fromJson(json['comment'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$QuestionAddResponseToJson(
-  QuestionAddResponse instance,
-) =>
+        QuestionAddResponse instance) =>
     <String, dynamic>{
       'error': instance.error,
       'status': instance.status,
@@ -23,19 +25,20 @@ Map<String, dynamic> _$QuestionAddResponseToJson(
       'comment': instance.comment,
     };
 
-QuestionAddBean _$QuestionAddBeanFromJson(Map<String, dynamic> json) => QuestionAddBean(
+QuestionAddBean _$QuestionAddBeanFromJson(Map<String, dynamic> json) =>
+    QuestionAddBean(
       commentId: json['comment_ID'] as String,
       content: json['content'] as String,
       author: json['author'] == null
           ? null
           : QuestionAddAuthorBean.fromJson(
-              json['author'] as Map<String, dynamic>,
-            ),
+              json['author'] as Map<String, dynamic>),
       datetime: json['datetime'] as String,
       repliesCount: json['replies_count'] as String,
     );
 
-Map<String, dynamic> _$QuestionAddBeanToJson(QuestionAddBean instance) => <String, dynamic>{
+Map<String, dynamic> _$QuestionAddBeanToJson(QuestionAddBean instance) =>
+    <String, dynamic>{
       'comment_ID': instance.commentId,
       'content': instance.content,
       'author': instance.author,
@@ -44,8 +47,7 @@ Map<String, dynamic> _$QuestionAddBeanToJson(QuestionAddBean instance) => <Strin
     };
 
 QuestionAddAuthorBean _$QuestionAddAuthorBeanFromJson(
-  Map<String, dynamic> json,
-) =>
+        Map<String, dynamic> json) =>
     QuestionAddAuthorBean(
       id: json['id'] as int,
       login: json['login'] as String,
@@ -55,8 +57,7 @@ QuestionAddAuthorBean _$QuestionAddAuthorBeanFromJson(
     );
 
 Map<String, dynamic> _$QuestionAddAuthorBeanToJson(
-  QuestionAddAuthorBean instance,
-) =>
+        QuestionAddAuthorBean instance) =>
     <String, dynamic>{
       'id': instance.id,
       'login': instance.login,
@@ -71,12 +72,12 @@ ReplyAddBean _$ReplyAddBeanFromJson(Map<String, dynamic> json) => ReplyAddBean(
       author: json['author'] == null
           ? null
           : QuestionAddAuthorBean.fromJson(
-              json['author'] as Map<String, dynamic>,
-            ),
+              json['author'] as Map<String, dynamic>),
       datetime: json['datetime'] as String,
     );
 
-Map<String, dynamic> _$ReplyAddBeanToJson(ReplyAddBean instance) => <String, dynamic>{
+Map<String, dynamic> _$ReplyAddBeanToJson(ReplyAddBean instance) =>
+    <String, dynamic>{
       'comment_ID': instance.commentId,
       'content': instance.content,
       'author': instance.author,

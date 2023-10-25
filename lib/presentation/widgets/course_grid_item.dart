@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:provider/provider.dart';
 import 'package:qadriyatlar_app/core/env.dart';
 import 'package:qadriyatlar_app/data/models/course/courses_response.dart';
@@ -10,16 +9,19 @@ import 'package:qadriyatlar_app/presentation/screens/search/components/recent_vi
 import 'package:qadriyatlar_app/theme/app_color.dart';
 
 class CourseGridItem extends StatelessWidget {
-  CourseGridItem(this.coursesBean);
+  CourseGridItem(this.coursesBean, {this.isSelected});
 
   final CoursesBean? coursesBean;
+
+  /// Used for favorites design
+  final bool? isSelected;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.all(Radius.circular(12.0)),
       onTap: () {
-        Provider.of<RecentViewedService>(context,listen: false).addRecentViewed(coursesBean);
+        Provider.of<RecentViewedService>(context, listen: false).addRecentViewed(coursesBean);
 
         Navigator.pushNamed(
           context,
@@ -27,15 +29,24 @@ class CourseGridItem extends StatelessWidget {
           arguments: CourseScreenArgs.fromCourseBean(coursesBean!),
         );
       },
-      child: CourseGridCard(coursesBean: coursesBean),
+      child: CourseGridCard(
+        coursesBean: coursesBean,
+        isSelected: isSelected,
+      ),
     );
   }
 }
 
 class CourseGridCard extends StatelessWidget {
-  const CourseGridCard({Key? key, required this.coursesBean}) : super(key: key);
+  const CourseGridCard({
+    Key? key,
+    required this.coursesBean,
+    this.isSelected,
+  }) : super(key: key);
 
   final CoursesBean? coursesBean;
+
+  final bool? isSelected;
 
   double? get rating => coursesBean?.rating?.average?.toDouble();
 
@@ -47,14 +58,29 @@ class CourseGridCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget buildPrice = Text(
-      coursesBean!.price!.free ? localizations.getLocalization('course_free_price') : coursesBean!.price!.price!,
-      textScaleFactor: 1.0,
-      style: Theme.of(context)
-          .primaryTextTheme
-          .titleMedium!
-          .copyWith(color: ColorApp.dark, fontStyle: FontStyle.normal, fontWeight: FontWeight.bold),
-    );
+    Widget buildPrice = coursesBean!.price!.free
+        ? Container(
+            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+            decoration: BoxDecoration(
+              color: ColorApp.secondaryColor,
+              borderRadius: BorderRadius.all(Radius.circular(8.0)),
+            ),
+            child: Text(
+              localizations.getLocalization('course_free_price'),
+              style: Theme.of(context)
+                  .primaryTextTheme
+                  .titleMedium!
+                  .copyWith(color: ColorApp.dark, fontStyle: FontStyle.normal, fontWeight: FontWeight.bold),
+            ),
+          )
+        : Text(
+            'От ${coursesBean!.price!.price!}',
+            textScaleFactor: 1.0,
+            style: Theme.of(context)
+                .primaryTextTheme
+                .titleMedium!
+                .copyWith(color: ColorApp.dark, fontStyle: FontStyle.normal, fontWeight: FontWeight.bold),
+          );
 
     if (coursesBean?.price?.oldPrice != null) {
       buildPrice = Row(
@@ -62,12 +88,12 @@ class CourseGridCard extends StatelessWidget {
           buildPrice,
           const SizedBox(width: 4.0),
           Text(
-            (coursesBean?.price?.oldPrice != null) ? coursesBean!.price!.oldPrice! : ' ',
+            coursesBean?.price?.oldPrice != null ? coursesBean!.price!.oldPrice! : ' ',
             textScaleFactor: 1.0,
             style: Theme.of(context).primaryTextTheme.titleMedium!.copyWith(
                   color: Color(0xFF999999),
                   fontStyle: FontStyle.normal,
-                  decoration: (coursesBean?.price?.oldPrice != null) ? TextDecoration.lineThrough : TextDecoration.none,
+                  decoration: coursesBean?.price?.oldPrice != null ? TextDecoration.lineThrough : TextDecoration.none,
                 ),
           ),
         ],
@@ -76,6 +102,15 @@ class CourseGridCard extends StatelessWidget {
 
     return Card(
       elevation: 3,
+      shape: isSelected ?? false
+          ? RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              side: BorderSide(
+                color: ColorApp.mainColor,
+                width: 2,
+              ),
+            )
+          : null,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -158,21 +193,10 @@ class CourseGridCard extends StatelessWidget {
             padding: const EdgeInsets.only(left: 4.0),
             child: Row(
               children: <Widget>[
-                RatingBar.builder(
-                  initialRating: rating!,
-                  minRating: 0,
-                  direction: Axis.horizontal,
-                  tapOnlyMode: true,
-                  glow: false,
-                  allowHalfRating: true,
-                  ignoreGestures: true,
-                  itemCount: 5,
-                  itemSize: 14,
-                  itemBuilder: (context, _) => Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                  ),
-                  onRatingUpdate: (rating) {},
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 20,
                 ),
                 Text(
                   '$rating ($reviews)',
@@ -183,7 +207,7 @@ class CourseGridCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 4.0, top: 4.0, bottom: 4.0),
+            padding: const EdgeInsets.only(left: 6.0, top: 4.0, bottom: 4.0),
             child: buildPrice,
           ),
         ],
